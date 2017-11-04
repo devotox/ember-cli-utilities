@@ -34,9 +34,12 @@ script:
 notifications:
   webhooks:
     urls:
-      - https://webhook.atomist.com/travis
+    - https://webhook.atomist.com/travis
     on_success: always
     on_failure: always
     on_start: always
     on_cancel: always
     on_error: always
+  slack:
+    rooms:
+      secure: NDFfJY1Xava6T28IpRZt7ikq+pLrFRanbolpWTRIEH3u7Hmigyvrf3L1U9OuR3jmWNlmKUjHaCPVplLMyIlNc0sxXKfaMqv1RSL+WLIE+Y2vI2DoW6CuzrbwKa9XRwVszNkkUoJNNisOuz/WO7RckTq3KieIgP2K4moJ+KpclPCz/X8MG/h8j/bJJjjI8igm9080o5MGGA1i/AvuKGG1PHUgcPZRIgWDtEJ9AcVWfrE4R4sVl0C33c/Z83byosC3M15cbCG3TN57+KAb3296xJ/3CT4751B8yCrcNxExEs4B/mTSMGS9vlZ9iqeZa3JqrtmhVIWc8sz5n4GpcgTqMN6D2B2+D0i5d/Wd8p0rP4uTeWwJYtSB3BaTN78lEX52gxHJIH5dLKvqPEiDcV3SclqcVnac3N5PzpqxxslDNMW+YA13Qoa0/ceB37akWiv/AApbC3VDmwV7re67/jPmu/WUo1Lt5AHRQQWoM0XB0T3xOsuGzg5saTBvEPMLEc6Ow6hshuVmHA8I70Gl9brOu6/LoPqArGWCAnaU9Ee8CO/Kwx9BsjllsEPF32gA+tuXAIKjtTSRA/ptMNLqZ8KY4Bb6H/uj3yEgziEw0+OxocTgu7eBi3ha3nHuYZHZT/SYA0UIbiUPljGQbWD64bviU3a+ouFgr7FXQ6bodQlNyDk=
