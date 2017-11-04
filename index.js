@@ -2,5 +2,20 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-utilities'
+	name: 'ember-cli-utilities',
+
+	included() {
+		this._super.included.apply(this, arguments);
+	},
+
+	options: {
+		babel: {
+			plugins: ['transform-object-rest-spread']
+		},
+		'ember-cli-babel': {
+			compileModules: true,
+			includePolyfill: true,
+			disableDebugTooling: true
+		},
+	}
 };
