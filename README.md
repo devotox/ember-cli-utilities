@@ -27,7 +27,7 @@ Multiple Utility Services / Mixins to use in your ember application
 
 ## Services
 * alpha-iterator
-	- iterate through alphabet 
+	- iterate through alphabet
 * crypto
 	- set of useable crypto functions
 * device
@@ -51,7 +51,9 @@ Multiple Utility Services / Mixins to use in your ember application
 * sandbox
 	- run custom code in a sandbox without access to globals you do not specify
 * store
-	- Ember Data Store which allows slugs / offline 
+	- Ember Data Store which allows slugs / offline
+* string-builder
+	- Build strings efficiently
 * translation
 	- fetch translations
 * utils
