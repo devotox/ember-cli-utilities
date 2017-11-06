@@ -1,16 +1,30 @@
 import Service from '@ember/service';
 
+import { Promise } from 'rsvp';
+
 const has = () => true;
 
-const { console, WeakMap, Proxy, Symbol } = window;
+const needsWindow = ['setTimeout', 'setInterval'];
 
-const get = (target, key) => key === Symbol.unscopables ? undefined : target[key];
+const { WeakMap, Proxy, Reflect, Symbol, console } = window;
+
+const get = (target, key) => {
+	return key !== Symbol.unscopables
+		&& needsWindow.includes(key)
+		? target[key].bind(window)
+		: target[key];
+};
 
 export default Service.extend({
 
 	sandboxes: new WeakMap(),
 
-	globals: { console, Object, parseFloat },
+	globals: {
+		console,
+		Object, Promise,
+		parseInt, parseFloat,
+		setTimeout, setInterval
+	},
 
 	getSandboxKey(context) {
 		return context;

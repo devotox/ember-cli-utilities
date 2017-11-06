@@ -41,24 +41,3 @@ export default Service.extend({
 		this.set('counter', 0);
 	}
 });
-
-/*
-exports.string_builder = function() {
-	this.data = [];
-	this.counter = 0;
-
-	// adds string s to the stringbuilder
-	this.append = function () {
-		let args = Array.prototype.slice.call(arguments);
-		this.data[this.counter++] = args.join('').trim(); return this;
-	};
-	// removes j elements starting at i, or 1 if j is omitted
-	this.remove = function (i, j) { this.data.splice(i, j || 1); return this; };
-	// inserts string s at i
-	this.insert = function (i, s) { this.data.splice(i, 0, s); return this; };
-	// builds the string
-	this.toString = function (s) { return this.data.join(s || ''); };
-
-	return this;
-}.bind({});
- */
