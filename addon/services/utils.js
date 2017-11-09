@@ -64,15 +64,12 @@ export default Service.extend({
 		});
 	},
 	switch(input, cases = {}) {
-		cases = Object.assign(
-			{
-				default() {
-					let message = 'default run for unhandled case:';
-					console.trace(message, input);
-				}
-			},
-			cases
-		);
+		cases = Object.assign({
+			default() {
+				let message = 'default run for unhandled case:';
+				console.trace(message, input);
+			}
+		}, cases);
 
 		return this.exists(cases[input])
 			? this.isFunction(cases[input]) ? cases[input]() : cases[input]

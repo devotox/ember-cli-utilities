@@ -6,7 +6,7 @@ const has = () => true;
 
 const needsWindow = ['setTimeout', 'setInterval'];
 
-const { WeakMap, Proxy, Reflect, Symbol, console } = window;
+const { WeakMap, Proxy, Symbol, console } = window;
 
 const get = (target, key) => {
 	return key !== Symbol.unscopables
