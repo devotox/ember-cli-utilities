@@ -40,10 +40,12 @@
 		]
 	},
 	"dependencies": {
-		"ember-cli-babel": "6.9.0"
+		"ember-cli-babel": "6.9.0",
+		"ember-cli-notifications": "4.2.1",
+		"ember-notification-hub": "devotox/ember-notification-hub",
+		"babel-plugin-transform-object-rest-spread": "7.0.0-beta.3"
 	},
 	"devDependencies": {
-		"babel-plugin-transform-object-rest-spread": "7.0.0-beta.2",
 		"broccoli-asset-rev": "2.6.0",
 		"ember-ajax": "3.0.0",
 		"ember-cli": "2.16.2",
@@ -55,7 +57,6 @@
 		"ember-cli-htmlbars-inline-precompile": "1.0.2",
 		"ember-cli-inject-live-reload": "1.7.0",
 		"ember-cli-moment-shim": "3.5.0",
-		"ember-cli-notifications": "4.2.1",
 		"ember-cli-qunit": "4.0.2",
 		"ember-cli-shims": "1.1.0",
 		"ember-cli-sri": "2.1.1",
@@ -67,10 +68,9 @@
 		"ember-i18n": "5.0.2",
 		"ember-load-initializers": "1.0.0",
 		"ember-moment": "7.5.0",
-		"ember-notification-hub": "devotox/ember-notification-hub",
 		"ember-resolver": "4.5.0",
-		"ember-source": "2.17.0-beta.3",
-		"eslint": "4.10.0",
+		"ember-source": "2.17.0-beta.5",
+		"eslint": "4.11.0",
 		"eslint-config-prettier": "2.7.0",
 		"eslint-plugin-ember-suave": "1.0.0",
 		"eslint-plugin-prettier": "2.3.1",
