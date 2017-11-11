@@ -168,7 +168,6 @@ export default Service.extend({
 	spinnerClass: 'fa fa-spinner fa-pulse fa-3x fa-fw loading-mask-spinner',
 
 	loading(add) {
-		console.log(add, $);
 		if (!$) { return; }
 
 		let $class = this.get('spinnerClass');

@@ -9,6 +9,9 @@ module.exports = {
 	},
 
 	options: {
+		sassOptions: {
+			includePaths: ['addon/styles']
+		},
 		babel: {
 			plugins: ['transform-object-rest-spread']
 		},
