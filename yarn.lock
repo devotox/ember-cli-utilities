@@ -2521,7 +2521,7 @@ ember-cli-qunit@4.0.2:
     resolve "^1.4.0"
     silent-error "^1.1.0"
 
-ember-cli-sass@^7.0.0:
+ember-cli-sass@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-7.0.0.tgz#24bdf6e6c13610c57cbddb1f077715588aedcf13"
   dependencies:
