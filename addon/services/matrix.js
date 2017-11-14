@@ -7,19 +7,29 @@ import { later } from '@ember/runloop';
 let { screen, document } = window;
 
 export default Service.extend({
+
+	matrixID: 'matrix',
+
 	run() {
-		$(document).on('keypress', ({ which, ctrlKey, altKey, shiftKey }) => {
+		$(document).on('keypress.matrix', ({ which, ctrlKey, altKey, shiftKey }) => {
 			return which === 13 // m
 				&& (ctrlKey && altKey && this.matrix())
-				|| ctrlKey && shiftKey && this.clear();
+				|| ctrlKey && shiftKey && this.clear()
+				|| true;
 		});
+	},
+
+	remove() {
+		$(document).off('keypress.matrix');
 	},
 
 	matrix() {
 		this.clear();
 		this.timeout();
 
-		let $canvas = $('<canvas/>', { id: 'matrix' }).css({
+		let matrixID = this.get('matrixID');
+
+		let $canvas = $('<canvas/>', { id: matrixID }).css({
 			position: 'absolute', zIndex: 9999, left: 0, top: 0
 		}).appendTo('body');
 
@@ -54,7 +64,9 @@ export default Service.extend({
 
 	clear() {
 		let matrixInterval = this.get('matrixInterval');
+		let matrixID = this.get('matrixID');
+
 		clearInterval(matrixInterval);
-		$('#matrix').remove();
+		$(`#${matrixID}`).remove();
 	}
 });

@@ -3,6 +3,28 @@
 import Service from '@ember/service';
 
 export default Service.extend({
+	create(value) {
+		return value
+			&& (this.isRegex(value) && value
+				|| this[value] || this.stringToRegex(value)
+			);
+	},
+	isRegex(value) {
+		return value instanceof RegExp;
+	},
+	stringToRegex(value) {
+		let flags = value.replace(/.*\/([gimy]*)$/, '$1');
+		let pattern = value.replace(new RegExp(`^/(.*?)/${flags}$`), '$1');
+		flags === value && (flags = '');
+
+		try {
+			return new RegExp(pattern, flags);
+		}
+		catch(error) {
+			console.error('[String To Regex]', error);
+		}
+	},
+	Numeric: /^\d+$/,
 	Alpha: /^[a-z]+$/i,
 	AlphaNumeric: /^\w+$/i,
 	AlphabetWithPunctuation: /^[a-z_.,\-()\s']+$/i,
