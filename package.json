@@ -42,7 +42,7 @@
 	"dependencies": {
 		"babel-plugin-transform-object-rest-spread": "7.0.0-beta.3",
 		"ember-cli-babel": "6.9.0",
-		"ember-cli-sass": "7.1.0",
+		"ember-cli-sass": "7.1.1",
 		"ember-cli-notifications": "4.2.1",
 		"ember-notification-hub": "devotox/ember-notification-hub"
 	},
@@ -58,7 +58,7 @@
 		"ember-cli-htmlbars-inline-precompile": "1.0.2",
 		"ember-cli-inject-live-reload": "1.7.0",
 		"ember-cli-moment-shim": "3.5.0",
-		"ember-cli-qunit": "4.1.1",
+		"ember-cli-qunit": "4.0.2",
 		"ember-cli-shims": "1.1.0",
 		"ember-cli-sri": "2.1.1",
 		"ember-cli-uglify": "2.0.0",
