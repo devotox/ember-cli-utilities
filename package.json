@@ -42,7 +42,7 @@
 	"dependencies": {
 		"babel-plugin-transform-object-rest-spread": "7.0.0-beta.3",
 		"ember-cli-babel": "6.9.0",
-		"ember-cli-sass": "7.0.0",
+		"ember-cli-sass": "7.1.1",
 		"ember-cli-notifications": "4.2.1",
 		"ember-notification-hub": "devotox/ember-notification-hub"
 	},
