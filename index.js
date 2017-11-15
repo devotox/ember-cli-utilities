@@ -4,8 +4,13 @@
 module.exports = {
 	name: 'ember-cli-utilities',
 
-	included() {
+	included(app) {
 		this._super.included.apply(this, arguments);
+		!app.sassOptions
+			&& (app.sassOptions = { includePaths: [] });
+
+		app.sassOptions.includePaths.push('app/styles');
+		app.sassOptions.includePaths.push('addon/styles');
 	},
 
 	options: {
