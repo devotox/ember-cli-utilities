@@ -15,7 +15,10 @@ module.exports = {
 
 	options: {
 		sassOptions: {
-			includePaths: ['addon/styles']
+			includePaths: [
+				'app/styles',
+				'addon/styles'
+			]
 		},
 		babel: {
 			plugins: ['transform-object-rest-spread']
