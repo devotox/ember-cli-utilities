@@ -1,0 +1,31 @@
+/*
+We set the element we are applying our loading mask to relative
+*/
+.loading-mask {
+	position: relative;
+}
+
+/*
+ To use with Font Awesome Spinner
+ */
+.loading-mask-spinner {
+	top: 49%;
+	left: 49%;
+	z-index: 9999999;
+	position: absolute;
+}
+
+/*
+Because we set .loading-mask relative, we can span our ::before
+element over the whole parent element
+*/
+.loading-mask::before {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	z-index: 9999998;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.25);
+}

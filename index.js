@@ -27,6 +27,6 @@ module.exports = {
 			compileModules: true,
 			includePolyfill: true,
 			disableDebugTooling: true
-		},
+		}
 	}
 };
