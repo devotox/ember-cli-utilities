@@ -61,8 +61,8 @@ export default Service.extend({
 			'success',
 			'warning'
 		].forEach((type) => {
-			type = type === 'alert' ? 'info' : type;
-			this[type] = (message,  options) => this.notify(type, message, options);
+			let notifyType = type === 'alert' ? 'info' : type;
+			this[type] = (message,  options) => this.notify(notifyType, message, options);
 		});
 	},
 
@@ -119,7 +119,7 @@ export default Service.extend({
 				? `${message} Successful!`
 				: `${message} Unsuccessful!`;
 
-		this.get('notification-messages')[type](message, options);
+		this.get('notificationMessages')[type](message, options);
 	},
 
 	async callback(promise, options) {

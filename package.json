@@ -44,6 +44,7 @@
 		"ember-cli-babel": "6.10.0",
 		"ember-cli-sass": "7.1.1",
 		"ember-cli-notifications": "4.2.1",
+		"ember-offline": "devotox/ember-offline",
 		"ember-notification-hub": "devotox/ember-notification-hub"
 	},
 	"devDependencies": {

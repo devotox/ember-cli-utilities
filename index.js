@@ -6,6 +6,13 @@ module.exports = {
 
 	included(app) {
 		this._super.included.apply(this, arguments);
+
+		!app.emberOffline
+			&& (app.emberOffline = { themes: {} });
+
+		app.emberOffline.themes.theme = 'chrome';
+		app.emberOffline.themes.language = 'english';
+
 		!app.sassOptions
 			&& (app.sassOptions = { includePaths: [] });
 
