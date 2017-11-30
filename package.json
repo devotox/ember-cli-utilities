@@ -42,7 +42,6 @@
 	"dependencies": {
 		"babel-plugin-transform-object-rest-spread": "6.26.0",
 		"ember-cli-babel": "6.10.0",
-		"ember-cli-notifications": "4.2.1",
 		"ember-cli-sass": "7.1.1",
 		"ember-notification-hub": "devotox/ember-notification-hub",
 		"ember-offline": "devotox/ember-offline"
@@ -50,7 +49,8 @@
 	"devDependencies": {
 		"broccoli-asset-rev": "2.6.0",
 		"ember-ajax": "3.0.0",
-		"ember-cli": "2.18.0-beta.1",
+		"ember-cli": "2.17.0",
+		"ember-cli-notifications": "4.2.1",
 		"ember-cli-dependency-checker": "2.1.0",
 		"ember-cli-eslint": "4.2.2",
 		"ember-cli-fastboot": "1.1.0",
@@ -71,7 +71,7 @@
 		"ember-load-initializers": "1.0.0",
 		"ember-moment": "7.5.0",
 		"ember-resolver": "4.5.0",
-		"ember-source": "2.18.0-beta.1",
+		"ember-source": "2.17.0",
 		"eslint": "4.12.1",
 		"eslint-config-prettier": "2.9.0",
 		"eslint-plugin-ember-suave": "1.0.0",

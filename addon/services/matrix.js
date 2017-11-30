@@ -11,6 +11,8 @@ export default Service.extend({
 	matrixID: 'matrix',
 
 	run() {
+		if (!$) { return; }
+
 		$(document).on('keypress.matrix', ({ which, ctrlKey, altKey, shiftKey }) => {
 			return which === 13 // m
 				&& (ctrlKey && altKey && this.matrix())
@@ -20,12 +22,16 @@ export default Service.extend({
 	},
 
 	remove() {
+		if (!$) { return; }
+
 		$(document).off('keypress.matrix');
 	},
 
 	matrix() {
 		this.clear();
 		this.timeout();
+
+		if (!$) { return; }
 
 		let matrixID = this.get('matrixID');
 
@@ -65,6 +71,8 @@ export default Service.extend({
 	clear() {
 		let matrixInterval = this.get('matrixInterval');
 		let matrixID = this.get('matrixID');
+
+		if (!$) { return; }
 
 		clearInterval(matrixInterval);
 		$(`#${matrixID}`).remove();

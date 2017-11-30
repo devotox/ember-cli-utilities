@@ -8,7 +8,15 @@ export default Route.extend(SetupController, {
 
 	matrix: inject(),
 
+	notification: inject(),
+
 	afterRender() {
 		this.get('matrix').run();
+	},
+
+	actions: {
+		notify() {
+			this.get('notification').alert('Test Notice');
+		}
 	}
 });
