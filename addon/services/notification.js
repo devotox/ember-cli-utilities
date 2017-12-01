@@ -56,12 +56,15 @@ export default Service.extend({
 		[	// Proxy Functions
 			'hub',
 			'info',
+			'warn',
 			'alert',
 			'error',
 			'success',
 			'warning'
 		].forEach((type) => {
-			let notifyType = type === 'alert' ? 'info' : type;
+			let notifyType;
+			notifyType = type === 'alert' ? 'info' : type;
+			notifyType = type === 'warn' ? 'warning' : type;
 			this[type] = (message,  options) => this.notify(notifyType, message, options);
 		});
 	},
