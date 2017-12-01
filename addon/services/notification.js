@@ -64,7 +64,7 @@ export default Service.extend({
 		].forEach((type) => {
 			let notifyType;
 			notifyType = type === 'alert' ? 'info' : type;
-			notifyType = type === 'warn' ? 'warning' : type;
+			notifyType = notifyType === 'warn' ? 'warning' : notifyType;
 			this[type] = (message,  options) => this.notify(notifyType, message, options);
 		});
 	},

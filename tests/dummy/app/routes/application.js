@@ -15,8 +15,8 @@ export default Route.extend(SetupController, {
 	},
 
 	actions: {
-		notify() {
-			this.get('notification').alert('Test Notice');
+		notify(type = 'alert') {
+			this.get('notification')[type](`Test ${type}`);
 		}
 	}
 });

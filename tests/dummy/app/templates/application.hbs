@@ -1,6 +1,8 @@
 <h2 id="title">Ember CLI Utilities</h2>
 {{notification-container position='top-right'}}
 
+{{new-version}}
+
 <p>
 	The <a href='https://github.com/devotox/ember-cli-utilities'>README</a> lists all the utilities in this addon
 <br />
@@ -12,9 +14,16 @@
 
 <code>
 	CTRL + ALT + M - Matrix Start
-<br />
+<br/>
 	CTRL + SHIFT + M - Matrix Stop
 </code>
 
-<br />
-<button {{action 'notify'}}>Notify</button>
+<br/>
+<br/>
+
+<h3>Notifications</h3>
+{{#each (array 'alert' 'warn' 'error' 'success') as |type|}}
+	<button {{action 'notify' type}}>{{titleize type}}</button>
+{{/each}}
+
+{{notification-center}}
