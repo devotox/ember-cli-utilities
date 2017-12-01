@@ -17,6 +17,38 @@ Multiple Utility Services / Mixins to use in your ember application
 ## Installation
 * `ember install ember-cli-utilities`
 
+## Addons
+* Dependencies
+```
+	"babel-plugin-transform-async-to-generator": "6.24.1",
+	"babel-plugin-transform-object-rest-spread": "6.26.0",
+	"ember-cli-babel": "6.10.0",
+	"ember-cli-htmlbars": "2.0.3",
+	"ember-cli-htmlbars-inline-precompile": "1.0.2",
+	"ember-cli-new-version": "devotox/ember-cli-new-version",
+	"ember-cli-notifications": "4.2.1",
+	"ember-cli-sass": "7.1.1",
+	"ember-cli-string-helpers": "1.5.0",
+	"ember-composable-helpers": "2.0.3",
+	"ember-fetch": "3.4.3",
+	"ember-i18n": "5.0.2",
+	"ember-math-helpers": "2.3.0",
+	"ember-notification-hub": "devotox/ember-notification-hub",
+	"ember-offline": "devotox/ember-offline",
+	"ember-font-awesome": "4.0.0-alpha.14",
+	"ember-promise-helpers": "1.0.3",
+	"ember-reactive-helpers": "0.5.0",
+	"ember-string-helpers": "1.0.2",
+	"ember-truth-helpers": "2.0.0",
+	"normalize.css": "7.0.0"
+```
+
+## Components
+* new-version
+	- To be added to top of application.hbs and automatically alerts when an updated version of your application is available based on the package.json
+* notification-center
+	- To be added at the bottom of application.hbs and can hold notifications based on using the notification service
+
 ## Mixins
 * after-render
 	- can hook into afterRender schedule on any ember object
