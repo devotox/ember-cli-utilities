@@ -9,7 +9,8 @@ module.exports = {
 		sassOptions: {
 			includePaths: [
 				'app/styles',
-				'addon/styles'
+				'addon/styles',
+				'addon/components/'
 			]
 		},
 		babel: {
@@ -31,10 +32,49 @@ module.exports = {
 		emberOffline: {
 			themes: {
 				theme: 'chrome',
-				indicator: false,
-				language: 'english',
+				language: 'english'
+			},
+
+			// Should we check the connection status immediatly on page load.
+			checkOnLoad: true,
+
+			// Should we monitor AJAX requests to help decide if we have a connection.
+			interceptRequests: true,
+
+			// Should we store and attempt to remake requests which fail while the connection is down.
+			requests: true,
+
+			// Should deduping also take into account the content of the request.
+			deDupBody: true,
+
+			// Should we show a snake game while the connection is down to keep the user entertained?
+			// It's not included in the normal build, you should bring in js/snake.js in addition to
+			// offline.min.js.
+			game: false,
+
+			// What url should be used to test online status
+			// Defaults to /favicon.ico
+			checks: { xhr: { url: '/api/status' } },
+
+			// Should we automatically retest periodically when the connection is down
+			// set to false to disable
+			reconnect: {
+				// How many seconds should we wait before rechecking.
+				initialDelay: 10,
+
+				// How long should we wait between retries.
+				// Default (1.5 * last delay, capped at 1 hour)
+				delay: null
 			}
 		}
+	},
+
+	config() {
+		let options = Object.assign({}, this.options, this._getAddonOptions());
+		delete options.sassOptions;
+		delete options.project;
+		delete options.trees;
+		return options;
 	},
 
 	included() {
