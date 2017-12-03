@@ -36,7 +36,7 @@
 {{/loading-mask}}
 
 <h3>Loading Mask (Using Service)</h3>
-{{#each (array 'show') as |type|}}
+{{#each (array 'show' 'hide') as |type|}}
 	<button {{action 'loading' type}}>{{titleize type}}</button>
 {{/each}}
 
