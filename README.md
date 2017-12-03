@@ -55,7 +55,10 @@ Multiple Utility Services / Mixins to use in your ember application
 * new-version
 	- To be added to top of application.hbs and automatically alerts when an updated version of your application is available based on the package.json
 * notification-center
+	- used with notification service
 	- To be added at the bottom of application.hbs and can hold notifications based on using the notification service
+* notification-container
+	- To be used with notification service to warn, alert, error notifications
 * loading-mask
 	- Added anywhere as a contextual component, sets a loading mask for the whole viewport that also yields the hide, show, loading actions 
 
