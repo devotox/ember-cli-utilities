@@ -1,12 +1,8 @@
-import $ from 'jquery';
-
 const { Offline } = window;
 
 import moment from 'moment';
 
 import { Promise } from 'rsvp';
-
-import { later, cancel } from '@ember/runloop';
 
 import Service, { inject } from '@ember/service';
 
@@ -33,8 +29,6 @@ import Service, { inject } from '@ember/service';
 				callback will always run
  */
 export default Service.extend({
-
-	maxLoadingTime: 5000,
 
 	notificationCenter: inject('emberNotificationCenter'),
 
@@ -166,26 +160,5 @@ export default Service.extend({
 
 		return ['success', 'error', 'hub'].includes(type)
 			? timestamp : `${timestamp} ${message}`;
-	},
-
-	spinnerClass: 'fa fa-spinner fa-pulse fa-3x fa-fw loading-mask-spinner',
-
-	loading(add) {
-		if (!$) { return; }
-
-		let $class = this.get('spinnerClass');
-
-		let body = this.get('body') || $('body');
-
-		let spinner = this.get('spinner') || $('<i/>', { class: $class });
-
-		this.setProperties({ body, spinner });
-
-		body[`${add ? 'add' : 'remove'}Class`]('loading-mask');
-
-		cancel(this.get('loadingTimeout'));
-		add && this.set('loadingTimeout', later(() => this.loading(false), this.get('maxLoadingTime')));
-
-		return add ? body.append(spinner) : spinner.remove();
 	}
 });

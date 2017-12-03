@@ -26,4 +26,14 @@
 	<button {{action 'notify' type}}>{{titleize type}}</button>
 {{/each}}
 
+
+<br/>
+<br/>
+
+<h3>Loading Mask</h3>
+{{#loading-mask as |l|}}
+	<button {{action l.loading}}>Show Loading Mask</button>
+{{/loading-mask}}
+
+
 {{notification-center}}

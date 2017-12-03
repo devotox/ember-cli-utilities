@@ -24,11 +24,6 @@ module.exports = {
 			includePolyfill: true,
 			disableDebugTooling: true
 		},
-		'ember-font-awesome': {
-			useScss: true,
-			includeFontFiles: true,
-			includeFontAwesomeAssets: true
-		},
 		emberOffline: {
 			themes: {
 				theme: 'chrome',
