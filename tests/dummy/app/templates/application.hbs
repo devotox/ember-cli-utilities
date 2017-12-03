@@ -30,10 +30,14 @@
 <br/>
 <br/>
 
-<h3>Loading Mask</h3>
-{{#loading-mask as |l|}}
-	<button {{action l.loading}}>Show Loading Mask</button>
+<h3>Loading Mask (Block Component)</h3>
+{{#loading-mask as |mask|}}
+	<button {{action mask.loading}}>Show Loading Mask</button>
 {{/loading-mask}}
 
+<h3>Loading Mask (Using Service)</h3>
+{{#each (array 'show') as |type|}}
+	<button {{action 'loading' type}}>{{titleize type}}</button>
+{{/each}}
 
 {{notification-center}}

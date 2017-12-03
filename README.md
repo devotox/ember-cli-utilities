@@ -83,6 +83,8 @@ Multiple Utility Services / Mixins to use in your ember application
 	- easier to use fastboot store functions
 * logger
 	- Ember logger with interface to state where logs coming from
+* loading-mask
+	- works in tandem with loading mask component for programmatic access
 * matrix
 	- add matrix type screen sensation
 * navigation

@@ -8,6 +8,8 @@ export default Route.extend(SetupController, {
 
 	matrix: inject(),
 
+	loadingMask: inject(),
+
 	notification: inject(),
 
 	afterRender() {
@@ -15,6 +17,9 @@ export default Route.extend(SetupController, {
 	},
 
 	actions: {
+		loading(type = 'show') {
+			this.get('loadingMask')[type]();
+		},
 		notify(type = 'alert') {
 			this.get('notification')[type](`Test ${type}`);
 		}
