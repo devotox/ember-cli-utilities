@@ -34,19 +34,16 @@ export default Component.extend(RunMixin, {
 			.setProperties({
 				hide: this.hide.bind(this),
 				show: this.show.bind(this),
-				loading: this.loading.bind(this)
+				loadPromise: this.loadPromise.bind(this),
+				maxLoadingTime: this.get('maxLoadingTime')
 			});
 	},
 
 	loadPromise(promise) {
-		this.loading();
+		this.show();
 
 		promise && Promise.resolve(promise)
 			.then(this.hide.bind(this));
-	},
-
-	loading(show = true) {
-		show ? this.show() : this.hide();
 	},
 
 	show() {
