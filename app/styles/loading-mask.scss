@@ -9,6 +9,8 @@ We set the element we are applying our loading mask to relative
 	bottom: 0;
 	margin: 0;
 	padding: 0;
+	width: 100vw;
+	height: 100vh;
 	display: flex;
 	position: fixed;
 }
