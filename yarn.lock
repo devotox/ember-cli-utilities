@@ -2327,9 +2327,9 @@ ember-cli-dependency-checker@2.1.0:
     resolve "^1.5.0"
     semver "^5.3.0"
 
-ember-cli-eslint@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/ember-cli-eslint/-/ember-cli-eslint-4.2.2.tgz#4445b3365954e7a90d93d366761e088b0486ae79"
+ember-cli-eslint@4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-eslint/-/ember-cli-eslint-4.2.3.tgz#2844d3f5e8184f19b2d7132ba99eb0b370b55598"
   dependencies:
     broccoli-lint-eslint "^4.2.1"
     ember-cli-version-checker "^2.1.0"
@@ -2484,8 +2484,8 @@ ember-cli-new-version@devotox/ember-cli-new-version:
   resolved "https://codeload.github.com/devotox/ember-cli-new-version/tar.gz/3c86b098c77281202be298059a1f32db30be4eee"
   dependencies:
     broccoli-file-creator "^1.1.1"
-    ember-cli-babel "^6.10.0"
-    ember-cli-htmlbars "^2.0.3"
+    ember-cli-babel "^6.5.1"
+    ember-cli-htmlbars "^1.0.1"
 
 ember-cli-node-assets@^0.2.2:
   version "0.2.2"
@@ -2548,7 +2548,17 @@ ember-cli-roboto-fontface@1.0.3:
     ember-cli-node-assets "^0.2.2"
     roboto-fontface "^0.8.0"
 
-ember-cli-sass@7.1.1, ember-cli-sass@^7.1.1:
+ember-cli-sass@7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-7.1.2.tgz#5756a92a526754878b32f3be4367cfe4bf2b5514"
+  dependencies:
+    broccoli-funnel "^1.0.0"
+    broccoli-merge-trees "^1.1.0"
+    broccoli-sass-source-maps "^2.1.0"
+    ember-cli-babel "^6.6.0"
+    ember-cli-version-checker "^1.0.2"
+
+ember-cli-sass@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-7.1.1.tgz#6ae75b0756e5dbc0db61ec27843929500a38343d"
   dependencies:
@@ -6213,9 +6223,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.8.2.tgz#bff83e7fd573933c607875e5ba3abbdffb96aeb8"
+prettier@1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.9.1.tgz#41638a0d47c1efbd1b7d5a742aaa5548eab86d70"
 
 printf@^0.2.3:
   version "0.2.5"
