@@ -31,7 +31,6 @@ export default Service.extend({
 			'info',
 			'warn',
 			'debug',
-			'error',
 			'assert'
 		].forEach((type) => {
 			this[type] = (key, value, from) => this._log(type, key, value, from);
