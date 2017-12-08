@@ -2262,6 +2262,12 @@ ember-ajax@3.0.0:
   dependencies:
     ember-cli-babel "^6.0.0"
 
+ember-api-actions@devotox/ember-api-actions:
+  version "0.1.6"
+  resolved "https://codeload.github.com/devotox/ember-api-actions/tar.gz/a25f4f07673c6d2aae529291404830f1fcef4041"
+  dependencies:
+    ember-cli-babel "^6.0.0"
+
 ember-basic-dropdown@^0.33.1:
   version "0.33.10"
   resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-0.33.10.tgz#6c08f9a83e5d657144fd5b0d6a3e170ee269587e"
@@ -2280,7 +2286,7 @@ ember-basic-dropdown@^0.34.0:
     ember-native-dom-helpers "^0.5.4"
     ember-wormhole "^0.5.2"
 
-ember-cli-babel@6.10.0, ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.5, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.1.0, ember-cli-babel@^6.10.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
+ember-cli-babel@6.10.0, ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.5, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.1.0, ember-cli-babel@^6.10.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.5.1, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
   version "6.10.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.10.0.tgz#81424acd1d97fb13658168121eeb2007d6edee84"
   dependencies:
@@ -2400,7 +2406,7 @@ ember-cli-htmlbars@2.0.3, ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.3:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.1.1:
+ember-cli-htmlbars@^1.0.1, ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.1.1:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-1.3.4.tgz#461289724b34af372a6a0c4b6635819156963353"
   dependencies:
@@ -2484,8 +2490,8 @@ ember-cli-new-version@devotox/ember-cli-new-version:
   resolved "https://codeload.github.com/devotox/ember-cli-new-version/tar.gz/3c86b098c77281202be298059a1f32db30be4eee"
   dependencies:
     broccoli-file-creator "^1.1.1"
-    ember-cli-babel "^6.10.0"
-    ember-cli-htmlbars "^2.0.3"
+    ember-cli-babel "^6.5.1"
+    ember-cli-htmlbars "^1.0.1"
 
 ember-cli-node-assets@^0.2.2:
   version "0.2.2"
@@ -2866,6 +2872,16 @@ ember-getowner-polyfill@^2.0.0, ember-getowner-polyfill@^2.0.1:
     ember-cli-version-checker "^2.1.0"
     ember-factory-for-polyfill "^1.3.1"
 
+ember-hammertime@html-next/ember-hammertime:
+  version "1.2.5"
+  resolved "https://codeload.github.com/html-next/ember-hammertime/tar.gz/5938d6a28f7eb33672a0ebda6fc1d8e83ea408c1"
+  dependencies:
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^2.0.0"
+    broccoli-stew "^1.5.0"
+    ember-cli-babel "^6.8.2"
+    hammer-timejs "^1.1.0"
+
 ember-i18n@5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/ember-i18n/-/ember-i18n-5.0.2.tgz#3de05014e632b53a1b48d84d4a0d2ff261b8ebfc"
@@ -2956,6 +2972,12 @@ ember-notification-hub@devotox/ember-notification-hub:
     ember-cli-htmlbars-inline-precompile "^1.0.2"
     ember-cli-sass "^7.1.1"
     ember-localstorage-adapter "1.0.0"
+
+ember-object-update@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/ember-object-update/-/ember-object-update-0.5.0.tgz#d78f5cc3bd0e743dacc90a63e3f9394b530ef98a"
+  dependencies:
+    ember-cli-babel "^6.6.0"
 
 ember-offline@devotox/ember-offline:
   version "1.0.0"
@@ -3137,6 +3159,12 @@ ember-try@^0.2.15:
     rimraf "^2.3.2"
     rsvp "^3.0.17"
     semver "^5.1.0"
+
+ember-velocity-mixin@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ember-velocity-mixin/-/ember-velocity-mixin-0.3.0.tgz#6cf3ff0739154e008ecf5ef4d87f2eb85257feb7"
+  dependencies:
+    ember-cli-babel "^5.1.5"
 
 ember-weakmap@^3.0.0:
   version "3.1.1"
@@ -4059,6 +4087,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.4,
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
+
+hammer-timejs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/hammer-timejs/-/hammer-timejs-1.1.0.tgz#fc07ec1e4012228fe51b6a51218ec12661a32a42"
 
 hammerjs@^2.0.6, hammerjs@^2.0.8:
   version "2.0.8"

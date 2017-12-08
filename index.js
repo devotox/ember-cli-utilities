@@ -24,6 +24,38 @@ module.exports = {
 			includePolyfill: true,
 			disableDebugTooling: true
 		},
+		pace: {
+			// addon-specific options to configure theme
+			color: 'blue',
+			target: 'body',
+			theme: 'minimal',
+
+			// pace-specific options
+			// learn more on http://github.hubspot.com/pace/#configuration
+			minTime: 100,
+			ghostTime: 50,
+			catchupTime: 50,
+			easeFactor: 1.25,
+			initialRate: 0.01,
+			startOnPageLoad: true,
+			maxProgressPerFrame: 20,
+			restartOnPushState: true,
+			restartOnRequestAfter: 500,
+			elements: {
+				checkInterval: 100,
+				selectors: ['body', '.ember-view']
+			},
+			eventLag: {
+				minSamples: 10,
+				sampleCount: 3,
+				lagThreshold: 3
+			},
+			ajax: {
+				trackMethods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+				trackWebSockets: false,
+				ignoreURLs: []
+			}
+		},
 		emberOffline: {
 			themes: {
 				theme: 'chrome',
