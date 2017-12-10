@@ -24,6 +24,14 @@ module.exports = {
 			includePolyfill: true,
 			disableDebugTooling: true
 		},
+		'ember-paper': {
+			insertFontLinks: false
+		},
+		moment: {
+			includeLocales: ['en'],
+			includeTimezone: 'subset',
+			localeOutputPath: 'assets/moment-locales'
+		},
 		pace: {
 			// addon-specific options to configure theme
 			color: 'blue',
