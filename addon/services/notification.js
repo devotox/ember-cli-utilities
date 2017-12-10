@@ -30,6 +30,8 @@ import Service, { inject } from '@ember/service';
  */
 export default Service.extend({
 
+	push: inject(),
+
 	notificationCenter: inject('emberNotificationCenter'),
 
 	notificationMessages: inject('notificationMessagesService'),
@@ -53,6 +55,7 @@ export default Service.extend({
 			'warn',
 			'alert',
 			'error',
+			'system',
 			'success',
 			'warning'
 		].forEach((type) => {
@@ -109,14 +112,19 @@ export default Service.extend({
 		}
 	},
 
-	notificationMessage(type, message, options) {
+	notificationMessage(type, message, options = {}) {
 		message = !['success', 'error'].includes(type)
 			? message
 			: type === 'success'
 				? `${message} Successful!`
 				: `${message} Unsuccessful!`;
 
-		this.get('notificationMessages')[type](message, options);
+		let body = message;
+		let { icon = '', title = '', timeout = 5000 } = options;
+
+		(type === 'system' || options.system)
+			&& this.get('push').create(title, { icon, body, timeout })
+			|| this.get('notificationMessages')[type](message, options);
 	},
 
 	async callback(promise, options) {
