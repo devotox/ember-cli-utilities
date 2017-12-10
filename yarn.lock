@@ -2563,8 +2563,8 @@ ember-cli-new-version@devotox/ember-cli-new-version:
   resolved "https://codeload.github.com/devotox/ember-cli-new-version/tar.gz/3c86b098c77281202be298059a1f32db30be4eee"
   dependencies:
     broccoli-file-creator "^1.1.1"
-    ember-cli-babel "^6.5.1"
-    ember-cli-htmlbars "^1.0.1"
+    ember-cli-babel "^6.10.0"
+    ember-cli-htmlbars "^2.0.3"
 
 ember-cli-node-assets@^0.2.2:
   version "0.2.2"
