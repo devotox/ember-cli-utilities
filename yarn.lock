@@ -2563,8 +2563,8 @@ ember-cli-new-version@devotox/ember-cli-new-version:
   resolved "https://codeload.github.com/devotox/ember-cli-new-version/tar.gz/3c86b098c77281202be298059a1f32db30be4eee"
   dependencies:
     broccoli-file-creator "^1.1.1"
-    ember-cli-babel "^6.10.0"
-    ember-cli-htmlbars "^2.0.3"
+    ember-cli-babel "^6.5.1"
+    ember-cli-htmlbars "^1.0.1"
 
 ember-cli-node-assets@^0.2.2:
   version "0.2.2"
@@ -2612,9 +2612,9 @@ ember-cli-preprocess-registry@^3.1.0:
     process-relative-require "^1.0.0"
     silent-error "^1.0.0"
 
-ember-cli-pushjs@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/ember-cli-pushjs/-/ember-cli-pushjs-1.0.4.tgz#97338ddf6a092398ba9a8ea63820df3a8a934675"
+ember-cli-pushjs@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ember-cli-pushjs/-/ember-cli-pushjs-1.0.5.tgz#83e6f26cbc2daaf9c40beff5e02d6e70ca5df8a1"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-node-assets "^0.2.2"

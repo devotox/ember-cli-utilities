@@ -122,7 +122,7 @@ export default Service.extend({
 		let body = message;
 		let { icon = '', title = '', timeout = 5000 } = options;
 
-		(type === 'system' || options.system)
+		return (type === 'system' || options.system)
 			&& this.get('push').create(title, { icon, body, timeout })
 			|| this.get('notificationMessages')[type](message, options);
 	},
@@ -132,8 +132,8 @@ export default Service.extend({
 			let data = await promise;
 			options.success && options.success(data);
 		}
-		catch(e) { options.failure && options.failure(e); }
-		finally { options.callback && options.callback(); }
+		catch(e) { options.failure && options.failure(e);  }
+		finally  { options.callback && options.callback(); }
 	},
 
 	async offline(options) {
