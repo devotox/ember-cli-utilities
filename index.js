@@ -5,7 +5,7 @@ module.exports = {
 	name: 'ember-cli-utilities',
 
 	options: {
-		newVersion: false,
+		newVersion: true,
 		sassOptions: {
 			includePaths: [
 				'app/styles',
