@@ -28,9 +28,11 @@ module.exports = {
 			insertFontLinks: false
 		},
 		moment: {
-			includeLocales: ['en'],
-			includeTimezone: 'subset',
-			localeOutputPath: 'assets/moment-locales'
+			allowEmpty: true,
+			outputFormat: 'L',
+			includeLocales: ['es'],
+			includeTimezone: 'subset'
+			// localeOutputPath: 'assets/moment-locales'
 		},
 		pace: {
 			// addon-specific options to configure theme
