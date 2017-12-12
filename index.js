@@ -30,7 +30,7 @@ module.exports = {
 		moment: {
 			allowEmpty: true,
 			outputFormat: 'L',
-			includeLocales: ['es'],
+			includeLocales: ['en-gb'],
 			includeTimezone: 'subset'
 			// localeOutputPath: 'assets/moment-locales'
 		},
