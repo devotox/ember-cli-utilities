@@ -122,24 +122,28 @@ module.exports = {
 		this.import('node_modules/animate.css/animate.css');
 	},
 
-	_getAddonOptions() {
-		return this.parent && this.parent.options
-			|| this.app && this.app.options || {};
+	_findHost() {
+		let app;
+		let current = this;
+
+		// eslint-disable-next-line
+		do {
+			app = current.app || app;
+		} while (current.parent.parent && (current = current.parent));
+
+		return app || {};
+	},
+
+	_getAddonOptions(opt) {
+		let topLevelOptions = this._findHost().options;
+		let parentOptions = this.parent && this.parent.options;
+		if (!opt) { return topLevelOptions || parentOptions; }
+		return topLevelOptions && topLevelOptions[opt]
+			|| parentOptions && parentOptions[opt];
 	},
 
 	_ensureThisImport() {
 		if (!this.import) {
-			this._findHost = function findHostShim() {
-				let current = this;
-				let app;
-
-				// eslint-disable-next-line
-				do {
-					app = current.app || app;
-				} while (current.parent.parent && (current = current.parent));
-
-				return app;
-			};
 			this.import = function importShim(asset, options) {
 				let app = this._findHost();
 				app.import(asset, options);
