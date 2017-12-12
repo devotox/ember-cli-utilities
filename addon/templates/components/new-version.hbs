@@ -1,4 +1,7 @@
-{{#new-version-notifier updateInterval=3600000 as |version lastVersion reload|}}
+{{#new-version-notifier
+	updateInterval=3600000
+	versionFileName='/VERSION.txt'
+as |version lastVersion reload|}}
 	{{#if hasBlock}}
 		{{yield (hash
 					reload=reload
