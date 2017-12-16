@@ -4,7 +4,7 @@ import { run } from '@ember/runloop';
 
 import Service from '@ember/service';
 
-import { w, capitalize, camelize } from '@ember/string';
+import { w, capitalize } from '@ember/string';
 
 const { Set, Math: { round, random, floor } } = window;
 
@@ -99,7 +99,7 @@ export default Service.extend({
 			return;
 		}
 		return (
-			obj.includes(item)
+			obj.includes(item) && item
 			|| obj.find((o) => {
 				let objId = get(o, 'id');
 				let itemId = get(item, 'id');
@@ -110,55 +110,6 @@ export default Service.extend({
 				return objId === itemId;
 			})
 		);
-	},
-	getChildren(node, type) {
-		let ids = {};
-
-		let camelizeR = (child) => {
-			Object.keys(child).forEach((key) => {
-				let attr = child[key];
-				delete child[key];
-				child[camelize(key)] = attr;
-			});
-		};
-
-		let getChildren = (node) => {
-			let children = [];
-
-			let nodeChildren = get(node, 'children');
-
-			if (!nodeChildren) {
-				return children;
-			}
-
-			nodeChildren.forEach((child) => {
-				camelizeR(child);
-
-				let childId = get(child, 'id');
-
-				child = !type
-					? child
-					: this.get('store').peekRecord(type, childId)
-					&& this.get('store').peekRecord(type, childId)
-					|| this.get('store').createRecord(type, child);
-
-				if (ids[childId]) {
-					return;
-				}
-
-				ids[childId] = child;
-
-				children.push(child);
-
-				let grandChildren = getChildren(child);
-
-				children = children.concat(grandChildren);
-			});
-
-			return children;
-		};
-
-		return getChildren(node);
 	},
 	range(left, right, step = 1, inclusive = true) {
 		let range = [];
