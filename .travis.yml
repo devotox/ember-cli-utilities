@@ -7,7 +7,9 @@ addons:
   chrome: stable
 cache:
   directories:
-  - "$HOME/.npm"
+  - '$HOME/.npm'
+  - '$HOME/.cache'
+  - '$HOME/.yarn-cache'
 env:
   matrix:
   - EMBER_TRY_SCENARIO=ember-lts-2.12
@@ -25,6 +27,7 @@ matrix:
 before_install:
 - npm config set spin false
 - npm install -g npm@4
+- npm install -g yarn
 - npm --version
 - npm install -g greenkeeper-lockfile@1
 - npm install -g codecov

@@ -1,5 +1,6 @@
 /* eslint-env node */
 module.exports = {
+	framework: 'qunit',
 	test_page: [
 		'tests/index.html?hidepassed&filter=acceptance',
 		'tests/index.html?hidepassed&filter=integration',
@@ -13,14 +14,18 @@ module.exports = {
 	launch_in_dev: [
 		'Chrome'
 	],
-	browser_start_timeout: 120,
-	browser_disconnect_timeout: 120,
+	browser_start_timeout: 300,
+	browser_disconnect_timeout: 300,
 	browser_args: {
 		Chrome: [
 			'--headless',
+			'--incognito',
+			'--no-sandbox',
 			'--disable-gpu',
+			'--disable-web-security',
 			'--window-size=1440,900',
-			'--remote-debugging-port=9222'
+			'--remote-debugging-port=9222',
+			'--remote-debugging-address=0.0.0.0'
 		]
 	}
 };
