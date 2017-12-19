@@ -69,6 +69,7 @@ module.exports = {
 		emberOffline: {
 			themes: {
 				theme: 'chrome',
+				indicator: 'chrome',
 				language: 'english'
 			},
 
