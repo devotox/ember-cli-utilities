@@ -5,7 +5,7 @@ module.exports = {
 		'tests/index.html?hidepassed&filter=integration',
 		'tests/index.html?hidepassed&filter=unit'
 	],
-	parallel: -1,
+	parallel: 3,
 	disable_watching: true,
 	launch_in_ci: [
 		'Chrome'
