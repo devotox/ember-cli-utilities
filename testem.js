@@ -1,21 +1,20 @@
 /* eslint-env node */
 module.exports = {
-	framework: 'qunit',
+	parallel: 3,
+	disable_watching: true,
 	test_page: [
 		'tests/index.html?hidepassed&filter=acceptance',
 		'tests/index.html?hidepassed&filter=integration',
 		'tests/index.html?hidepassed&filter=unit'
 	],
-	parallel: 3,
-	disable_watching: true,
 	launch_in_ci: [
 		'Chrome'
 	],
 	launch_in_dev: [
 		'Chrome'
 	],
-	browser_start_timeout: 1200,
-	browser_disconnect_timeout: 1200,
+	browser_start_timeout: 60,
+	browser_disconnect_timeout: 60,
 	browser_args: {
 		Chrome: [
 			'--headless',
