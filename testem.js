@@ -1,6 +1,11 @@
 /* eslint-env node */
 module.exports = {
-	test_page: 'tests/index.html?hidepassed',
+	test_page: [
+		'tests/index.html?hidepassed&filter=acceptance',
+		'tests/index.html?hidepassed&filter=integration',
+		'tests/index.html?hidepassed&filter=unit'
+	],
+	parallel: -1,
 	disable_watching: true,
 	launch_in_ci: [
 		'Chrome'

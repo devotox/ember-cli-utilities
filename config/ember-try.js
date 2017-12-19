@@ -1,6 +1,7 @@
 /* eslint-env node */
 module.exports = {
 	useYarn: true,
+	command: 'ember exam --split=3  --parallel --random',
 	scenarios: [
 		{
 			name: 'ember-lts-2.12',
