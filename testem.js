@@ -14,8 +14,8 @@ module.exports = {
 	launch_in_dev: [
 		'Chrome'
 	],
-	browser_start_timeout: 300,
-	browser_disconnect_timeout: 300,
+	browser_start_timeout: 1200,
+	browser_disconnect_timeout: 1200,
 	browser_args: {
 		Chrome: [
 			'--headless',
