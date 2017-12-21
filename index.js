@@ -66,6 +66,11 @@ module.exports = {
 				ignoreURLs: []
 			}
 		},
+		EmberHammertime: {
+			touchActionSelectors: ['button', 'input', 'a', 'textarea'],
+			touchActionProperties:
+				'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;'
+		},
 		emberOffline: {
 			themes: {
 				theme: 'chrome',
