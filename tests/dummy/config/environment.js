@@ -12,7 +12,8 @@ module.exports = function(environment) {
 				/^.+\.surge\.sh$/,
 				/^.+\.ngrok\.io$/,
 				/^localhost(:\d+)?$/,
-				/^.+\.localtunnel\.me$/
+				/^.+\.localtunnel\.me$/,
+				/^.+\.github(.*)?\.(co\.uk|com|net|io)$/
 			]
 		},
 		EmberENV: {
