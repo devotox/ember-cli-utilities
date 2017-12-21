@@ -11,7 +11,7 @@ export function initialize(application) {
 }
 
 export default {
-	name: 'session-ability',
+	name: 'session-injection',
 	after: 'ember-simple-auth',
 	initialize
 };

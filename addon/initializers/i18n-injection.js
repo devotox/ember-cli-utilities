@@ -9,7 +9,7 @@ export function initialize(application) {
 	});
 }
 export default {
-	name: 'i18n',
+	name: 'i18n-injection',
 	after: 'ember-i18n',
 	initialize
 };
