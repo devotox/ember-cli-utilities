@@ -3041,6 +3041,13 @@ ember-hammertime@1.2.5:
     ember-cli-babel "^6.8.2"
     hammer-timejs "^1.1.0"
 
+ember-href-to@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/ember-href-to/-/ember-href-to-1.15.0.tgz#45867e43359c40d023ec2711ffdd5fda3d8f8bcb"
+  dependencies:
+    ember-cli-babel "^6.8.2"
+    ember-router-service-polyfill "^1.0.2"
+
 ember-i18n@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/ember-i18n/-/ember-i18n-5.1.0.tgz#e8b55b502d067100232c371893dd54686afe8f6d"
@@ -3154,6 +3161,13 @@ ember-offline@devotox/ember-offline:
     fastboot-transform "^0.1.2"
     offline-js "^0.7.19"
 
+ember-paper-link@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ember-paper-link/-/ember-paper-link-0.0.2.tgz#78a35ef926138f0691d519ce67946cba669450fe"
+  dependencies:
+    ember-cli-babel "^5.1.7"
+    ember-cli-htmlbars "^1.1.1"
+
 ember-paper@1.0.0-beta.4:
   version "1.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.4.tgz#ecdba9c3939b036a7de8d5bfe18ed85d4896772b"
@@ -3249,6 +3263,12 @@ ember-router-generator@^1.0.0, ember-router-generator@^1.2.3:
   dependencies:
     recast "^0.11.3"
 
+ember-router-service-polyfill@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ember-router-service-polyfill/-/ember-router-service-polyfill-1.0.2.tgz#6e5565f196fa7045cbe06a6fab861f9e766fe62a"
+  dependencies:
+    ember-cli-babel "^6.8.2"
+
 ember-runtime-enumerable-includes-polyfill@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/ember-runtime-enumerable-includes-polyfill/-/ember-runtime-enumerable-includes-polyfill-1.0.4.tgz#16a7612e347a2edf07da8b2f2f09dbfee70deba0"
@@ -3277,6 +3297,12 @@ ember-simple-auth@1.4.1:
     ember-fetch "^2.1.0 || ^3.0.0"
     ember-getowner-polyfill "^1.1.0 || ^2.0.0"
     silent-error "^1.0.0"
+
+ember-skeleton@devotox/ember-skeleton:
+  version "0.0.3"
+  resolved "https://codeload.github.com/devotox/ember-skeleton/tar.gz/7275606deac99782ff70dab89051adc385f30cf5"
+  dependencies:
+    ember-cli-babel "^6.3.0"
 
 ember-source@2.17.0:
   version "2.17.0"
