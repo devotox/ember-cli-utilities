@@ -23,31 +23,39 @@ Multiple Utility Services / Mixins to use in your ember application
 	"animate.css": "3.5.2",
 	"babel-plugin-transform-async-to-generator": "6.24.1",
 	"babel-plugin-transform-object-rest-spread": "6.26.0",
-	"ember-cli-babel": "6.10.0",
+	"ember-api-actions": "devotox/ember-api-actions",
+	"ember-can": "0.8.5",
+	"ember-cli-babel": "6.11.0",
 	"ember-cli-htmlbars": "2.0.3",
 	"ember-cli-htmlbars-inline-precompile": "1.0.2",
 	"ember-cli-localforage": "1.0.2",
 	"ember-cli-moment-shim": "3.5.0",
 	"ember-cli-new-version": "devotox/ember-cli-new-version",
 	"ember-cli-notifications": "4.2.1",
+	"ember-cli-pushjs": "1.0.5",
 	"ember-cli-roboto-fontface": "1.0.3",
-	"ember-cli-sass": "7.1.1",
+	"ember-cli-sass": "7.1.2",
 	"ember-cli-string-helpers": "1.5.0",
 	"ember-composable-helpers": "2.0.3",
-	"ember-fetch": "3.4.3",
-	"ember-i18n": "5.0.2",
+	"ember-fetch": "3.4.4",
+	"ember-hammertime": "1.2.5",
+	"ember-i18n": "5.1.0",
+	"ember-in-viewport": "2.1.1",
 	"ember-lifeline": "2.0.0",
 	"ember-material-design-icons-shim": "0.1.11",
 	"ember-math-helpers": "2.3.0",
 	"ember-moment": "7.5.0",
 	"ember-notification-hub": "devotox/ember-notification-hub",
+	"ember-object-update": "0.5.0",
 	"ember-offline": "devotox/ember-offline",
-	"ember-paper": "1.0.0-beta.3",
+	"ember-paper": "1.0.0-beta.4",
 	"ember-promise-helpers": "1.0.3",
 	"ember-reactive-helpers": "0.5.0",
 	"ember-route-action-helper": "2.0.6",
+	"ember-simple-auth": "1.4.1",
 	"ember-string-helpers": "1.0.2",
 	"ember-truth-helpers": "2.0.0",
+	"ember-velocity-mixin": "0.3.0",
 	"normalize.css": "7.0.0"
 ```
 
@@ -79,6 +87,8 @@ Multiple Utility Services / Mixins to use in your ember application
 	- set of functions to determine current device
 * ember-utils
 	- utility functions combining ember functions
+* ext-store
+	- Ember Data Store which allows slugs / offline
 * fastboot-store
 	- easier to use fastboot store functions
 * logger
@@ -97,14 +107,34 @@ Multiple Utility Services / Mixins to use in your ember application
 	- set of useful regex
 * sandbox
 	- run custom code in a sandbox without access to globals you do not specify
-* store
-	- Ember Data Store which allows slugs / offline
 * string-builder
 	- Build strings efficiently
 * translation
 	- fetch translations
 * utils
 	- utility functions
+	
+## Initializers
+* component-router
+	- injects router main into components
+* i18n-injection
+	- injects i18n service into models, routes, controllers, components
+* session-injection
+	- injects session service into routes, controllers, components
+
+## Instance Initializers
+* i18n
+	- initializes the instance with the accurate language based on a query string or the system language
+
+## Transforms
+* array
+	- transform for arrays for models
+* object
+	- transform for objects for models
+* pg-date
+	- transforms for postgres dates for models
+* uuid
+	- transforms for uuids for models
 
 #### License
 MIT license.
