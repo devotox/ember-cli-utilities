@@ -21,6 +21,12 @@
 <br/>
 <br/>
 
+<h3>Locale Select</h3>
+{{locale-select}}
+
+<br/>
+<br/>
+
 <h3>Notifications</h3>
 {{#each (array 'alert' 'warn' 'error' 'success'  'hub' 'system') as |type|}}
 	<button {{action 'notify' type}}>{{titleize type}}</button>
