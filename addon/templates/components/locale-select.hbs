@@ -1,0 +1,9 @@
+{{#paper-select
+	options=locales
+	selected=locale
+	shouldShowLabel=false
+	class='locale-select'
+	onChange=(action 'localeSelected') as |lang|
+}}
+	{{lang.label}}
+{{/paper-select}}
