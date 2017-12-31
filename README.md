@@ -82,6 +82,8 @@ Multiple Utility Services / Mixins to use in your ember application
 	- adds application controller / after-render to current Ember object
 
 ## Services
+* api
+	- generic api connector to run all HTTP methods using ember-fetch
 * alpha-iterator
 	- iterate through alphabet
 * crypto
