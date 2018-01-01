@@ -46,12 +46,13 @@ export default Component.extend(RunMixin, {
 			.then(this.hide.bind(this));
 	},
 
-	show() {
+	show(noHide) {
 		if (this.isRemoved()) { return; }
+		this.set('hidden', false);
+		if (noHide) { return; }
 
 		let mlt = this.get('maxLoadingTime');
 		this.debounceTask('hide', mlt);
-		this.set('hidden', false);
 	},
 
 	hide() {
