@@ -1,7 +1,5 @@
 import fetch from 'fetch';
 
-import { computed } from '@ember/object';
-
 import Service, { inject } from '@ember/service';
 
 export default Service.extend({

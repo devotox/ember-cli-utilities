@@ -2,7 +2,10 @@ module.exports = {
 	'root': true,
 	'parserOptions': {
 		'ecmaVersion': 2017,
-		'sourceType': 'module'
+		'sourceType': 'module',
+		'ecmaFeatures': {
+			'experimentalObjectRestSpread': true
+		}
 	},
 	'plugins': [
 		'prettier',
@@ -26,7 +29,7 @@ module.exports = {
 		'no-extra-parens': 'error',
 		// 'prettier/prettier': 'error',
 		'comma-dangle': ['error', 'never'],
-		'arrow-parens' : ['error', 'always'],
+		'arrow-parens': ['error', 'always'],
 		'no-cond-assign': ['error', 'always'],
 		'no-template-curly-in-string': 'error',
 		'object-shorthand': ['error', 'always'],
@@ -35,6 +38,6 @@ module.exports = {
 		'new-cap': ['error', { 'capIsNewExceptions': ['A'] }],
 		'no-constant-condition': ['error', { 'checkLoops': false }],
 		'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
-		'generator-star-spacing' : ['error', { 'before': false, 'after': true }]
+		'generator-star-spacing': ['error', { 'before': false, 'after': true }]
 	}
 };
