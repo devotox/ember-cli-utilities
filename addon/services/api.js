@@ -3,9 +3,15 @@ import fetch from 'fetch';
 import Service, { inject } from '@ember/service';
 
 export default Service.extend({
+
+	// To be set by extension
 	host: '',
 
 	namespace: 'api',
+
+	maxCacheTime: 5 * 60 * 1000,
+
+	// To be set by extension
 
 	cache: {},
 
@@ -18,8 +24,6 @@ export default Service.extend({
 	offline: inject(),
 
 	fastboot: inject(),
-
-	maxCacheTime: 5 * 60 * 1000,
 
 	invalidateCache(timestamp) {
 		let currentTime = +new Date();
@@ -39,8 +43,9 @@ export default Service.extend({
 		});
 	},
 
-	async request(method = 'get', api, data = {}, headers = {}, { form, contentType, responseType } = {}) {
+	async request(method = 'get', api, data = {}, headers = {}, { form, contentType, responseType, bypassCache } = {}) {
 		method = method.toLowerCase();
+		bypassCache = bypassCache || false;
 		responseType = responseType || 'json';
 		contentType = contentType || 'application/json; charset=utf-8';
 
@@ -60,14 +65,15 @@ export default Service.extend({
 			method: method.toUpperCase()
 		};
 
-		let bypassCache = false;
 		let cache = this.get('cache');
 		let crypto = this.get('crypto');
 		let fetching = this.get('fetching');
 		let cacheKey = crypto.hash(`${url}-${JSON.stringify(data)}`);
 
-		if (!bypassCache && cache[cacheKey]) {
-			let { timestamp, response } = cache[cacheKey];
+		let cachedResponse = cache[cacheKey];
+
+		if (!bypassCache && cachedResponse) {
+			let { timestamp, response } = cachedResponse;
 
 			if (!this.invalidateCache(timestamp)) {
 				return response;
@@ -78,23 +84,23 @@ export default Service.extend({
 			fetching[cacheKey] = fetching[cacheKey] || fetch(url, request);
 			this.set('fetching', fetching);
 
-			let response = (await fetching[cacheKey]).clone();
-			response = this.finish(response, responseType);
 			let timestamp = +new Date();
+			let data = (await fetching[cacheKey]).clone();
+			let response = await this.finish(data, responseType);
 
-			response.ok
-			&& (cache[cacheKey] = { response, timestamp })
-			&& this.set('cache', cache);
+			cache[cacheKey] = { response, timestamp };
+			this.set('cache', cache);
 
 			delete fetching[cacheKey];
 			return response;
 		}
 		catch(error) {
-			return this.error(error);
+			return cachedResponse
+				|| this.error(error);
 		}
 	},
 
-	finish(response, type = 'json') {
+	async finish(response, type = 'json') {
 		if (!response.ok) {
 			return this.error(response);
 		}
