@@ -27,6 +27,23 @@ module.exports = {
 		'ember-paper': {
 			insertFontLinks: false
 		},
+		'ember-cli-mirage': {
+			enabled: false
+		},
+		'ember-cli-head': {
+			suppressBrowserRender: false
+		},
+		'ember-cli-notifications': {
+			includeFontAwesome: false,
+			clearDuration: 3500,
+			autoClear: true
+		},
+		'ember-load-css': {
+			enabled: true,
+			minifyJS: {
+				enabled: true
+			}
+		},
 		moment: {
 			allowEmpty: true,
 			outputFormat: 'L',
