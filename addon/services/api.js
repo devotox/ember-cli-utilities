@@ -7,6 +7,8 @@ export default Service.extend({
 	// To be set by extension
 	host: '',
 
+	proxyURL: '',
+
 	namespace: 'api',
 
 	maxCacheTime: 5 * 60 * 1000,
@@ -43,15 +45,15 @@ export default Service.extend({
 		});
 	},
 
-	async request(method = 'get', api, data = {}, headers = {}, { form, contentType, responseType, bypassCache } = {}) {
+	async request(method = 'GET', api, data = {}, headers = {}, { form, contentType, responseType, bypassCache, useProxy } = {}) {
 		method = method.toLowerCase();
 		bypassCache = bypassCache || false;
 		responseType = responseType || 'json';
 		contentType = contentType || 'application/json; charset=utf-8';
 
-		let url = this.createUrl(api, method, data);
 		headers = this.createHeaders(headers, contentType);
 		let dataType = method !== 'get' ? 'body' : 'params';
+		let url = this.createUrl(method, api, data, useProxy);
 
 		data = method === 'get' ? data
 			: form ? new FormData(form)
@@ -139,9 +141,10 @@ export default Service.extend({
 		throw error;
 	},
 
-	createUrl(api, method, data) {
+	createUrl(method, endpoint, data, useProxy) {
 		let qs = this.params(data);
 		let host = this.get('host');
+		let proxyURL = this.get('proxyURL');
 		let namespace = this.get('namespace');
 
 		if (this.get('fastboot.isFastBoot')) {
@@ -149,15 +152,17 @@ export default Service.extend({
 			host = `https://${host}`;
 		}
 
-		if (!api) {
-			throw new Error('No API Specified');
+		if (!endpoint) {
+			throw new Error('No Endpoint Specified');
 		}
 		else if (namespace) {
-			api = api.replace(new RegExp(`^(/+)?(${namespace})?(/+)?`), '');
+			endpoint = endpoint.replace(new RegExp(`^(/+)?(${namespace})?(/+)?`), '');
 		}
 
-		let apiURL = `${host}/${namespace}/${api}`.replace(/\/$/, '');
-		return method !== 'get' ? apiURL : `${apiURL}${qs}`;
+		let url = `${host}/${namespace}/${endpoint}`.replace(/\/$/, '');
+		url = useProxy ? `${proxyURL}/${url.replace('://', ':/')}` : url;
+
+		return method !== 'get' ? url : `${url}${qs}`;
 	},
 
 	createHeaders(headers, contentType) {
