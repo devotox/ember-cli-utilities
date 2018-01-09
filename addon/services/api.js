@@ -166,10 +166,9 @@ export default Service.extend({
 	},
 
 	createHeaders(headers, contentType) {
-		headers = {
-			'Content-Type': contentType,
-			...headers
-		};
+		headers = Object.assign({
+			'Content-Type': contentType
+		}, headers);
 
 		Object.keys(headers).forEach(
 			(key) => !headers[key] && delete headers[key]
