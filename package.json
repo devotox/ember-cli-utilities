@@ -67,7 +67,7 @@
 		"ember-lifeline": "2.0.0",
 		"ember-material-design-icons-shim": "0.1.12",
 		"ember-math-helpers": "2.4.0",
-		"ember-moment": "7.5.0",
+		"ember-moment": "7.6.0",
 		"ember-notification-hub": "devotox/ember-notification-hub",
 		"ember-object-update": "0.5.0",
 		"ember-offline": "devotox/ember-offline",
