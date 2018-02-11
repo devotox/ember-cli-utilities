@@ -82,7 +82,7 @@
 		"ember-string-helpers": "1.0.2",
 		"ember-truth-helpers": "2.0.0",
 		"ember-velocity-mixin": "0.3.0",
-		"normalize.css": "7.0.0"
+		"normalize.css": "8.0.0"
 	},
 	"devDependencies": {
 		"broccoli-asset-rev": "2.6.0",
