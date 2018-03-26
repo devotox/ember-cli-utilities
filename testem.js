@@ -16,14 +16,17 @@ module.exports = {
 	browser_start_timeout: 60,
 	browser_disconnect_timeout: 60,
 	browser_args: {
-		Chrome: [
-			'--headless',
-			'--incognito',
-			'--no-sandbox',
-			'--disable-gpu',
-			'--disable-web-security',
-			'--window-size=1440,900',
-			'--remote-debugging-port=9222'
-		]
+		Chrome: {
+			mode: 'ci',
+			args: [
+				'--headless',
+				'--incognito',
+				'--no-sandbox',
+				'--disable-gpu',
+				'--disable-web-security',
+				'--window-size=1440,900',
+				'--remote-debugging-port=9222'
+			]
+		}
 	}
 };
