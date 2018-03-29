@@ -12,10 +12,10 @@ module.exports = {
 			}
 		},
 		{
-			name: 'ember-lts-2.16',
+			name: 'ember-lts-2.18',
 			npm: {
 				devDependencies: {
-					'ember-source': '~2.16.0'
+					'ember-source': '~2.18.0'
 				}
 			}
 		},
