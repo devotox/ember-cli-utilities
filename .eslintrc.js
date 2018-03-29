@@ -8,6 +8,7 @@ module.exports = {
 		}
 	},
 	'plugins': [
+		'ember',
 		'prettier',
 		'ember-suave'
 	],
@@ -39,5 +40,25 @@ module.exports = {
 		'no-constant-condition': ['error', { 'checkLoops': false }],
 		'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
 		'generator-star-spacing': ['error', { 'before': false, 'after': true }]
-	}
+	},
+	overrides: [
+		// node files
+		{
+			files: [
+				'testem.js',
+				'ember-cli-build.js',
+				'config/**/*.js',
+				'lib/*/index.js'
+			],
+			parserOptions: {
+				sourceType: 'script',
+				ecmaVersion: 2015
+			},
+			env: {
+				browser: false,
+				node: true
+			}
+		}
+	]
 };
+
