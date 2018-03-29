@@ -85,7 +85,7 @@
 		"normalize.css": "8.0.0"
 	},
 	"devDependencies": {
-		"broccoli-asset-rev": "2.6.0",
+		"broccoli-asset-rev": "2.7.0",
 		"ember-ajax": "3.1.0",
 		"ember-cli": "3.0.2",
 		"ember-cli-dependency-checker": "2.1.0",
