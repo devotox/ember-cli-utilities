@@ -1,12 +1,13 @@
-import { moduleFor, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleFor('service:translation', 'Unit | Service | translation', {
-	// Specify the other units that are required for this test.
-	needs: ['service:i18n']
+module('Unit | Service | translation', function(hooks) {
+	setupTest(hooks);
+
+	// Replace this with your real tests.
+	test('it exists', function(assert) {
+		let service = this.owner.lookup('service:translation');
+		assert.ok(service);
+	});
 });
 
-// Replace this with your real tests.
-test('it exists', function(assert) {
-	let service = this.subject();
-	assert.ok(service);
-});

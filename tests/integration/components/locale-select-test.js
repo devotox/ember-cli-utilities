@@ -1,24 +1,26 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('locale-select', 'Integration | Component | locale select', {
-	integration: true
-});
+module('Integration | Component | locale-select', function(hooks) {
+	setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-	// Set any properties with this.set('myProperty', 'value');
-	// Handle any actions with this.on('myAction', function(val) { ... });
+	test('it renders', async function(assert) {
+		// Set any properties with this.set('myProperty', 'value');
+		// Handle any actions with this.set('myAction', function(val) { ... });
 
-	this.render(hbs`{{locale-select}}`);
+		await render(hbs`{{locale-select}}`);
 
-	assert.equal(this.$().text().trim(), 'en');
+		assert.equal(this.element.textContent.trim().replace(/\s+/g, ''), 'en');
 
-	// Template block usage:
-	this.render(hbs`
-    {{#locale-select}}
-      template block text
-    {{/locale-select}}
-  `);
+		// Template block usage:
+		await render(hbs`
+      {{#locale-select}}
+        template block text
+      {{/locale-select}}
+    `);
 
-	assert.equal(this.$().text().trim(), 'en');
+		assert.equal(this.element.textContent.trim().replace(/\s+/g, ''), 'en');
+	});
 });

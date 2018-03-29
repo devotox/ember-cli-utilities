@@ -48,6 +48,7 @@ module.exports = {
 				'testem.js',
 				'ember-cli-build.js',
 				'config/**/*.js',
+				'tests/dummy/config/**/*.js',
 				'lib/*/index.js'
 			],
 			parserOptions: {

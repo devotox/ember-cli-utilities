@@ -1,12 +1,12 @@
-import { moduleFor, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleFor('transform:uuid', 'Unit | Transform | uuid', {
-	// Specify the other units that are required for this test.
-	// needs: ['serializer:foo']
-});
+module('transform:uuid', 'Unit | Transform | uuid', function(hooks) {
+	setupTest(hooks);
 
-// Replace this with your real tests.
-test('it exists', function(assert) {
-	let transform = this.subject();
-	assert.ok(transform);
+	// Replace this with your real tests.
+	test('it exists', function(assert) {
+		let transform = this.owner.lookup('transform:uuid');
+		assert.ok(transform);
+	});
 });
