@@ -24,12 +24,10 @@ export default Component.extend(RunMixin, {
 	init() {
 		this._super(...arguments);
 		this.setLoadingMaskService();
-
-		this.get('fastboot.isFastBoot')
-			&& this.set('hidden', true);
 	},
 
 	didReceiveAttrs() {
+		if (this.get('fastboot.isFastBoot')) { return this.hide(); }
 		let promise = this.get('promise');
 		this.loadPromise(promise);
 	},
