@@ -15,6 +15,8 @@ export default Component.extend(RunMixin, {
 
 	hidden: false,
 
+	fastboot: inject(),
+
 	maxLoadingTime: 5000,
 
 	loadingMask: inject(),
@@ -22,6 +24,9 @@ export default Component.extend(RunMixin, {
 	init() {
 		this._super(...arguments);
 		this.setLoadingMaskService();
+
+		this.get('fastboot.isFastBoot')
+			&& this.set('hidden', true);
 	},
 
 	didReceiveAttrs() {
