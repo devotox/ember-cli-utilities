@@ -28,6 +28,8 @@ export default Component.extend(RunMixin, {
 
 	didReceiveAttrs() {
 		if (this.get('fastboot.isFastBoot')) { return this.hide(); }
+		if (this.get('hidden')) { return; }
+
 		let promise = this.get('promise');
 		this.loadPromise(promise);
 	},
