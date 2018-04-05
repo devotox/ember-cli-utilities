@@ -59,7 +59,7 @@
     "ember-cli-string-helpers": "1.8.0",
     "ember-composable-helpers": "2.1.0",
     "ember-cryptojs-shim": "4.2.0",
-    "ember-fetch": "3.4.4",
+    "ember-fetch": "3.4.5",
     "ember-hammertime": "1.4.1",
     "ember-href-to": "1.15.1",
     "ember-i18n": "5.2.0",
