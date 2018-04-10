@@ -1,6 +1,6 @@
-import Service from '@ember/service';
-
 import { Promise } from 'rsvp';
+
+import Service from '@ember/service';
 
 const has = () => true;
 

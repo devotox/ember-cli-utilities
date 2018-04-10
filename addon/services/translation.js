@@ -1,6 +1,6 @@
-import Service, { inject } from '@ember/service';
-
 import fetch from 'fetch';
+
+import Service, { inject } from '@ember/service';
 
 export default Service.extend({
 	i18n: inject(),
