@@ -2,7 +2,11 @@ import { Promise } from 'rsvp';
 
 import { inject } from '@ember/service';
 
+import { computed } from '@ember/object';
+
 import Component from '@ember/component';
+
+import { getOwner } from '@ember/application';
 
 import RunMixin from 'ember-lifeline/mixins/run';
 
@@ -15,11 +19,13 @@ export default Component.extend(RunMixin, {
 
 	hidden: false,
 
-	fastboot: inject(),
-
 	maxLoadingTime: 5000,
 
 	loadingMask: inject(),
+
+	fastboot: computed(function() {
+		return getOwner(this).lookup('service:fastboot');
+	}),
 
 	init() {
 		this._super(...arguments);
