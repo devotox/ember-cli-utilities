@@ -1,8 +1,8 @@
 /* eslint max-len: ["error", { "ignoreRegExpLiterals": true, "code": 140 }]*/
 
-import Service from '@ember/service';
-
 import { Promise } from 'rsvp';
+
+import Service from '@ember/service';
 
 const {
 	URL,

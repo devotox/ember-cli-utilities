@@ -1,16 +1,20 @@
 import { computed } from '@ember/object';
 
+import { getOwner } from '@ember/application';
+
 import Service, { inject } from '@ember/service';
 
 export default Service.extend({
-
-	fastboot: inject(),
 
 	globalStore: 'globalStore',
 
 	shoebox: computed.alias('fastboot.shoebox'),
 
 	isFastBoot: computed.alias('fastboot.isFastBoot'),
+
+	fastboot: computed(function() {
+		return getOwner(this).lookup('service:fastboot');
+	}),
 
 	createStore(storeName, store = {}) {
 		this.get('isFastBoot')

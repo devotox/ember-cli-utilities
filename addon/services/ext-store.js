@@ -12,6 +12,8 @@ import { inject } from '@ember/service';
 
 import ArrayProxy from '@ember/array/proxy';
 
+import { getOwner } from '@ember/application';
+
 import { get, set, computed } from '@ember/object';
 
 import MapWithDefault from '@ember/map/with-default';
@@ -27,9 +29,11 @@ export default Store.extend({
 
 	crypto: inject(),
 
-	fastboot: inject(),
-
 	queryCacheResults: {},
+
+	fastboot: computed(function() {
+		return getOwner(this).lookup('service:fastboot');
+	}),
 
 	init() {
 		this._super(...arguments);

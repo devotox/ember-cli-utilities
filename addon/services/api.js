@@ -1,5 +1,9 @@
 import fetch from 'fetch';
 
+import { computed } from '@ember/object';
+
+import { getOwner } from '@ember/application';
+
 import Service, { inject } from '@ember/service';
 
 export default Service.extend({
@@ -25,7 +29,9 @@ export default Service.extend({
 
 	offline: inject(),
 
-	fastboot: inject(),
+	fastboot: computed(function() {
+		return getOwner(this).lookup('service:fastboot');
+	}),
 
 	invalidateCache(timestamp) {
 		let currentTime = +new Date();
