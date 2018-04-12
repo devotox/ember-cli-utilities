@@ -1,5 +1,3 @@
-# ember-cli-utilities
-
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-utilities.svg)](http://emberobserver.com/addons/ember-cli-utilities)
 [![Build Status](https://travis-ci.org/devotox/ember-cli-utilities.svg)](http://travis-ci.org/devotox/ember-cli-utilities)
 [![Coverage Status](https://codecov.io/gh/devotox/ember-cli-utilities/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-utilities)
@@ -9,13 +7,23 @@
 [![DevDependency Status](https://david-dm.org/poetic/ember-cli-utilities/dev-status.svg)](https://david-dm.org/poetic/ember-cli-utilities#info=devDependencies)
 [![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-utilities.svg)](https://greenkeeper.io/)
 
-## Description
+ember-cli-utilities
+==============================================================================
+
 Multiple Utility Services / Mixins to use in your ember application
 
 [DEMO](http://devotox.github.io/ember-cli-utilities)
 
-## Installation
-* `ember install ember-cli-utilities`
+Installation
+------------------------------------------------------------------------------
+
+```
+ember install ember-cli-utilities
+```
+
+
+Usage
+------------------------------------------------------------------------------
 
 ## Addons
 * Dependencies
@@ -66,80 +74,109 @@ Multiple Utility Services / Mixins to use in your ember application
 
 ## Components
 * new-version
-	- To be added to top of application.hbs and automatically alerts when an updated version of your application is available based on the package.json
+    - To be added to top of application.hbs and automatically alerts when an updated version of your application is available based on the package.json
 * notification-center
-	- used with notification service
-	- To be added at the bottom of application.hbs and can hold notifications based on using the notification service
+    - used with notification service
+    - To be added at the bottom of application.hbs and can hold notifications based on using the notification service
 * notification-container
-	- To be used with notification service to warn, alert, error notifications
+    - To be used with notification service to warn, alert, error notifications
 * loading-mask
-	- Added anywhere as a contextual component, sets a loading mask for the whole viewport that also yields the hide, show, loading actions 
+    - Added anywhere as a contextual component, sets a loading mask for the whole viewport that also yields the hide, show, loading actions 
 
 ## Mixins
 * after-render
-	- can hook into afterRender schedule on any ember object
+    - can hook into afterRender schedule on any ember object
 * reset-scroll
-	- scrolls back to top of window on route change
+    - scrolls back to top of window on route change
 * setup-controller
-	- adds application controller / after-render to current Ember object
+    - adds application controller / after-render to current Ember object
 
 ## Services
 * api
-	- generic api connector to run all HTTP methods using ember-fetch
+    - generic api connector to run all HTTP methods using ember-fetch
 * alpha-iterator
-	- iterate through alphabet
+    - iterate through alphabet
 * crypto
-	- set of useable crypto functions
+    - set of useable crypto functions
 * device
-	- set of functions to determine current device
+    - set of functions to determine current device
 * ember-utils
-	- utility functions combining ember functions
+    - utility functions combining ember functions
 * ext-store
-	- Ember Data Store which allows slugs / offline
+    - Ember Data Store which allows slugs / offline
 * fastboot-store
-	- easier to use fastboot store functions
+    - easier to use fastboot store functions
 * loading-mask
-	- works in tandem with loading mask component for programmatic access
+    - works in tandem with loading mask component for programmatic access
 * matrix
-	- add matrix type screen sensation
+    - add matrix type screen sensation
 * navigation
-	- navigation shell
+    - navigation shell
 * notification
-	- notification hub / notification center mashup
+    - notification hub / notification center mashup
 * printer
-	- TODO: allow arbitrary printing of any ember object
+    - TODO: allow arbitrary printing of any ember object
 * regex
-	- set of useful regex
+    - set of useful regex
 * sandbox
-	- run custom code in a sandbox without access to globals you do not specify
+    - run custom code in a sandbox without access to globals you do not specify
 * string-builder
-	- Build strings efficiently
+    - Build strings efficiently
 * translation
-	- fetch translations
+    - fetch translations
 * utils
-	- utility functions
-	
+    - utility functions
+    
 ## Initializers
 * component-router
-	- injects router main into components
+    - injects router main into components
 * i18n-injection
-	- injects i18n service into models, routes, controllers, components
+    - injects i18n service into models, routes, controllers, components
 * session-injection
-	- injects session service into routes, controllers, components
+    - injects session service into routes, controllers, components
 
 ## Instance Initializers
 * i18n
-	- initializes the instance with the accurate language based on a query string or the system language
+    - initializes the instance with the accurate language based on a query string or the system language
 
 ## Transforms
 * array
-	- transform for arrays for models
+    - transform for arrays for models
 * object
-	- transform for objects for models
+    - transform for objects for models
 * pg-date
-	- transforms for postgres dates for models
+    - transforms for postgres dates for models
 * uuid
-	- transforms for uuids for models
+    - transforms for uuids for models
 
-#### License
-MIT license.
+Contributing
+------------------------------------------------------------------------------
+
+### Installation
+
+* `git clone <repository-url>`
+* `cd ember-cli-utilities`
+* `yarn install`
+
+### Linting
+
+* `yarn lint:js`
+* `yarn lint:js --fix`
+
+### Running tests
+
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
+
+### Running the dummy application
+
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

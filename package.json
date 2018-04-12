@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-utilities",
-  "version": "2.3.9",
+  "version": "2.4.0",
   "description": "Utility Components / Services / Mixins for Ember",
   "keywords": [
     "ember-addon",
@@ -28,6 +28,7 @@
     "release-major": "npm version major",
     "postversion": "git push && git push --tags",
     "deploy:release": "npm run release; npm run deploy",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "deploy:setup": "git add -A; git commit -m \"Added ember-cli-github-pages addon\"; git checkout --orphan gh-pages; rm -rf `bash -c \"ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|([.]{1,2}/?$)'\"`; touch .gitkeep; git add -A; git commit -m \"initial gh-pages commit\"; git checkout master",
     "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push origin gh-pages; git checkout master",
     "format": "find app addon config tests -name '*.js' -type f | xargs prettier --write | xargs eslint --fix"
