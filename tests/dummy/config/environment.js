@@ -1,3 +1,4 @@
+/* eslint-env node */
 'use strict';
 
 module.exports = function(environment) {
@@ -6,6 +7,15 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    fastboot: {
+      hostWhitelist: [
+        /^.+\.surge\.sh$/,
+        /^.+\.ngrok\.io$/,
+        /^localhost(:\d+)?$/,
+        /^.+\.localtunnel\.me$/,
+        /^.+\.github(.*)?\.(co\.uk|com|net|io)$/
+      ]
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -44,6 +54,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.locationType = 'hash';
+    ENV.rootURL = '/ember-cli-utilities/';
     // here you can enable a production-specific feature
   }
 
