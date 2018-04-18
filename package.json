@@ -55,7 +55,7 @@
     "ember-cli-new-version": "devotox/ember-cli-new-version",
     "ember-cli-notifications": "4.2.1",
     "ember-cli-pushjs": "2.0.3",
-    "ember-cli-roboto-fontface": "1.0.3",
+    "ember-cli-roboto-fontface": "2.0.1",
     "ember-cli-sass": "7.1.7",
     "ember-cli-string-helpers": "1.8.0",
     "ember-composable-helpers": "2.1.0",
