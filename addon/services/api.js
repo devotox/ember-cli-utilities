@@ -40,12 +40,13 @@ export default Service.extend({
 	},
 
 	init() {
+    this._super(...arguments);
+
 		[
 			'get', 'put', 'post',
 			'head', 'patch', 'delete'
 		].forEach((method) => {
 			let self = this;
-      this._super(...arguments);
 
 			this[method === 'get' && 'fetch' || method] = function() {
 				return self.request(method, ...arguments);
