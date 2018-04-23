@@ -1,4 +1,3 @@
-/* eslint-env node */
 module.exports = {
   disable_watching: true,
   test_page: [

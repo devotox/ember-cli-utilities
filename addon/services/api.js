@@ -45,6 +45,8 @@ export default Service.extend({
 			'head', 'patch', 'delete'
 		].forEach((method) => {
 			let self = this;
+      this._super(...arguments);
+
 			this[method === 'get' && 'fetch' || method] = function() {
 				return self.request(method, ...arguments);
 			};
