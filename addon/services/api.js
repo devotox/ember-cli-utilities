@@ -40,7 +40,7 @@ export default Service.extend({
 	},
 
 	init() {
-    this._super(...arguments);
+		this._super(...arguments);
 
 		[
 			'get', 'put', 'post',
