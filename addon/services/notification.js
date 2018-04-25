@@ -34,11 +34,11 @@ export default Service.extend({
 
 	notificationCenter: inject('emberNotificationCenter'),
 
-	notificationMessages: inject('notificationMessagesService'),
+	notificationMessages: inject('notification-messages'),
 
 	init() {
 		this._super(...arguments);
-		this.defaults();
+		// this.defaults();
 		this.setup();
 	},
 
