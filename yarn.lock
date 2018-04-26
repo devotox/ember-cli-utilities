@@ -2919,9 +2919,9 @@ ember-cli-string-helpers@1.2.1:
     broccoli-funnel "^1.0.1"
     ember-cli-babel "^5.1.7"
 
-ember-cli-string-helpers@1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-string-helpers/-/ember-cli-string-helpers-1.8.0.tgz#48002211d306648c784630fee99fb2762747d30c"
+ember-cli-string-helpers@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-string-helpers/-/ember-cli-string-helpers-1.8.1.tgz#11f8eb1746e73d72f29a4229e0edb42085666a67"
   dependencies:
     broccoli-funnel "^1.0.1"
     ember-cli-babel "^6.6.0"
@@ -3518,9 +3518,9 @@ ember-source-channel-url@1.1.0:
   dependencies:
     got "^8.0.1"
 
-ember-source@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.1.0.tgz#21902747801c747b615f60168712968db3b433fc"
+ember-source@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.1.1.tgz#9cf95e8a6d7568d60b8eda2aeda17ac8944e654b"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
