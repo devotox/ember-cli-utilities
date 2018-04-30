@@ -106,6 +106,8 @@ Usage
     - Ember Data Store which allows slugs / offline
 * fastboot-store
     - easier to use fastboot store functions
+* logger
+    - Ember logger with interface to state where logs coming from
 * loading-mask
     - works in tandem with loading mask component for programmatic access
 * matrix
