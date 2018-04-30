@@ -3145,7 +3145,7 @@ ember-css-transitions@0.1.10:
   dependencies:
     ember-cli-babel "^5.1.6"
 
-ember-data@^3.1.1:
+ember-data@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.1.1.tgz#8c17c97a4932b0a0a405cc3e38c43140880366d2"
   dependencies:
