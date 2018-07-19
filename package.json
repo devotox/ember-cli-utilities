@@ -45,7 +45,7 @@
     "babel-plugin-transform-async-to-generator": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "ember-api-actions": "devotox/ember-api-actions",
-    "ember-can": "1.0.0",
+    "ember-can": "1.1.1",
     "ember-cli-head": "0.4.1",
     "ember-cli-babel": "6.14.1",
     "ember-cli-htmlbars": "2.0.3",
