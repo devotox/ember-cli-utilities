@@ -1,7 +1,5 @@
 import DS from 'ember-data';
 
-import Map from '@ember/map';
-
 import { Promise } from 'rsvp';
 
 import { run } from '@ember/runloop';
@@ -15,8 +13,6 @@ import ArrayProxy from '@ember/array/proxy';
 import { getOwner } from '@ember/application';
 
 import { get, set, computed } from '@ember/object';
-
-import MapWithDefault from '@ember/map/with-default';
 
 const { Offline } = window;
 
@@ -38,9 +34,7 @@ export default Store.extend({
 
 		debug('[Store]', '!!! USING CUSTOM STORE !!!');
 
-		this.set('modelSlugCache', MapWithDefault.create({
-			defaultValue() { return Map.create(); }
-		}));
+		this.set('modelSlugCache', new Map());
 
 		this.set('queryCache', ArrayProxy.extend({
 			meta: computed.alias('content.meta')
@@ -106,8 +100,10 @@ export default Store.extend({
 		});
 	},
 	findRecord(modelName, idOrSlug, ...args) {
-		let slugCache = this.get('modelSlugCache').get(modelName);
-		let id = slugCache.get(`${idOrSlug}`);
+		let modelSlugCache = this.get('modelSlugCache');
+		let slugCache = modelSlugCache.get(modelName);
+		let id = slugCache && slugCache.get(`${idOrSlug}`);
+		!slugCache && modelSlugCache.set(modelName, new Map());
 
 		return id
 			? this._super(modelName, id, ...args)

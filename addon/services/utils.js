@@ -49,6 +49,10 @@ export default Service.extend({
 			.map(capitalize)
 			.join(' ');
 	},
+	cleanObject(obj = {}) {
+		Object.keys(obj).forEach((key) => (obj[key] === null || typeof obj[key] === 'undefined') && delete obj[key]);
+		return obj;
+	},
 	stringToBoolean(value) {
 		value
 			= value

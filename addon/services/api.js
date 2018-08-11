@@ -33,6 +33,10 @@ export default Service.extend({
 		return getOwner(this).lookup('service:fastboot');
 	}),
 
+	destroyed() {
+		return this.get('isDestroyed') || this.get('isDestroying');
+	},
+
 	invalidateCache(timestamp) {
 		let currentTime = +new Date();
 		let maxCacheTime = this.get('maxCacheTime');
@@ -99,9 +103,10 @@ export default Service.extend({
 			let data = (await fetching[cacheKey]).clone();
 			let response = await this.finish(data, responseType);
 
-			cache[cacheKey] = { response, timestamp };
-			this.set('cache', cache);
-
+			if (!this.destroyed()) {
+				cache[cacheKey] = { response, timestamp };
+				this.set('cache', cache);
+			}
 			delete fetching[cacheKey];
 			return response;
 		}
@@ -156,7 +161,7 @@ export default Service.extend({
 		let proxyURL = this.get('proxyURL');
 		let namespace = this.get('namespace');
 
-		if (this.get('fastboot.isFastBoot')) {
+		if (!host && this.get('fastboot.isFastBoot')) {
 			host = this.get('fastboot.request.host');
 			host = `https://${host}`;
 		}
