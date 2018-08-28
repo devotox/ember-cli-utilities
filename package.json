@@ -46,7 +46,7 @@
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "ember-api-actions": "devotox/ember-api-actions",
     "ember-can": "1.1.1",
-    "ember-cli-babel": "6.16.0",
+    "ember-cli-babel": "6.17.0",
     "ember-cli-head": "0.4.1",
     "ember-cli-htmlbars": "3.0.0",
     "ember-cli-htmlbars-inline-precompile": "1.0.3",
