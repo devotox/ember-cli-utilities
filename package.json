@@ -93,7 +93,7 @@
     "ember-cli-eslint": "4.2.3",
     "ember-cli-github-pages": "devotox/ember-cli-github-pages#patch-1",
     "ember-cli-inject-live-reload": "1.8.2",
-    "ember-cli-qunit": "4.3.2",
+    "ember-cli-qunit": "4.4.0",
     "ember-cli-shims": "1.2.0",
     "ember-cli-sri": "2.1.1",
     "ember-cli-uglify": "2.1.0",
