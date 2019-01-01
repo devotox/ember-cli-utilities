@@ -54,7 +54,7 @@
     "ember-cli-moment-shim": "3.7.1",
     "ember-cli-new-version": "devotox/ember-cli-new-version",
     "ember-cli-notifications": "4.3.3",
-    "ember-cli-pushjs": "2.0.4",
+    "ember-cli-pushjs": "2.0.6",
     "ember-cli-roboto-fontface": "2.0.2",
     "ember-cli-sass": "7.1.7",
     "ember-cli-string-helpers": "1.9.0",
