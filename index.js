@@ -1,8 +1,9 @@
-/* eslint-env node */
 'use strict';
 
+const { name } = require('./package');
+
 module.exports = {
-	name: 'ember-cli-utilities',
+    name,
 
 	options: {
 		newVersion: true,
