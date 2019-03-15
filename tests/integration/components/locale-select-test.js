@@ -12,7 +12,7 @@ module('Integration | Component | locale-select', function(hooks) {
 
 		await render(hbs`{{locale-select}}`);
 
-		assert.equal(this.element.textContent.trim().replace(/\s+/g, ''), '');
+		assert.equal(this.element.textContent.trim().replace(/\s+/g, ''), 'English(US)');
 
 		// Template block usage:
 		await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | locale-select', function(hooks) {
       {{/locale-select}}
     `);
 
-		assert.equal(this.element.textContent.trim().replace(/\s+/g, ''), '');
+		assert.equal(this.element.textContent.trim().replace(/\s+/g, ''), 'English(US)');
 	});
 });
