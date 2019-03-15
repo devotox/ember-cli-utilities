@@ -9,30 +9,36 @@ import layout from '../templates/components/locale-select';
 export default Component.extend({
 	layout,
 
-	i18n: inject(),
+	intl: inject(),
 
-	locales: computed('i18n.locales', function() {
-		let i18n = this.get('i18n');
-		let locale = i18n.get('locale');
-		let locales = i18n.get('locales');
-		locales && locales.length || (locales = [locale]);
+	init() {
+		this._super();
+
+		let intl = this.get('intl');
+		let locales = this.get('locales');
+		let locale = intl.get('primaryLocale');
+
+		let selectedLocale = locales.find(({ id }) => locale === id);
+
+		this.actions.localeSelected.call(this, selectedLocale);
+	},
+
+	locales: computed('intl.locales', function() {
+		let intl = this.get('intl');
+		let locales = intl.get('locales');
 
 		return locales.map((id) => {
-			let label = i18n.t(`components.locale-select.locale.${id}`);
+			let label = intl.t(`components.locale-select.locale.${id}`);
 			label.includes('Missing') && (label = id);
-			let localeData = { id, label };
-
-			locale === id
-				&& this.set('locale', localeData);
-
-			return localeData;
+			return { id, label };
 		});
-	}).property('i18n.locale'), // Needed so the label changes when the language changes
+	}).property('intl.locale'), // Needed so the label changes when the language changes
 
 	actions: {
-		localeSelected({ id }) {
-			let i18n = this.get('i18n');
-			i18n.set('locale', id);
+		localeSelected(locale) {
+			this.set('locale', locale);
+			let intl = this.get('intl');
+			intl.set('locale', locale.id);
 		}
 	}
 });

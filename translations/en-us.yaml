@@ -1,0 +1,5 @@
+components:
+  locale-select:
+    locale:
+      en: English (GB)
+      en-us: English (US)

@@ -1,20 +1,20 @@
-<div class={{concat 'loading-mask' (if hidden ' hide')}}>
-	<div class='load-indicator-wrapper'>
-		<div class='load-indicator'>
-			<div class='indicator'></div>
-			<div class='indicator'></div>
-			<div class='indicator'></div>
-			<div class='indicator'></div>
-			<div class='indicator'></div>
-		</div>
-	</div>
+<div class={{concat "loading-mask" (if hidden " hide")}}>
+  <div class="load-indicator-wrapper">
+    <div class="load-indicator">
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+    </div>
+  </div>
 </div>
 
 
 {{yield (hash
-	promise=promise
-	hide=(action hide)
-	show=(action show)
-	maxLoadingTime=maxLoadingTime
-	loadPromise=(action loadPromise)
+  promise=promise
+  hide=(action hide)
+  show=(action show)
+  maxLoadingTime=maxLoadingTime
+  loadPromise=(action loadPromise)
 )}}

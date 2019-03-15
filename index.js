@@ -3,10 +3,14 @@
 const { name } = require('./package');
 
 module.exports = {
-    name,
+	name,
 
 	options: {
-		newVersion: true,
+		newVersion: {
+			enabled: true,
+			useAppVersion: true,
+			fileName: 'version.txt'
+		},
 		sassOptions: {
 			includePaths: [
 				'app/styles',
@@ -16,8 +20,11 @@ module.exports = {
 		},
 		babel: {
 			plugins: [
-				'transform-object-rest-spread',
-				'transform-async-to-generator'
+				'@babel/plugin-proposal-optional-chaining',
+				'@babel/plugin-proposal-object-rest-spread',
+				'@babel/plugin-transform-async-to-generator',
+				'@babel/plugin-proposal-export-namespace-from',
+				'@babel/plugin-proposal-nullish-coalescing-operator'
 			]
 		},
 		'ember-cli-babel': {
