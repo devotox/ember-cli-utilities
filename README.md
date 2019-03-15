@@ -33,48 +33,50 @@ Usage
 ## Addons
 * Dependencies
 ```
-    "animate.css": "3.6.1",
-    "babel-plugin-transform-async-to-generator": "6.24.1",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "ember-api-actions": "devotox/ember-api-actions",
-    "ember-can": "1.0.0",
-    "ember-cli-babel": "6.12.0",
-    "ember-cli-head": "0.4.0",
-    "ember-cli-htmlbars": "2.0.3",
-    "ember-cli-htmlbars-inline-precompile": "1.0.2",
-    "ember-cli-localforage": "1.0.2",
-    "ember-cli-moment-shim": "3.6.0",
-    "ember-cli-new-version": "devotox/ember-cli-new-version",
-    "ember-cli-notifications": "4.2.1",
-    "ember-cli-pushjs": "2.0.2",
-    "ember-cli-roboto-fontface": "1.0.3",
-    "ember-cli-sass": "7.1.7",
-    "ember-cli-string-helpers": "1.8.0",
-    "ember-composable-helpers": "2.1.0",
-    "ember-cryptojs-shim": "4.2.0",
-    "ember-fetch": "3.4.5",
-    "ember-hammertime": "1.4.1",
-    "ember-href-to": "1.15.1",
-    "ember-i18n": "5.2.1",
-    "ember-in-viewport": "3.0.1",
-    "ember-lifeline": "3.0.1",
-    "ember-material-design-icons-shim": "0.1.12",
-    "ember-math-helpers": "2.4.1",
-    "ember-moment": "7.6.0",
+    "@babel/core": "7.3.4",
+    "@babel/plugin-proposal-export-namespace-from": "7.2.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.4",
+    "@babel/plugin-proposal-optional-chaining": "7.2.0",
+    "@babel/plugin-transform-async-to-generator": "7.3.4",
+    "animate.css": "3.7.0",
+    "ember-api-actions": "0.2.6",
+    "ember-can": "1.1.1",
+    "ember-cli-babel": "7.6.0",
+    "ember-cli-head": "0.4.1",
+    "ember-cli-htmlbars": "3.0.1",
+    "ember-cli-htmlbars-inline-precompile": "2.1.0",
+    "ember-cli-localforage": "2.0.6",
+    "ember-cli-moment-shim": "3.7.1",
+    "ember-cli-new-version": "1.4.3",
+    "ember-cli-notifications": "4.3.3",
+    "ember-cli-pushjs": "2.0.8",
+    "ember-cli-roboto-fontface": "2.0.5",
+    "ember-cli-sass": "10.0.0",
+    "ember-cli-string-helpers": "2.0.0",
+    "ember-composable-helpers": "2.2.0",
+    "ember-cryptojs-shim": "4.3.0",
+    "ember-fetch": "6.5.0",
+    "ember-hammertime": "1.6.0",
+    "ember-href-to": "2.0.1",
+    "ember-in-viewport": "3.2.2",
+    "ember-lifeline": "4.1.1",
+    "ember-material-design-icons-shim": "0.1.13",
+    "ember-math-helpers": "2.10.0",
+    "ember-moment": "7.8.1",
     "ember-notification-hub": "devotox/ember-notification-hub",
     "ember-object-update": "0.5.1",
     "ember-offline": "devotox/ember-offline",
-    "ember-page-title": "4.0.3",
-    "ember-paper": "1.0.0-beta.4",
+    "ember-page-title": "5.0.1",
+    "ember-paper": "1.0.0-beta.24",
     "ember-promise-helpers": "1.0.6",
-    "ember-reactive-helpers": "0.5.0",
-    "ember-route-action-helper": "2.0.6",
-    "ember-simple-auth": "1.6.0",
+    "ember-reactive-helpers": "devotox/ember-reactive-helpers",
+    "ember-route-action-helper": "2.0.7",
+    "ember-simple-auth": "1.8.2",
     "ember-skeleton": "devotox/ember-skeleton",
-    "ember-string-helpers": "1.0.2",
-    "ember-truth-helpers": "2.0.0",
-    "ember-velocity-mixin": "0.3.0",
-    "normalize.css": "8.0.0"
+    "ember-string-helpers": "devotox/ember-string-helpers",
+    "ember-truth-helpers": "2.1.0",
+    "normalize.css": "8.0.1"
 ```
 
 ## Components
@@ -137,13 +139,11 @@ Usage
 ## Initializers
 * component-router
     - injects router main into components
-* i18n-injection
-    - injects i18n service into models, routes, controllers, components
 * session-injection
     - injects session service into routes, controllers, components
 
 ## Instance Initializers
-* i18n
+* intl
     - initializes the instance with the accurate language based on a query string or the system language
 
 ## Transforms
