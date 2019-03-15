@@ -46,6 +46,7 @@
     ]
   },
   "dependencies": {
+    "@babel/core": "7.3.4",
     "@babel/plugin-proposal-export-namespace-from": "7.2.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.2.0",
     "@babel/plugin-proposal-object-rest-spread": "7.3.4",
@@ -113,6 +114,7 @@
     "ember-source": "3.8.0",
     "ember-source-channel-url": "1.1.0",
     "ember-try": "1.1.0",
+    "eslint": "5.15.2",
     "eslint-plugin-ember": "6.2.0",
     "eslint-plugin-node": "8.0.1",
     "loader.js": "4.7.0",
