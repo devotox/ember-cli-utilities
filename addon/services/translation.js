@@ -3,7 +3,7 @@ import fetch from 'fetch';
 import Service, { inject } from '@ember/service';
 
 export default Service.extend({
-	i18n: inject(),
+	intl: inject(),
 
 	path: 'api/translations.json',
 
@@ -14,10 +14,10 @@ export default Service.extend({
 	},
 
 	addTranslations(json) {
-		let i18n = this.get('i18n');
+		let intl = this.get('intl');
 
 		Object.keys(json).forEach((locale) => {
-			i18n.addTranslations(locale, json[locale]);
+			intl.addTranslations(locale, json[locale]);
 		});
 	}
 });

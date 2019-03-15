@@ -29,22 +29,22 @@ export default Service.extend({
 
 	open: false,
 
-	i18n: inject(),
+	intl: inject(),
 
 	title: 'Default',
 
 	image: 'favicon.ico',
 
 	nav: computed('links', function() {
-		let i18n = this.get('i18n');
+		let intl = this.get('intl');
 
 		let links = this.get('links');
 
 		return links.map((link) => {
-			link.name =  i18n.t(`navigation.${link.route}`);
+			link.name =  intl.t(`navigation.${link.route}`);
 			return link;
 		});
-	}).property('i18n.locale'),
+	}).property('intl.locale'),
 
 	init() {
 		this._super(...arguments);
