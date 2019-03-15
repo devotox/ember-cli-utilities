@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-utilities",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "Utility Components / Services / Mixins for Ember",
   "keywords": [
     "ember-addon",
@@ -32,6 +32,7 @@
     "release-major": "npm version major",
     "postversion": "git push && git push --tags",
     "deploy:release": "npm run release; npm run deploy",
+    "preversion": "npm run lint:hbs && npm run lint:js && npm test",
     "format": "find app addon config tests -name '*.js' -type f | xargs prettier --write | xargs eslint --fix",
     "nearley": "nearleyc app/grammar/index.ne -o app/grammar/index.js; node app/grammar/parser.js; rm -rf app/grammar/index.js",
     "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push origin gh-pages; git checkout master",
