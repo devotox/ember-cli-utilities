@@ -36,7 +36,10 @@ export default Component.extend({
 
 	actions: {
 		localeSelected(locale) {
+			if(!locale || !locale.id) { return; }
+
 			this.set('locale', locale);
+
 			let intl = this.get('intl');
 			intl.set('locale', locale.id);
 		}
