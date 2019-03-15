@@ -78,7 +78,7 @@
     "ember-material-design-icons-shim": "0.1.13",
     "ember-math-helpers": "2.10.0",
     "ember-moment": "7.8.1",
-    "ember-notification-hub": "devotox/ember-notification-hub",
+    "ember-notification-hub": "devotox/ember-notification-hub#915ee1d",
     "ember-object-update": "0.5.1",
     "ember-offline": "devotox/ember-offline",
     "ember-page-title": "5.0.1",
