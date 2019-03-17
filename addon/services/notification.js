@@ -168,5 +168,10 @@ export default Service.extend({
 
 		return ['success', 'error', 'hub'].includes(type)
 			? timestamp : `${timestamp} ${message}`;
+	},
+
+	clear() {
+		this.get('push').clear();
+		this.get('notificationMessages').clearAll();
 	}
 });
