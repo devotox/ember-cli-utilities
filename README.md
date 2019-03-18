@@ -135,7 +135,12 @@ Usage
     - fetch translations
 * utils
     - utility functions
-    
+
+## Helpers
+* disable-bubbling
+    - Disable bubbling of closure actions
+* json-parse 
+    - Parse JSON string
 ## Initializers
 * component-router
     - injects router main into components
