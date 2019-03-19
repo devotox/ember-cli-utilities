@@ -2,11 +2,13 @@ import { helper } from '@ember/component/helper';
 
 export function disableBubbling([action]/*, hash*/) {
 	return function(event) {
-		event = event.originalEvent || event;
-		event.stopImmediatePropagation();
-		event.stopPropagation();
-		event.preventDefault();
-		return action(event);
+		let _event = event.originalEvent || event;
+		_event.stopImmediatePropagation();
+		_event.stopPropagation();
+		_event.preventDefault();
+		
+		return action 
+			&& action(event);
 	};
 }
 
