@@ -8,7 +8,7 @@ export function debounceAction([action, debounceTime=300] /* , hash*/) {
 	return function(event) {
 		if (isRunning) { return; }
 
-		later(() => isRunning = false, debounceTime);
+		later(function(){ isRunning = false; }, debounceTime);
 		isRunning = !isRunning;
 		return action(event);
 	};

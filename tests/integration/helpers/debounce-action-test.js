@@ -15,7 +15,7 @@ module('Integration | Helper | debounce-action', function(hooks) {
 		const returnedFunction = `function(event) {
 			if (isRunning) { return; }
 
-			Ember.run.later(() => isRunning = false, debounceTime);
+			later(function(){ isRunning = false; }, debounceTime);
 			isRunning = !isRunning;
 			return action(event);
 		}`.replace(/\s/g, '');

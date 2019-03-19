@@ -13,13 +13,10 @@ module('Integration | Helper | disable-bubbling', function(hooks) {
 		await render(hbs`{{disable-bubbling inputValue}}`);
 
 		const returnedFunction = `function(event) {
-			let _event = event.originalEvent || event;
-			_event.stopImmediatePropagation();
-			_event.stopPropagation();
-			_event.preventDefault();
-			
-			return action 
-				&& action(event);
+			(event.originalEvent || event).stopImmediatePropagation();
+			(event.originalEvent || event).stopPropagation();
+			(event.originalEvent || event).preventDefault();
+			return action && action(event);
 		}`.replace(/\s/g, '');
 
 		assert.equal(this.element.textContent.replace(/\s/g, ''), returnedFunction);
