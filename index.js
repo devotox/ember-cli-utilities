@@ -52,6 +52,13 @@ module.exports = {
 				enabled: true
 			}
 		},
+        'ember-font-awesome': {
+            useScss: true,
+            includeComponent: true,
+            includeFontFiles: true,
+            removeUnusedIcons: false,
+            includeFontAwesomeAssets: true
+        }
 		moment: {
 			allowEmpty: true,
 			outputFormat: 'L',
