@@ -62,7 +62,7 @@
     "ember-cli-htmlbars-inline-precompile": "2.1.0",
     "ember-cli-localforage": "2.0.6",
     "ember-cli-moment-shim": "3.7.1",
-    "ember-cli-new-version": "1.4.3",
+    "ember-cli-new-version": "1.4.4",
     "ember-cli-notifications": "4.3.3",
     "ember-cli-pushjs": "2.0.8",
     "ember-cli-roboto-fontface": "2.0.5",
