@@ -54,7 +54,7 @@
     "@babel/plugin-transform-async-to-generator": "7.4.0",
     "animate.css": "3.7.0",
     "caniuse-lite": "1.0.30000957",
-    "ember-api-actions": "0.2.6",
+    "ember-api-actions": "0.2.8",
     "ember-can": "1.1.1",
     "ember-cli-babel": "7.7.3",
     "ember-cli-head": "0.4.1",
