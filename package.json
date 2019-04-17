@@ -93,6 +93,9 @@
     "normalize.css": "8.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-logical-assignment-operators": "7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "7.3.2",
+    "@babel/plugin-proposal-throw-expressions": "7.2.0",
     "@ember/optional-features": "0.7.0",
     "broccoli-asset-rev": "3.0.0",
     "ember-cli": "3.9.0",
