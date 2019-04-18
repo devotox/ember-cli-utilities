@@ -70,7 +70,7 @@
     "ember-cli-string-helpers": "2.0.0",
     "ember-composable-helpers": "2.2.0",
     "ember-cryptojs-shim": "4.3.0",
-    "ember-fetch": "6.5.0",
+    "ember-fetch": "6.5.1",
     "ember-hammertime": "1.6.0",
     "ember-href-to": "3.1.0",
     "ember-in-viewport": "3.3.0",
