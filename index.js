@@ -20,6 +20,7 @@ module.exports = {
 		},
 		babel: {
 			plugins: [
+				'@babel/plugin-transform-block-scoping',
 				'@babel/plugin-proposal-throw-expressions',
 				'@babel/plugin-proposal-optional-chaining',
 				'@babel/plugin-proposal-object-rest-spread',
