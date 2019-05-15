@@ -12,6 +12,6 @@ module('Integration | Helper | json-stringify', function(hooks) {
 
 		await render(hbs`{{json-stringify inputValue}}`);
 
-		assert.equal(this.element.textContent.trim(), '1234');
+		assert.equal(this.element.textContent.trim().replace(/\s/g, ''), '["1234"]');
 	});
 });
