@@ -2,8 +2,6 @@ import { Promise } from 'rsvp';
 
 import Service from '@ember/service';
 
-const has = () => true;
-
 const needsWindow = ['setTimeout', 'setInterval'];
 
 const { WeakMap, Proxy, Symbol, console } = window;
@@ -14,6 +12,8 @@ const get = (target, key) => {
 		? target[key].bind(window)
 		: target[key];
 };
+
+const has = () => true;
 
 export default Service.extend({
 

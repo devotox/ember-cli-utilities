@@ -20,6 +20,9 @@ const {
 } = window;
 
 export default Service.extend({
+	exists(value) {
+		return value !== null && typeof value !== 'undefined';
+	},
 	toBase64(str) {
 		try {
 			return btoa(unescape(encodeURIComponent(str)));
