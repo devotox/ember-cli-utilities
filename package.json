@@ -67,7 +67,7 @@
     "ember-cli-notifications": "4.3.3",
     "ember-cli-pushjs": "2.0.8",
     "ember-cli-roboto-fontface": "2.0.5",
-    "ember-cli-sass": "10.0.0",
+    "ember-cli-sass": "10.0.1",
     "ember-cli-string-helpers": "2.0.0",
     "ember-composable-helpers": "2.3.1",
     "ember-cryptojs-shim": "4.3.0",
