@@ -5869,7 +5869,8 @@ ember-object-update@0.5.1:
 
 ember-offline@devotox/ember-offline:
   version "1.0.0"
-  resolved "https://codeload.github.com/devotox/ember-offline/tar.gz/3b0655bbcf75b040f76479c4126cc46773b10a22"
+  uid "35138b89ac707ffb3f69320c2226d871b8be0be2"
+  resolved "https://codeload.github.com/devotox/ember-offline/tar.gz/35138b89ac707ffb3f69320c2226d871b8be0be2"
   dependencies:
     ember-cli-babel "7.6.0"
     ember-cli-node-assets "^0.2.2"
