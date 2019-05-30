@@ -5954,7 +5954,8 @@ ember-qunit@4.4.1:
 
 ember-reactive-helpers@devotox/ember-reactive-helpers:
   version "0.5.1"
-  resolved "https://codeload.github.com/devotox/ember-reactive-helpers/tar.gz/cb17ae4ed9dfde47bdf2aed997d42acb4b77afce"
+  uid "50d78dc9a1eb831cd781b09dcbfae2316c5bd564"
+  resolved "https://codeload.github.com/devotox/ember-reactive-helpers/tar.gz/50d78dc9a1eb831cd781b09dcbfae2316c5bd564"
   dependencies:
     ember-cli-babel "7.6.0"
     ember-cli-string-helpers "2.0.0"
