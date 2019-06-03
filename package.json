@@ -59,6 +59,7 @@
     "animate.css": "3.7.1",
     "caniuse-lite": "1.0.30000971",
     "ember-api-actions": "0.2.8",
+    "ember-auto-import": "1.3.0",
     "ember-can": "1.1.1",
     "ember-cli-babel": "7.7.3",
     "ember-cli-head": "0.4.1",
@@ -94,6 +95,7 @@
     "ember-skeleton": "devotox/ember-skeleton",
     "ember-string-helpers": "devotox/ember-string-helpers",
     "ember-truth-helpers": "2.1.0",
+    "json-fn": "1.1.1",
     "normalize.css": "8.0.1"
   },
   "devDependencies": {

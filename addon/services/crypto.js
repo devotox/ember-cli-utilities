@@ -1,5 +1,7 @@
 /* eslint max-len: ["error", { "ignoreRegExpLiterals": true, "code": 140 }]*/
 
+import JSON from 'json-fn';
+
 import { Promise } from 'rsvp';
 
 import Service from '@ember/service';
@@ -20,6 +22,8 @@ const {
 } = window;
 
 export default Service.extend({
+	JSON,
+
 	exists(value) {
 		return value !== null && typeof value !== 'undefined';
 	},

@@ -6,13 +6,29 @@ import RunMixin from 'ember-lifeline/mixins/run';
 
 import SetupController from 'ember-cli-utilities/mixins/setup-controller';
 
+const testOject = {
+	string: 'test',
+	number: 10000,
+	func() {
+		return 'test';
+	}
+};
+
 export default Route.extend(SetupController, RunMixin, {
+
+	crypto: inject(),
 
 	matrix: inject(),
 
 	loadingMask: inject(),
 
 	notification: inject(),
+
+	setupController() {
+		const crypto = this.get('crypto');
+		const jsonString = crypto.JSON.stringify(testOject, null, 4);
+		this.controller.set('jsonString', jsonString);
+	},
 
 	afterRender() {
 		this.get('matrix').run();
