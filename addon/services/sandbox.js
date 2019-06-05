@@ -20,6 +20,7 @@ export default Service.extend({
 	sandboxes: new WeakMap(), // eslint-disable-line
 
 	globals: { // eslint-disable-line
+		Math,
 		console,
 		Object, Promise,
 		parseInt, parseFloat,

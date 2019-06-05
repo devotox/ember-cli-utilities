@@ -2,6 +2,8 @@
 
 import JSON from 'json-fn';
 
+import CircularJSON from 'flatted/esm';
+
 import { Promise } from 'rsvp';
 
 import Service from '@ember/service';
@@ -9,20 +11,22 @@ import Service from '@ember/service';
 const {
 	URL,
 	Blob,
+	btoa,
+	atob,
+	escape,
+	unescape,
 	FileReader,
 	Uint8Array,
 	ArrayBuffer,
+	Math: { random },
 	encodeURIComponent,
-	decodeURIComponent,
-	btoa,
-	atob,
-	unescape,
-	escape,
-	Math: { random }
+	decodeURIComponent
 } = window;
 
 export default Service.extend({
 	JSON,
+
+	CircularJSON,
 
 	exists(value) {
 		return value !== null && typeof value !== 'undefined';
