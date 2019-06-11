@@ -4203,9 +4203,9 @@ console-control-strings@^1.0.0, console-control-strings@^1.1.0, console-control-
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 console-ui@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/console-ui/-/console-ui-3.0.4.tgz#1df0b003ea7b6adcda3d2f781f567b3b75ee7cbb"
-  integrity sha512-1obVCKinYE179hoPKnlHzJY5q1fQdiuiUXrYbTkZDTE+UXxGFMayxFzJjKN9GLfEkTo/rg6+Iqt+yGaOqc3GXQ==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/console-ui/-/console-ui-3.1.0.tgz#cf74b01150c1034de729165180d848194880a179"
+  integrity sha512-OqPjE8pNAe9xWp1o4igdH8YrXl359ovUaYzS2avCdgVSWc9tJq5SYIw7893ybhfhGwrI6aljdHALoE9+gNaHMA==
   dependencies:
     chalk "^2.1.0"
     inquirer "^6"
@@ -13704,9 +13704,9 @@ trim-right@^1.0.1:
     glob "^7.1.2"
 
 tslib@^1.9.0:
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
-  integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
 tty-browserify@0.0.0:
   version "0.0.0"
