@@ -18,5 +18,5 @@ update_configs:
     - "dependencies"
     - "dependabot"
 
-    default_reviewers:
-    - "devotox"
+    # default_reviewers:
+    # - "devotox"
