@@ -86,7 +86,7 @@
     "ember-notification-hub": "devotox/ember-notification-hub#915ee1d",
     "ember-object-update": "0.5.1",
     "ember-offline": "devotox/ember-offline",
-    "ember-page-title": "5.0.1",
+    "ember-page-title": "5.0.2",
     "ember-paper": "1.0.0-beta.24",
     "ember-promise-helpers": "1.0.6",
     "ember-reactive-helpers": "devotox/ember-reactive-helpers",
