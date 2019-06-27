@@ -12067,15 +12067,13 @@ read-installed@~4.0.3:
     graceful-fs "^4.1.2"
 
 read-package-tree@^5.2.2:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/read-package-tree/-/read-package-tree-5.2.2.tgz#4b6a0ef2d943c1ea36a578214c9a7f6b7424f7a8"
-  integrity sha512-rW3XWUUkhdKmN2JKB4FL563YAgtINifso5KShykufR03nJ5loGFlkUMe1g/yxmqX073SoYYTsgXu7XdDinKZuA==
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/read-package-tree/-/read-package-tree-5.3.0.tgz#4f95472e45e7145fb77f4069d12844b139f5ea12"
+  integrity sha512-Gi64+EWmi4515E1rPR77ae/Ip8cjFQTlsWytSYJj974U0tSnxm67pyXltbDjB1lvLw4dc85HbtidGL1K2c/oxw==
   dependencies:
-    debuglog "^1.0.1"
-    dezalgo "^1.0.0"
-    once "^1.3.0"
     read-package-json "^2.0.0"
     readdir-scoped-modules "^1.0.0"
+    util-promisify "^2.1.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -14233,6 +14231,13 @@ util-extend@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/util-extend/-/util-extend-1.0.3.tgz#a7c216d267545169637b3b6edc6ca9119e2ff93f"
   integrity sha1-p8IW0mdUUWljeztu3GypEZ4v+T8=
+
+util-promisify@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/util-promisify/-/util-promisify-2.1.0.tgz#3c2236476c4d32c5ff3c47002add7c13b9a82a53"
+  integrity sha1-PCI2R2xNMsX/PEcAKt18E7moKlM=
+  dependencies:
+    object.getownpropertydescriptors "^2.0.3"
 
 util.promisify@^1.0.0:
   version "1.0.0"
