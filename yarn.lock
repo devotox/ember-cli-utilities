@@ -2880,9 +2880,9 @@ bops@0.0.3:
     to-utf8 "0.0.1"
 
 bottleneck@^2.18.1:
-  version "2.19.1"
-  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-2.19.1.tgz#f7657aed83edff1fa41d438cdbdf3e0931a1d3f0"
-  integrity sha512-TrdmthuOG5SpYfFQTprSQOtqQUTreAgPkCFfow/aVOnryRRpIwiwfiQmmJUiiHUKgPV7LBNlfGecJ5hCVs30gw==
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-2.19.2.tgz#a84d2709288ef6527aee3d228067e180493b657a"
+  integrity sha512-19LN3Gz1m26S/M4aFyaGfMLIUoVsVDSW3H2anKvR/ijh2c6/3lRzhXn3xUPnPlqVsEwfvhMbMoqz9BpawJcXsg==
 
 bower-config@^1.4.1:
   version "1.4.1"
