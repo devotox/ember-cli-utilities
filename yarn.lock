@@ -10531,14 +10531,14 @@ libnpm@^2.0.1:
     stringify-package "^1.0.0"
 
 libnpmaccess@*, libnpmaccess@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/libnpmaccess/-/libnpmaccess-3.0.1.tgz#5b3a9de621f293d425191aa2e779102f84167fa8"
-  integrity sha512-RlZ7PNarCBt+XbnP7R6PoVgOq9t+kou5rvhaInoNibhPO7eMlRfS0B8yjatgn2yaHIwWNyoJDolC/6Lc5L/IQA==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/libnpmaccess/-/libnpmaccess-3.0.2.tgz#8b2d72345ba3bef90d3b4f694edd5c0417f58923"
+  integrity sha512-01512AK7MqByrI2mfC7h5j8N9V4I7MHJuk9buo8Gv+5QgThpOgpjB7sQBDDkeZqRteFb1QM/6YNdHfG7cDvfAQ==
   dependencies:
     aproba "^2.0.0"
     get-stream "^4.0.0"
     npm-package-arg "^6.1.0"
-    npm-registry-fetch "^3.8.0"
+    npm-registry-fetch "^4.0.0"
 
 libnpmconfig@^1.2.1:
   version "1.2.1"
