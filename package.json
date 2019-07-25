@@ -91,7 +91,7 @@
     "ember-promise-helpers": "1.0.8",
     "ember-reactive-helpers": "devotox/ember-reactive-helpers",
     "ember-route-action-helper": "2.0.7",
-    "ember-simple-auth": "1.9.1",
+    "ember-simple-auth": "1.9.2",
     "ember-skeleton": "devotox/ember-skeleton",
     "ember-string-helpers": "devotox/ember-string-helpers",
     "ember-truth-helpers": "2.1.0",
