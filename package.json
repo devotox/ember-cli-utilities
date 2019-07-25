@@ -55,7 +55,7 @@
     "@babel/plugin-proposal-pipeline-operator": "7.5.0",
     "@babel/plugin-proposal-throw-expressions": "7.2.0",
     "@babel/plugin-transform-async-to-generator": "7.5.0",
-    "@babel/plugin-transform-block-scoping": "7.4.4",
+    "@babel/plugin-transform-block-scoping": "7.5.5",
     "animate.css": "3.7.2",
     "caniuse-lite": "1.0.30000984",
     "ember-api-actions": "0.2.8",
