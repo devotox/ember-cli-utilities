@@ -3378,9 +3378,9 @@ broccoli-config-replace@^1.1.2:
     fs-extra "^0.24.0"
 
 broccoli-css-modules@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/broccoli-css-modules/-/broccoli-css-modules-0.6.2.tgz#44b1e67c20cc6f99addbf15e688364ffae7b0462"
-  integrity sha512-geZf3k/0hn0wx1yg2yRZSOGpVVhyVhRdoItA5XWxRy9y5MkLMBbzC1pAamNFLBZ8eyGTADJZcVl93m6cW0uKWg==
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/broccoli-css-modules/-/broccoli-css-modules-0.6.3.tgz#d19f4263f1c8061b8127ec35c09cf4ad698eee9e"
+  integrity sha512-sYr+X4H+KuhhDt5lo+Pf9V9QixbXIThuAYCQ0xm/Im0rv8QGvJeCOzDM1tNFKA+dWgq/p15x0Aq+BtlGlzubLg==
   dependencies:
     broccoli-caching-writer "^3.0.3"
     ensure-posix-path "^1.0.2"
