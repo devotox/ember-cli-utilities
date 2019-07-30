@@ -4,7 +4,7 @@ export function initialize(application) {
 	let device = application.lookup('service:device');
 
 	let allLanguages = intl.get('locales');
-	let userLanguage = (device.query('lang') || navigator.language)?.toLowerCase();
+	let userLanguage = (device.query('lang') || navigator.language || '').toLowerCase();
 
 	let currentLanguage = allLanguages.includes(userLanguage) 
 		? userLanguage : intl.get('locale')[0];
