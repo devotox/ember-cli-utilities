@@ -1348,7 +1348,12 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^12.6.2":
+"@types/node@*":
+  version "12.6.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.9.tgz#ffeee23afdc19ab16e979338e7b536fdebbbaeaf"
+  integrity sha512-+YB9FtyxXGyD54p8rXwWaN1EWEyar5L58GlGWgtH2I9rGmLGBQcw63+0jw+ujqVavNuO47S1ByAjm9zdHMnskw==
+
+"@types/node@^12.6.2":
   version "12.6.8"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.8.tgz#e469b4bf9d1c9832aee4907ba8a051494357c12c"
   integrity sha512-aX+gFgA5GHcDi89KG5keey2zf0WfZk/HAQotEamsK2kbey+8yGKcson0hbK8E+v0NArlCJQCqMP161YhV6ZXLg==
@@ -6734,9 +6739,9 @@ ember-string-helpers@devotox/ember-string-helpers:
     ember-cli-babel "7.6.0"
 
 ember-template-lint@^1.1.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.5.0.tgz#b889708123560e8428a5e0e97176c037bb5613fc"
-  integrity sha512-wldr1J7ABrP7Dzos5vGUz6Jqj9AOvddvQ+ngcSr0RNo2Z71j74iNsJTxGgIPaT9SJGcsxZeP5AXOanblj5n7wA==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.5.1.tgz#ae363d93578e9c99116563ad3e0466dd4eaf70ed"
+  integrity sha512-/n5o6KnDADGPg2/OuzrNR/u2w8WIfEjfJhESVw4DAS6jaF8uO0WZrNI60RvmM4Rp813iX5p8pp1dVUUz4Euy7w==
   dependencies:
     "@glimmer/compiler" "^0.41.0"
     chalk "^2.0.0"
