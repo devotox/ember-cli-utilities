@@ -126,7 +126,7 @@
     "eslint-plugin-ember": "6.10.0",
     "eslint-plugin-node": "10.0.0",
     "loader.js": "4.7.0",
-    "sass": "1.22.10"
+    "sass": "1.22.12"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
