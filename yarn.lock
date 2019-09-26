@@ -6156,10 +6156,10 @@ ember-in-element-polyfill@^0.1.3:
     ember-cli-version-checker "^2.1.0"
     ember-wormhole "^0.5.4"
 
-ember-in-viewport@3.5.10:
-  version "3.5.10"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.5.10.tgz#afa6eca2ac925d81fadeaf1992862fa21110a4d4"
-  integrity sha512-I3wGVefpM4A3ChmtlIAx5zGLEPGYM58MaCI61zlV+hl96tlZ/D83b3EaQ1hnFESmNPFkVge1gvlE3atu6EWiSg==
+ember-in-viewport@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.6.0.tgz#acaeb8ddc2cc07a5f69efcb7fbd3baf62c054068"
+  integrity sha512-PuTCxuVEB3YItXMy1vFysCXfN4REymStW/UpXLTRUwce6tred1JygQvtWgQ/75ZQxckOg1PHBXkI4OtBW+rhPQ==
   dependencies:
     ember-auto-import "^1.2.15"
     ember-cli-babel "^7.7.3"
