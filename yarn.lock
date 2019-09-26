@@ -6709,9 +6709,9 @@ entities@^1.1.1, entities@~1.1.1:
   integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
 
 env-ci@^4.0.0:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/env-ci/-/env-ci-4.1.1.tgz#b8438fc7258a0dc7a4f4c4816de730767946a718"
-  integrity sha512-eTgpkALDeYRGNhYM2fO9LKsWDifoUgKL7hxpPZqFMP2IU7f+r89DtKqCmk3yQB/jxS8CmZTfKnWO5TiIDFs9Hw==
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/env-ci/-/env-ci-4.1.2.tgz#8f2e4327cc3107021d5c91ec4014a8f5cf55fee9"
+  integrity sha512-JcoaMuJRjv4KkFZ9YIe68Tl7MmtZNBS0VVZklYE5wK1oL31T4+CWD/D2m8HxykdATnwwKUWHCUrpiNtG5j+UZQ==
   dependencies:
     execa "^1.0.0"
     java-properties "^1.0.0"
