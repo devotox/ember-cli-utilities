@@ -57,7 +57,7 @@
     "@babel/plugin-transform-async-to-generator": "7.5.0",
     "@babel/plugin-transform-block-scoping": "7.6.2",
     "animate.css": "3.7.2",
-    "caniuse-lite": "1.0.30000997",
+    "caniuse-lite": "1.0.30000998",
     "ember-api-actions": "0.2.8",
     "ember-auto-import": "1.5.2",
     "ember-can": "2.0.0",
