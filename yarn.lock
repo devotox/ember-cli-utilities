@@ -5333,7 +5333,7 @@ ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.0:
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.0.tgz#de3baedd093163b6c2461f95964888c1676325ac"
   integrity sha512-Zr4my8Xn+CzO0gIuFNXji0eTRml5AxZUTDQz/wsNJ5AJAtyFWCY4QtKdoELNNbiCVGt1lq5yLiwTm4scGKu6xA==
 
-ember-cli-babel@7.12.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.1.3, ember-cli-babel@^7.10.0, ember-cli-babel@^7.12.0, ember-cli-babel@^7.2.0, ember-cli-babel@^7.5.0, ember-cli-babel@^7.7.0, ember-cli-babel@^7.7.3, ember-cli-babel@^7.8.0:
+ember-cli-babel@7.12.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.1.3, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.2.0, ember-cli-babel@^7.5.0, ember-cli-babel@^7.7.0, ember-cli-babel@^7.7.3, ember-cli-babel@^7.8.0:
   version "7.12.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.12.0.tgz#064997d199384be8c88d251f30ef67953d3bddc5"
   integrity sha512-+EGQsbPvh19nNXHCm6rVBx2CdlxQlzxMyhey5hsGViDPriDI4PFYXYaFWdGizDrmZoDcG/Ywpeph3hl0NxGQTg==
@@ -6273,14 +6273,14 @@ ember-material-design-icons-shim@0.1.13:
     semantic-release "^15.10.7"
     travis-deploy-once "^5.0.9"
 
-ember-math-helpers@2.11.3:
-  version "2.11.3"
-  resolved "https://registry.yarnpkg.com/ember-math-helpers/-/ember-math-helpers-2.11.3.tgz#32a2523c7408787a6029b64c25b6ece88b320142"
-  integrity sha512-4Ky2MvDZMNg4YGyARt/09z7oNdDjSyVHLI0163WcJ62a8EvlikWVLVBx9B7eoiRwUxTdmgW8I5p9EvY+042UkA==
+ember-math-helpers@2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/ember-math-helpers/-/ember-math-helpers-2.12.0.tgz#21b778ffe1ad484c8858d61123002413172ea83d"
+  integrity sha512-oy40rbDeuK2Dq48TNRicgGTtfZxvObKrpzR2Q019x4vLwGQPdRYda5KjjQMZltGyxzR0AElvUxrO8e31TFULpg==
   dependencies:
     broccoli-funnel "^2.0.2"
-    ember-cli-babel "^7.7.3"
-    ember-cli-htmlbars "^3.0.1"
+    ember-cli-babel "^7.11.1"
+    ember-cli-htmlbars "^4.0.0"
 
 ember-maybe-import-regenerator@0.1.6, ember-maybe-import-regenerator@^0.1.5, ember-maybe-import-regenerator@^0.1.6:
   version "0.1.6"
