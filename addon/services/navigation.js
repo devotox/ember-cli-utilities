@@ -35,6 +35,10 @@ export default Service.extend({
 
 	image: 'favicon.ico',
 
+	type: 'sidebar', // sidebar, navbar
+
+	position: 'left', // left, right, top, bottom
+
 	nav: computed('links', function() {
 		let intl = this.get('intl');
 

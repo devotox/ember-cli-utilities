@@ -157,7 +157,6 @@ module.exports = {
 
 	included() {
 		this._super.included.apply(this, arguments);
-		this._ensureThisImport();
 
 		this.import('node_modules/normalize.css/normalize.css');
 		this.import('node_modules/animate.css/animate.css');
