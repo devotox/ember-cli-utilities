@@ -2,9 +2,9 @@
 
 import JSON from 'json-fn';
 
-import CircularJSON from 'flatted/esm';
-
 import { Promise } from 'rsvp';
+
+import CircularJSON from 'flatted/esm';
 
 import Service from '@ember/service';
 
