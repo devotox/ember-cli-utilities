@@ -8258,7 +8258,12 @@ hook-std@^2.0.0:
   resolved "https://registry.yarnpkg.com/hook-std/-/hook-std-2.0.0.tgz#ff9aafdebb6a989a354f729bb6445cf4a3a7077c"
   integrity sha512-zZ6T5WcuBMIUVh49iPQS9t977t7C0l7OtHrpeMb5uk48JdflRX0NSFvCekfYNmGQETnLq9W/isMyHl69kxGi8g==
 
-hosted-git-info@^2.1.4, hosted-git-info@^2.7.1, hosted-git-info@^2.8.2:
+hosted-git-info@^2.1.4, hosted-git-info@^2.7.1:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
+  integrity sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+
+hosted-git-info@^2.8.2:
   version "2.8.4"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.4.tgz#44119abaf4bc64692a16ace34700fed9c03e2546"
   integrity sha512-pzXIvANXEFrc5oFFXRMkbLPQ2rXRoDERwDLyrcUxGhaZhgP54BBSl9Oheh7Vv0T090cszWBxPjkQQ5Sq1PbBRQ==
@@ -9319,9 +9324,9 @@ levn@^0.3.0, levn@~0.3.0:
     type-check "~0.3.2"
 
 libcipm@^4.0.3:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/libcipm/-/libcipm-4.0.4.tgz#6d28fd0f31e61963f8ec7125e9247349181f6cf4"
-  integrity sha512-S2hmT4tYXTpq1H98K+gm/fujDcgQKqPz0QwkmtKrGklAo7U0DI9ZYmQq/EahF3sqw33Quv9gMHJGeodqyX23kg==
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/libcipm/-/libcipm-4.0.5.tgz#3c781cc3d5a0ead1fe6f254d22299864dc9f1137"
+  integrity sha512-r+kSk2giOWCJNlGwqcofYQjdChDowLQNI3wSn8fI/Vh/QkMhuYM4mW8hlOKCiH8sdU8H+/4lZVAQse3oNYgyrA==
   dependencies:
     bin-links "^1.1.2"
     bluebird "^3.5.1"
