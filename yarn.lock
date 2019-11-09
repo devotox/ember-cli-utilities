@@ -5937,10 +5937,10 @@ ember-composable-helpers@2.2.0:
     broccoli-funnel "^1.0.1"
     ember-cli-babel "^7.1.0"
 
-ember-composable-helpers@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/ember-composable-helpers/-/ember-composable-helpers-2.3.1.tgz#db98ad8b55d053e2ac216b9da091c9e7a3b9f453"
-  integrity sha512-Eltj5yt2CtHhBMrdsjKQTP1zFyfEXQ5/v85ObV2zh0eIJZa1t/gImHN+GIHHuJ+9xOrCUAy60/2TJZjadpoPBQ==
+ember-composable-helpers@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/ember-composable-helpers/-/ember-composable-helpers-3.0.2.tgz#7deb3cb72bd0ba14097378d4b35b6f89950a1c0f"
+  integrity sha512-XQEBjEIKi8hDV3TfjD7AGNLpzjMoWqXliBQ3A0k/OP1SAP2iW5wRwiNkKuInVtwZZjMBGJt0NUBT60M8TJwxOg==
   dependencies:
     "@babel/core" "^7.0.0"
     broccoli-funnel "2.0.1"
