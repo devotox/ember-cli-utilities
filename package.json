@@ -78,7 +78,7 @@
 		"@babel/plugin-proposal-throw-expressions": "7.2.0",
 		"@babel/plugin-transform-async-to-generator": "7.5.0",
 		"@babel/plugin-transform-block-scoping": "7.6.3",
-		"@ember/optional-features": "1.0.0",
+		"@ember/optional-features": "1.1.0",
 		"broccoli-asset-rev": "3.0.0",
 		"ember-api-actions": "0.2.8",
 		"ember-can": "2.0.0",
