@@ -88,7 +88,7 @@
 		"ember-cli-eslint": "5.1.0",
 		"ember-cli-github-pages": "0.2.2",
 		"ember-cli-head": "0.4.1",
-		"ember-cli-inject-live-reload": "2.0.1",
+		"ember-cli-inject-live-reload": "2.0.2",
 		"ember-cli-localforage": "2.0.6",
 		"ember-cli-moment-shim": "3.7.1",
 		"ember-cli-sri": "2.1.1",
