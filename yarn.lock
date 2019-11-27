@@ -5409,7 +5409,7 @@ ember-assign-polyfill@^2.6.0:
     ember-cli-babel "^6.16.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-auto-import@1.5.2, ember-auto-import@^1.2.14, ember-auto-import@^1.2.15, ember-auto-import@^1.5.2:
+ember-auto-import@1.5.2, ember-auto-import@^1.2.14, ember-auto-import@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-1.5.2.tgz#e97ed96b600caa6090ffed83e4611c3e7ec9bad7"
   integrity sha512-skVQpfdc6G5OVRsyemDn3vI1nj/iBBgnoqRLRka0ZbDT2GqelmyJ86bp+Bd/ztJe45Le3we+LXbR7T54RU5A9w==
@@ -6284,14 +6284,14 @@ ember-in-element-polyfill@^0.1.3:
     ember-cli-version-checker "^2.1.0"
     ember-wormhole "^0.5.4"
 
-ember-in-viewport@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.6.0.tgz#acaeb8ddc2cc07a5f69efcb7fbd3baf62c054068"
-  integrity sha512-PuTCxuVEB3YItXMy1vFysCXfN4REymStW/UpXLTRUwce6tred1JygQvtWgQ/75ZQxckOg1PHBXkI4OtBW+rhPQ==
+ember-in-viewport@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.6.1.tgz#0cc7ce8410e2acdb2e1be1d0e3192f8eb82e225d"
+  integrity sha512-5Dbn77kTgcBDf7FJ2zo1i4rWeiKMxa1ODV8rv3ckCRUvVsGiWexZsDzDYK3z4+EScFQwrPua3+4rwGWGSnH9Zw==
   dependencies:
-    ember-auto-import "^1.2.15"
+    ember-auto-import "^1.5.2"
     ember-cli-babel "^7.7.3"
-    intersection-observer-admin "~0.2.5"
+    intersection-observer-admin "~0.2.8"
     raf-pool "~0.1.3"
 
 ember-inflector@3.0.1, ember-inflector@^3.0.1:
@@ -8800,7 +8800,7 @@ inquirer@^7.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-intersection-observer-admin@~0.2.5:
+intersection-observer-admin@~0.2.8:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.2.9.tgz#95a4173ac729990d4c791e530f6c8c295ddb20d5"
   integrity sha512-lpZoEMa9VrHWnpy0uRFqVvPXL+mZ8vYPpOMPC9H64kAF7f+256gCjrwvIl/MjCIobrblAD3VVxLoiUqIKIfYTw==
