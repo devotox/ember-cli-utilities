@@ -2132,9 +2132,9 @@ astral-regex@^1.0.0:
   integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
 
 async-disk-cache@^1.2.1:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/async-disk-cache/-/async-disk-cache-1.3.4.tgz#a5c9f72f199a9933583659f57a0e11377884f816"
-  integrity sha512-qsIvGJ/XYZ5bSGf5vHt2aEQHZnyuehmk/+51rCJhpkZl4LtvOZ+STbhLbdFAJGYO+dLzUT5Bb4nLKqHBX83vhw==
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/async-disk-cache/-/async-disk-cache-1.3.5.tgz#cc6206ed79bb6982b878fc52e0505e4f52b62a02"
+  integrity sha512-VZpqfR0R7CEOJZ/0FOTgWq70lCrZyS1rkI8PXugDUkTKyyAUgZ2zQ09gLhMkEn+wN8LYeUTPxZdXtlX/kmbXKQ==
   dependencies:
     debug "^2.1.3"
     heimdalljs "^0.2.3"
@@ -2943,9 +2943,9 @@ binary-extensions@^2.0.0:
   integrity sha512-Phlt0plgpIIBOGTT/ehfFnbNlfsDEiqmzE2KRXoX1bLIlir4X/MR+zSyBEkL05ffWgnRSf/DXv+WrUAVr93/ow==
 
 "binaryextensions@1 || 2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-2.1.2.tgz#c83c3d74233ba7674e4f313cb2a2b70f54e94b7c"
-  integrity sha512-xVNN69YGDghOqCCtA6FI7avYrr02mTJjOgB0/f1VPD3pJC8QEvjTKWc4epDx8AqxxA75NI0QpVM2gPJXUbE4Tg==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/binaryextensions/-/binaryextensions-2.2.0.tgz#e7c6ba82d4f5f5758c26078fe8eea28881233311"
+  integrity sha512-bHhs98rj/7i/RZpCSJ3uk55pLXOItjIrh2sRQZSM6OoktScX+LxJzvlU+FELp9j3TdcddTmmYArLSGptCTwjuw==
 
 blank-object@^1.0.1:
   version "1.0.2"
@@ -14463,9 +14463,9 @@ text-table@^0.2.0, text-table@~0.2.0:
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
 "textextensions@1 || 2":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/textextensions/-/textextensions-2.5.0.tgz#e21d3831dafa37513dd80666dff541414e314293"
-  integrity sha512-1IkVr355eHcomgK7fgj1Xsokturx6L5S2JRT5WcRdA6v5shk9sxWuO/w/VbpQexwkXJMQIa/j1dBi3oo7+HhcA==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/textextensions/-/textextensions-2.6.0.tgz#d7e4ab13fe54e32e08873be40d51b74229b00fc4"
+  integrity sha512-49WtAWS+tcsy93dRt6P0P3AMD2m5PvXRhuEA0kaXos5ZLlujtYmpmFsB+QvWUSxE1ZsstmYXfQ7L40+EcQgpAQ==
 
 through2@^2.0.0, through2@^2.0.2, through2@~2.0.0:
   version "2.0.5"
