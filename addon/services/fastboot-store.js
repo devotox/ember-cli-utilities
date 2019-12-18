@@ -1,3 +1,4 @@
+import { alias } from '@ember/object/computed';
 import Service from '@ember/service';
 
 import { computed } from '@ember/object';
@@ -8,9 +9,9 @@ export default Service.extend({
 
 	globalStore: 'globalStore',
 
-	shoebox: computed.alias('fastboot.shoebox'),
+	shoebox: alias('fastboot.shoebox'),
 
-	isFastBoot: computed.alias('fastboot.isFastBoot'),
+	isFastBoot: alias('fastboot.isFastBoot'),
 
 	fastboot: computed(function() {
 		return getOwner(this).lookup('service:fastboot');

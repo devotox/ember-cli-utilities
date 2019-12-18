@@ -6,11 +6,6 @@ module.exports = {
 	name,
 
 	options: {
-		newVersion: {
-			enabled: true,
-			useAppVersion: true,
-			fileName: 'version.txt'
-		},
 		sassOptions: {
 			includePaths: [
 				'app/styles',

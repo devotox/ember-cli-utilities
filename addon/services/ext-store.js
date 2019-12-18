@@ -1,3 +1,4 @@
+import { alias } from '@ember/object/computed';
 import DS from 'ember-data';
 
 import { Promise } from 'rsvp';
@@ -37,7 +38,7 @@ export default Store.extend({
 		this.set('modelSlugCache', new Map());
 
 		this.set('queryCache', ArrayProxy.extend({
-			meta: computed.alias('content.meta')
+			meta: alias('content.meta')
 		}));
 	},
 
