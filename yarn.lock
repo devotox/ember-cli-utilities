@@ -15313,9 +15313,9 @@ xmlchars@^2.1.1:
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
 
 xmldom@^0.1.19:
-  version "0.1.29"
-  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.29.tgz#32ed99cb6550e2e1342578f5ad179b1e60e7d220"
-  integrity sha512-BoY9MWe3mSF13nuVxZHwJrY42Z8apHhkUvi6lJiez1pnGqZgL/HhAbkpaFqRj5ynlETzIYJdBXsrCMW69uSooA==
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
+  integrity sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ==
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
