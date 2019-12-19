@@ -6141,13 +6141,15 @@ ember-in-element-polyfill@^0.1.3:
     ember-cli-version-checker "^2.1.0"
     ember-wormhole "^0.5.4"
 
-ember-in-viewport@3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.6.1.tgz#0cc7ce8410e2acdb2e1be1d0e3192f8eb82e225d"
-  integrity sha512-5Dbn77kTgcBDf7FJ2zo1i4rWeiKMxa1ODV8rv3ckCRUvVsGiWexZsDzDYK3z4+EScFQwrPua3+4rwGWGSnH9Zw==
+ember-in-viewport@3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.6.2.tgz#90c3ab1d49c04efc0269b178461f9f23d43172ab"
+  integrity sha512-VoqBx6+AG1ps6PG7mektjCQJ54yBzwQ4D5XWKfGWv7oDAj2SFwZVXLqYNF8lvWyK9CEtlvGct6vQ5SKfdTK2ig==
   dependencies:
     ember-auto-import "^1.5.2"
     ember-cli-babel "^7.7.3"
+    ember-modifier "^1.0.2"
+    fast-deep-equal "^2.0.1"
     intersection-observer-admin "~0.2.8"
     raf-pool "~0.1.3"
 
@@ -6267,6 +6269,26 @@ ember-maybe-in-element@^0.2.0:
   integrity sha512-R5e6N8yDbfNbA/3lMZsFs2KEzv/jt80TsATiKMCqdqKuSG82KrD25cRdU5VkaE8dTQbziyBeuJs90bBiqOnakQ==
   dependencies:
     ember-cli-babel "^7.1.0"
+
+ember-modifier-manager-polyfill@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ember-modifier-manager-polyfill/-/ember-modifier-manager-polyfill-1.2.0.tgz#cf4444e11a42ac84f5c8badd85e635df57565dda"
+  integrity sha512-bnaKF1LLKMkBNeDoetvIJ4vhwRPKIIumWr6dbVuW6W6p4QV8ZiO+GdF8J7mxDNlog9CeL9Z/7wam4YS86G8BYA==
+  dependencies:
+    ember-cli-babel "^7.10.0"
+    ember-cli-version-checker "^2.1.2"
+    ember-compatibility-helpers "^1.2.0"
+
+ember-modifier@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ember-modifier/-/ember-modifier-1.0.2.tgz#475ca6d0a5b47cde8077903328ad1ec99e562be8"
+  integrity sha512-YyZ6etJpeMTcrtNJvP+NmyJ+uA2DsYAIg4Mxg9ndYPbe6oXnNTnYQbvF7VIIUuY0Z7zfZ0CwCukFVQESBlJ6Eg==
+  dependencies:
+    ember-cli-babel "^7.11.1"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-cli-normalize-entity-name "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
+    ember-modifier-manager-polyfill "^1.2.0"
 
 ember-moment@8.0.0:
   version "8.0.0"
