@@ -5517,7 +5517,7 @@ ember-cli-eslint@5.1.0:
     rsvp "^4.6.1"
     walk-sync "^1.0.0"
 
-ember-cli-fastclick@^1.5.0:
+ember-cli-fastclick@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/ember-cli-fastclick/-/ember-cli-fastclick-1.5.0.tgz#10562378f68cadb55266acc0a9a63317af389c7f"
   integrity sha512-NgpFlHX9fia9hyuFTYu6SvchKHqAtFrtrKqqVMk/cx9iIWFeJ5D/cr9kR40R2OBTdea5B34JA27vnaD9b8BI0w==
@@ -13260,10 +13260,10 @@ sass-graph@^2.2.4:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
-sass@1.23.7:
-  version "1.23.7"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.23.7.tgz#090254e006af1219d442f1bff31e139d5e085dff"
-  integrity sha512-cYgc0fanwIpi0rXisGxl+/wadVQ/HX3RhpdRcjLdj2o2ye/sxUTpAxIhbmJy3PLQgRFbf6Pn8Jsrta2vdXcoOQ==
+sass@1.24.0:
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.24.0.tgz#e8b9931bc5d18a37d271749311ef2edc83102a77"
+  integrity sha512-1TsPyMhLTx+9DLlmwg02iBW2p4poGA7LlkWJLpUY/XticFKNhPcx+l4FsIJLKl6oSUfXmAKpVljHEez1hwjqiw==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
