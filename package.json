@@ -58,7 +58,7 @@
 		"ember-notification-hub": "devotox/ember-notification-hub",
 		"ember-offline": "devotox/ember-offline",
 		"ember-reactive-helpers": "devotox/ember-reactive-helpers",
-		"ember-simple-auth": "2.1.0",
+		"ember-simple-auth": "2.1.1",
 		"ember-skeleton": "devotox/ember-skeleton",
 		"ember-string-helpers": "devotox/ember-string-helpers",
 		"flatted": "2.0.1",
