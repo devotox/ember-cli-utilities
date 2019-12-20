@@ -1,0 +1,9 @@
+<PaperSelect
+	@options={{this.locales}}
+	@selected={{this.locale}}
+	@shouldShowLabel={{false}}
+	@class="locale-select flex"
+	@onChange={{fn this.localeSelected}}
+as |lang|>
+ {{lang.label}}
+</PaperSelect>

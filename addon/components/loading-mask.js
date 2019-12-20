@@ -10,11 +10,7 @@ import { getOwner } from '@ember/application';
 
 import RunMixin from 'ember-lifeline/mixins/run';
 
-import layout from '../templates/components/loading-mask';
-
 export default Component.extend(RunMixin, {
-	layout,
-
 	promise: null,
 
 	hidden: false,

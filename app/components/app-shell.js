@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-utilities/components/app-shell';

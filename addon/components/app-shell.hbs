@@ -1,0 +1,175 @@
+<PaperSidenavContainer>
+	{{#if (eq this.navigation.type "sidebar")}}
+		<PaperSidenav
+			@name="main"
+			@class="md-whiteframe-z2"
+			@open={{this.navigation.open}}
+			@onToggle={{fn (mut this.navigation.open)}}
+		>
+			<PaperToolbar>
+				<PaperToolbarTools>
+					<img class="sidenav-image" alt="Sidenav Company" src={{this.navigation.logo}}>
+					<h1>
+						<strong>
+							<LinkTo @route="home">{{this.navigation.title}}</LinkTo>
+						</strong>
+					</h1>
+				</PaperToolbarTools>
+			</PaperToolbar>
+
+			<PaperContent>
+				<PaperList>
+					<PaperItem
+						{{on "click" (fn this.global.transition "account")}}
+						class="layout-row layout-align-center-center profile-image-wrapper"
+					>
+						{{#if this.session.isAuthenticated}}
+							<div class="md-list-item-text layout-column">
+								<img
+									class="md-avatar"
+									alt={{this.session.data.authenticated.profile.name}}
+									src={{this.session.data.authenticated.profile.picture}}
+								>
+							</div>
+							<div class="md-list-item-text layout-column">
+								<h3>{{this.session.data.authenticated.profile.name}}</h3>
+								<h4>{{this.session.data.authenticated.profile.email}}</h4>
+							</div>
+						{{else}}
+							<div class="md-list-item-text layout-column">
+								<img
+									class="md-avatar"
+									alt="Default Profile"
+									src={{this.navigation.profile.image}}
+								>
+							</div>
+							<div class="md-list-item-text layout-column">
+								<h3>{{this.navigation.profile.name}}</h3>
+							</div>
+
+						{{/if}}
+					</PaperItem>
+
+					<PaperDivider />
+
+					{{#each this.navigation.links as |link|}}
+						{{#if
+							(and
+								(not link.hide)
+								(or
+									(and
+										this.session.isAuthenticated
+										(not-eq link.authenticated false)
+									)
+									(and
+										(not this.session.isAuthenticated)
+										(not link.authenticated)
+									)
+								)
+							)
+						}}
+							<PaperItem
+								class={{if (eq link.route (regexp-replace this.router.currentRouteName "\..*" "")) "active"}}
+								{{on "click" (if link.action (fn (get this.global link.action)) (fn this.global.transition link.route))}}
+							>
+								<PaperIcon @icon={{get link "icon"}} />
+								<span>{{link.name}}</span>
+							</PaperItem>
+						{{/if}}
+					{{/each}}
+				</PaperList>
+			</PaperContent>
+		</PaperSidenav>
+	{{/if}}
+
+	<PaperContent class="layout-column layout-fill flex">
+		<PaperToolbar>
+			<PaperToolbarTools>
+				{{#if (eq this.navigation.type "sidebar")}}
+					<PaperSidenavToggle @name="main" as |toggleAction|>
+						<PaperButton
+							class="hide-gt-sm"
+							{{on "click" (fn toggleAction)}}
+						>
+
+							<PaperIcon @icon="menu" />
+						</PaperButton>
+					</PaperSidenavToggle>
+				{{/if}}
+
+				<h1>
+					<strong>
+						{{get (find-by
+								  "route"
+								  (regexp-replace this.router.currentRouteName "\..*" "")
+								  this.navigation.links
+							  )
+							  "name"
+						}}
+					</strong>
+				</h1>
+
+				<LocaleSelect class="locale-select" />
+
+				{{#if (and  (eq this.navigation.type "navbar") this.session.isAuthenticated)}}
+					<PaperItem
+						{{on "click" (fn this.global.transition "account")}}
+					>
+						<img
+							class="md-avatar m-0"
+							alt={{this.session.data.authenticated.profile.name}}
+							src={{this.session.data.authenticated.profile.picture}}
+						>
+					</PaperItem>
+				{{/if}}
+
+			</PaperToolbarTools>
+		</PaperToolbar>
+
+		<PaperContent class="layout-column layout-fill flex">
+			{{yield}}
+		</PaperContent>
+
+		{{#if (eq this.navigation.type "navbar")}}
+			<PaperToolbar>
+				<PaperToolbarTools>
+					<PaperList
+						class="layout-row layout-fill layout-align-center-center flex"
+					>
+						{{#each this.navigation.links as |link|}}
+							{{#if
+								(and
+									(not link.hide)
+									(or
+										(and
+											this.session.isAuthenticated
+											(not-eq link.authenticated false)
+										)
+										(and
+											(not this.session.isAuthenticated)
+											(not link.authenticated)
+										)
+									)
+								)
+							}}
+								<PaperItem
+									class={{concat "flex "
+											(if (eq link.route (regexp-replace this.router.currentRouteName "\..*" "")) "active")
+										}}
+									{{on "click" (if link.action (fn (get this.global link.action)) (fn this.global.transition link.route))}}
+								>
+									<div class="layout-row layout-fill layout-align-center-center flex">
+										<div class="mr-5">
+											<PaperIcon @icon={{get link "icon"}} />
+										</div>
+										<div>{{link.name}}</div>
+									</div>
+								</PaperItem>
+							{{/if}}
+						{{/each}}
+					</PaperList>
+				</PaperToolbarTools>
+			</PaperToolbar>
+		{{/if}}
+	</PaperContent>
+</PaperSidenavContainer>

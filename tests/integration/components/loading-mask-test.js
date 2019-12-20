@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | loading-mask', function(hooks) {
 	setupRenderingTest(hooks);
@@ -10,17 +10,17 @@ module('Integration | Component | loading-mask', function(hooks) {
 		// Set any properties with this.set('myProperty', 'value');
 		// Handle any actions with this.set('myAction', function(val) { ... });
 
-		await render(hbs`{{loading-mask}}`);
+		await render(hbs`<LoadingMask />`);
 
-		assert.dom(this.element).hasText('');
+		assert.equal(this.element.textContent.trim(), '');
 
 		// Template block usage:
 		await render(hbs`
-      {{#loading-mask}}
+      <LoadingMask>
         template block text
-      {{/loading-mask}}
+      </LoadingMask>
     `);
 
-		assert.dom(this.element).hasText('template block text');
+		assert.equal(this.element.textContent.trim(), 'template block text');
 	});
 });

@@ -1,56 +1,51 @@
-{{! template-lint-disable no-bare-strings }}
 <h2 id="title">Ember CLI Utilities</h2>
-{{notification-container position="top-right"}}
-
-{{new-version-notifier}}
+<NotificationContainer @position="top-right" />
 
 <p>
-  The <a href="https://github.com/devotox/ember-cli-utilities">README</a> lists all the utilities in this addon
-  <br><br>
-  This example uses the Setup Controller Mixin to allow us to run After Render.
-  <br>
-  It also uses the matrix service to allow us to do this...
+ The <a href="https://github.com/devotox/ember-cli-utilities">README</a> lists all the utilities in this addon
 </p>
 
-<code>
-  CTRL + ALT + M - Matrix Start
-  <br>
-  CTRL + SHIFT + M - Matrix Stop
-</code>
-
-<br><br>
-
 <h3>Locale Select</h3>
-{{locale-select}}
-
-<br>
-<br>
+<LocaleSelect /><br>
 
 <h3>Notifications</h3>
 {{#each (array "alert" "warn" "error" "success"  "hub" "system") as |type|}}
-  <button {{action "notify" type}}>{{titleize type}}</button>
+	<PaperButton
+		@raised={{true}}
+		{{on 'click' (fn (route-action 'notify') type)}}
+	>
+		{{titleize type}}
+	</PaperButton>
 {{/each}}
 
 
 <br><br>
 
 <h3>Loading Mask (Block Component)</h3>
-{{#loading-mask as |mask|}}
-  <button {{action mask.show}}>Show Loading Mask</button>
-{{/loading-mask}}
+<LoadingMask as |mask|>
+	<PaperButton
+		@raised={{true}}
+		{{on 'click' (fn mask.show)}}
+	>
+  Show Loading Mask
+ </PaperButton>
+</LoadingMask>
 
 <h3>Loading Mask (Using Service)</h3>
 {{#each (array "show" "hide") as |type|}}
-  <button {{action "loading" type}}>{{titleize type}}</button>
+	<PaperButton
+		@raised={{true}}
+		{{on 'click' (fn (route-action 'loading') type)}}
+	>
+		{{titleize type}}
+	</PaperButton>
 {{/each}}
 
 <br><br>
 
 <h3>JSON FN</h3>
 <code>
-  {{jsonString}}
+ {{this.jsonString}}
 </code>
 
-{{notification-center}}
-
-{{! template-lint-enable no-bare-strings }}
+<NotificationCenter />

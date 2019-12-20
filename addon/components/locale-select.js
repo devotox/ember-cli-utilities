@@ -1,30 +1,28 @@
-import { inject } from '@ember/service';
+import Component from '@glimmer/component';
 
-import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
 
-import Component from '@ember/component';
+import { computed, action, get, set } from '@ember/object';
 
-import layout from '../templates/components/locale-select';
+export default class LocaleSelect extends Component {
+	@service intl;
+	locale = '';
 
-export default Component.extend({
-	layout,
+	constructor() {
+		super(...arguments);
 
-	intl: inject(),
-
-	init() {
-		this._super();
-
-		let intl = this.get('intl');
-		let locales = this.get('locales');
+		let intl = get(this, 'intl');
+		let locales = get(this, 'locales');
 		let locale = intl.get('primaryLocale');
 
 		let selectedLocale = locales.find(({ id }) => locale === id);
 
-		this.actions.localeSelected.call(this, selectedLocale);
-	},
+		this.localeSelected(selectedLocale);
+	}
 
-	locales: computed('intl.locales', function() {
-		let intl = this.get('intl');
+	@computed('intl.{locale,locales}')
+	get locales() {
+		let intl = get(this, 'intl');
 		let locales = intl.get('locales');
 
 		return locales.map((id) => {
@@ -32,17 +30,15 @@ export default Component.extend({
 			label.includes('Missing') && (label = id);
 			return { id, label };
 		});
-	}).property('intl.locale'), // Needed so the label changes when the language changes
-
-	actions: {
-		localeSelected(locale) {
-			if(!locale || !locale.id) { return; }
-
-			this.set('locale', locale);
-
-			let intl = this.get('intl');
-			intl.set('locale', locale.id);
-		}
 	}
-});
 
+	@action
+	localeSelected(locale) {
+		if(!locale || !locale.id) { return; }
+
+		set(this, 'locale', locale);
+
+		let intl = get(this, 'intl');
+		intl.set('locale', locale.id);
+	}
+}
