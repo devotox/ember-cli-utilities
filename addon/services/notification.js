@@ -34,7 +34,7 @@ export default Service.extend({
 
 	notificationCenter: inject('emberNotificationCenter'),
 
-	notificationMessages: inject('notification-messages'),
+	notifications: inject('notifications'),
 
 	init() {
 		this._super(...arguments);
@@ -43,7 +43,7 @@ export default Service.extend({
 	},
 
 	defaults() {
-		let notification = this.get('notificationMessages');
+		let notification = this.get('notifications');
 		notification.setDefaultClearDuration(3500);
 		notification.setDefaultAutoClear(true);
 	},
@@ -124,7 +124,7 @@ export default Service.extend({
 
 		return (type === 'system' || options.system)
 			&& this.get('push').create(title, { icon, body, timeout })
-			|| this.get('notificationMessages')[type](message, options);
+			|| this.get('notifications')[type](message, options);
 	},
 
 	async callback(promise, options) {
@@ -172,6 +172,6 @@ export default Service.extend({
 
 	clear() {
 		this.get('push').clear();
-		this.get('notificationMessages').clearAll();
+		this.get('notifications').clearAll();
 	}
 });

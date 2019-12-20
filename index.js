@@ -157,18 +157,6 @@ module.exports = {
 		this.import('node_modules/animate.css/animate.css');
 	},
 
-	_findHost() {
-		let app;
-		let current = this;
-
-		// eslint-disable-next-line
-		do {
-			app = current.app || app;
-		} while (current.parent.parent && (current = current.parent));
-
-		return app || {};
-	},
-
 	_getAddonOptions(opt) {
 		let topLevelOptions = this._findHost().options;
 		let parentOptions = this.parent && this.parent.options;

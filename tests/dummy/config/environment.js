@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = function(environment) {
@@ -7,19 +6,35 @@ module.exports = function(environment) {
 		environment,
 		rootURL: '/',
 		locationType: 'auto',
-		fastboot: {
-			hostWhitelist: [
-				/^.+\.surge\.sh$/,
-				/^.+\.ngrok\.io$/,
-				/^localhost(:\d+)?$/,
-				/^.+\.localtunnel\.me$/,
-				/^.+\.github(.*)?\.(co\.uk|com|net|io)$/
-			]
+		orbit: {
+			types: {
+				bucket: 'data-bucket',
+				model: 'data-model',
+				source: 'data-source',
+				strategy: 'data-strategy'
+			},
+			collections: {
+				buckets: 'data-buckets',
+				models: 'data-models',
+				sources: 'data-sources',
+				strategies: 'data-strategies'
+			},
+			services: {
+				store: 'data-store',
+				coordinator: 'data-coordinator',
+				schema: 'data-schema',
+				keyMap: 'data-key-map'
+			},
+			skipStoreService: false,
+			skipStoreInjections: false,
+			skipCoordinatorService: false,
+			skipSchemaService: false,
+			skipKeyMapService: false
 		},
 		EmberENV: {
 			FEATURES: {
 				// Here you can enable experimental features on an ember canary build
-				// e.g. 'with-controller': true
+				// e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
 			},
 			EXTEND_PROTOTYPES: {
 				// Prevent Ember Data from overriding Date.parse.
@@ -55,8 +70,6 @@ module.exports = function(environment) {
 
 	if (environment === 'production') {
 		// here you can enable a production-specific feature
-		ENV.locationType = 'hash';
-		ENV.rootURL = '/ember-cli-utilities/';
 	}
 
 	return ENV;

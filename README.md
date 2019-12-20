@@ -5,7 +5,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-utilities.svg)](https://www.npmjs.org/package/ember-cli-utilities)
 [![Dependency Status](https://david-dm.org/devotox/ember-cli-utilities.svg)](https://david-dm.org/devotox/ember-cli-utilities)
 [![DevDependency Status](https://david-dm.org/devotox/ember-cli-utilities/dev-status.svg)](https://david-dm.org/devotox/ember-cli-utilities#info=devDependencies)
-[![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-utilities.svg)](https://greenkeeper.io/)
+[![Dependabot](https://api.dependabot.com/badges/status?host=github&repo=devotox/ember-cli-utilities)
 
 ember-cli-utilities
 ==============================================================================
@@ -33,25 +33,27 @@ Usage
 ## Addons
 * Dependencies
 ```
-		"animate.css": "3.7.2",
-		"ember-auto-import": "1.5.2",
-		"ember-cli-babel": "7.13.0",
-		"ember-cli-htmlbars": "4.0.8",
-		"ember-cli-notifications": "4.3.3",
-		"ember-cli-pushjs": "2.0.8",
-		"ember-cli-roboto-fontface": "2.0.5",
-		"ember-cli-sass": "10.0.1",
-		"ember-material-design-icons-shim": "0.1.13",
-		"ember-notification-hub": "devotox/ember-notification-hub",
-		"ember-offline": "devotox/ember-offline",
-		"ember-reactive-helpers": "devotox/ember-reactive-helpers",
-		"ember-simple-auth": "1.9.2",
-		"ember-skeleton": "devotox/ember-skeleton",
-		"ember-string-helpers": "devotox/ember-string-helpers",
-		"flatted": "2.0.1",
-		"json-fn": "1.1.1",
-		"normalize.css": "8.0.1",
-		"sass": "1.23.7"
+        "animate.css": "3.7.2",
+        "ember-auto-import": "1.5.3",
+        "ember-cli-babel": "7.13.2",
+        "ember-cli-build-notifications": "0.4.0",
+        "ember-cli-fastclick": "1.5.0",
+        "ember-cli-htmlbars": "4.2.0",
+        "ember-cli-notifications": "5.0.0-0",
+        "ember-cli-pushjs": "2.0.8",
+        "ember-cli-roboto-fontface": "2.0.5",
+        "ember-cli-sass": "10.0.1",
+        "ember-material-design-icons-shim": "0.1.13",
+        "ember-notification-hub": "devotox/ember-notification-hub",
+        "ember-offline": "devotox/ember-offline",
+        "ember-reactive-helpers": "devotox/ember-reactive-helpers",
+        "ember-simple-auth": "2.1.1",
+        "ember-skeleton": "devotox/ember-skeleton",
+        "ember-string-helpers": "devotox/ember-string-helpers",
+        "flatted": "2.0.1",
+        "json-fn": "1.1.1",
+        "normalize.css": "8.0.1",
+        "sass": "1.24.0"
 ```
 
 ## Components
@@ -84,6 +86,8 @@ Usage
     - utility functions combining ember functions
 * ext-store
     - Ember Data Store which allows slugs / offline
+* data-store
+    - Ember Orbit Store with some wrappers for background reload
 * fastboot-store
     - easier to use fastboot store functions
 * logger
@@ -114,11 +118,14 @@ Usage
     - Disable bubbling of closure actions
 * json-parse 
     - Parse JSON string
+
 ## Initializers
 * component-router
     - injects router main into components
 * session-injection
     - injects session service into routes, controllers, components
+* orbit-main-bucket
+    - initializes ember orbit bucket
 
 ## Instance Initializers
 * intl
@@ -134,6 +141,9 @@ Usage
 * uuid
     - transforms for uuids for models
 
+## Orbit JS
+* Has everything needed to have `memory + backup + remote` secenario
+    - [Scenario](https://github.com/orbitjs/todomvc-ember-orbit#scenario-4-memory--backup--remote)
 Contributing
 ------------------------------------------------------------------------------
 
