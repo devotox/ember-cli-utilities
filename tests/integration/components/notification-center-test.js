@@ -12,7 +12,7 @@ module('Integration | Component | notification-center', function(hooks) {
 
 		await render(hbs`<NotificationCenter />`);
 
-		assert.equal(this.element.textContent.trim(), '');
+		assert.equal(this.element.textContent.replace(/\s\s+/g, ' ').trim(), 'Notifications 0 0');
 
 		// Template block usage:
 		await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | notification-center', function(hooks) {
       </NotificationCenter>
     `);
 
-		assert.equal(this.element.textContent.trim(), 'template block text');
+		assert.equal(this.element.textContent.replace(/\s\s+/g, ' ').trim(), 'Notifications 0 0');
 	});
 });

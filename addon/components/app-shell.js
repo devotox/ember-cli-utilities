@@ -20,11 +20,15 @@ export default class AppShell extends Component {
 
 		const { head } = config;
 
+		if(!head) { return; }
+
 		// this.navigation.type = this.media.isGtSm ? 'sidebar' : 'navbar';
 		// this.navigation.position = this.media.isGtSm ? 'left' : 'bottom';
 
-		this.navigation.logo = head.logo;
-		this.navigation.title = head.title;
+		if (head) {
+			this.navigation.logo = head.logo;
+			this.navigation.title = head.title;
+		}
 
 		this.navigation.profile = {};
 		this.navigation.profile.name = 'Not logged in';

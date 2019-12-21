@@ -69,7 +69,7 @@
 							)
 						}}
 							<PaperItem
-								class={{if (eq link.route (regexp-replace this.router.currentRouteName "\..*" "")) "active"}}
+								class={{if (eq link.route (regexp-replace (or this.router.currentRouteName "") "\..*" "")) "active"}}
 								{{on "click" (if link.action (fn (get this.global link.action)) (fn this.global.transition link.route))}}
 							>
 								<PaperIcon @icon={{get link "icon"}} />
@@ -101,7 +101,7 @@
 					<strong>
 						{{get (find-by
 								  "route"
-								  (regexp-replace this.router.currentRouteName "\..*" "")
+								  (regexp-replace (or this.router.currentRouteName "") "\..*" "")
 								  this.navigation.links
 							  )
 							  "name"
@@ -154,7 +154,7 @@
 							}}
 								<PaperItem
 									class={{concat "flex "
-											(if (eq link.route (regexp-replace this.router.currentRouteName "\..*" "")) "active")
+											(if (eq link.route (regexp-replace (or this.router.currentRouteName "") "\..*" "")) "active")
 										}}
 									{{on "click" (if link.action (fn (get this.global link.action)) (fn this.global.transition link.route))}}
 								>

@@ -12,7 +12,7 @@ module('Integration | Component | app-shell', function(hooks) {
 
 		await render(hbs`<AppShell />`);
 
-		assert.equal(this.element.textContent.trim(), '');
+		assert.equal(this.element.textContent.replace(/\s\s+/g, ' ').trim(), 'Default menu English (US)');
 
 		// Template block usage:
 		await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | app-shell', function(hooks) {
       </AppShell>
     `);
 
-		assert.equal(this.element.textContent.trim(), 'template block text');
+		assert.equal(this.element.textContent.replace(/\s\s+/g, ' ').trim(), 'Default menu English (US) template block text');
 	});
 });
