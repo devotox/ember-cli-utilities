@@ -158,7 +158,8 @@ module.exports = {
 	},
 
 	_getAddonOptions(opt) {
-		let topLevelOptions = this._findHost().options;
+		let host = this._findHost() || {};
+		let topLevelOptions = host.options;
 		let parentOptions = this.parent && this.parent.options;
 		if (!opt) { return topLevelOptions || parentOptions; }
 		return topLevelOptions && topLevelOptions[opt]
