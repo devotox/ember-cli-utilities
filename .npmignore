@@ -25,6 +25,8 @@
 /tests/
 /yarn.lock
 .gitkeep
+/.dependabot
+.prettierrc.js
 
 # ember-try
 /.node_modules.ember-try/
