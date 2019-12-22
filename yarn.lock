@@ -6442,7 +6442,8 @@ ember-offline@devotox/ember-offline:
 
 ember-orbit@devotox/ember-orbit#patch-1:
   version "0.16.3"
-  resolved "https://codeload.github.com/devotox/ember-orbit/tar.gz/713aa7d9b3f97bdd497fc955fab3946e8a59adff"
+  uid "700840065c55afc8d698fcf5345935545d9b4f08"
+  resolved "https://codeload.github.com/devotox/ember-orbit/tar.gz/700840065c55afc8d698fcf5345935545d9b4f08"
   dependencies:
     "@orbit/coordinator" "^0.16.3"
     "@orbit/core" "^0.16.3"
