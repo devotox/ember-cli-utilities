@@ -30,6 +30,7 @@ export default {
 			 */
 			action() {
 				this.source.requestQueue.skip();
+				this.target.requestQueue.skip();
 			},
 
 			/**
@@ -72,4 +73,3 @@ export default {
 		});
 	}
 };
-
