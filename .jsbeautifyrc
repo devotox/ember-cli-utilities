@@ -32,11 +32,12 @@
 		"max_preserve_newlines": 10
 	},
 	"js": {
+		"operator_position": "after-newline", // [after-newline|before-newline|preserve-newline]
 		"allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
 		"brace_style": "collapse,preserve-inline", // [collapse|expand|end-expand|none] Put braces on the same line as control statements (default), or put braces on own line (Allman / ANSI style), or just put end braces on own line, or attempt to keep them where they are
 		"break_chained_methods": false, // Break chained method calls across subsequent lines
 		"e4x": false, // Pass E4X xml literals through untouched
-		"end_with_newline": false, // End output with newline
+		"end_with_newline": true, // End output with newline
 		"indent_char": " ", // Indentation character
 		"indent_level": 0, // Initial indentation level
 		"indent_size": 4, // Indentation size

@@ -1,5 +1,7 @@
 import { RequestStrategy } from '@orbit/coordinator';
 
+import { later } from '@ember/runloop';
+
 // Query remote API optimistically
 export default {
 	create() {
@@ -34,7 +36,7 @@ export default {
 			/**
 			 * A handler for any errors thrown as a result of performing the action.
 			 */
-			catch(e, transform) {
+			catch (e, transform) {
 				console.log('Error performing remote.query()', transform, e); // eslint-disable-line
 				this.source.requestQueue.skip(e);
 				this.target.requestQueue.skip(e);
@@ -57,7 +59,9 @@ export default {
 					const _query = JSON.parse(JSON.stringify(query));
 					_query.options.reload = false;
 					_query.options.force = true;
-					this.source.query(_query);
+
+					// Reload in background after 1 second
+					later(this, () => { this.source.query(_query) }, 1000);
 				}
 
 				return fetchFromRemote;
@@ -90,4 +94,3 @@ export default {
 		});
 	}
 };
-
