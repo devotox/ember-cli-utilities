@@ -28,7 +28,7 @@ module.exports = {
 		'indent': ['error', 'tab'],
 		'max-len': ['error', 140],
 		'no-extra-parens': 'error',
-		'default-param-last': 'error',
+		'default-param-last': ['error'],
 		// 'prettier/prettier': 'error',
 		'comma-dangle': ['error', 'never'],
 		'arrow-parens': ['error', 'always'],
