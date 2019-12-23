@@ -66,7 +66,7 @@ export default Service.extend({
 
 		headers = this.createHeaders(headers, contentType);
 		let dataType = method !== 'get' ? 'body' : 'params';
-		let url = this.createUrl(method, api, data, useProxy);
+		let url = this.createUrl(api, method, data, useProxy);
 
 		data = method === 'get' ? data
 			: form ? new FormData(form)
@@ -155,7 +155,7 @@ export default Service.extend({
 		throw error;
 	},
 
-	createUrl(method, endpoint, data, useProxy) {
+	createUrl(endpoint, method, data, useProxy) {
 		let qs = this.params(data);
 		let host = this.get('host');
 		let proxyURL = this.get('proxyURL');
