@@ -24,7 +24,7 @@ import Service, { inject as service } from '@ember/service';
 			false - only shows link when not logged in
 			undefined - shows link both when logged in and not logged in
  */
-export default class NavigationService extends Service {
+export default class Navigation extends Service {
 	@service intl;
 
 	@tracked
@@ -33,20 +33,28 @@ export default class NavigationService extends Service {
 	@tracked
 	links = [];
 
+	@tracked
+	profile = {};
+
+	@tracked
 	open = false;
 
+	@tracked
 	title = 'Title';
 
+	@tracked
 	image = 'favicon.ico';
 
+	@tracked
 	type = 'sidebar' // sidebar, navbar
 
+	@tracked
 	position = 'left'; // left, right, top, bottom
 
 	constructor() {
 		super(...arguments);
 
-		this._links.forEach((link) => {
+		this.links.forEach((link) => {
 			let route = link.route || link.action;
 			!this.live.includes(route) && (link.hide = true);
 		})

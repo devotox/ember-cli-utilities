@@ -1281,7 +1281,7 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@orbit/coordinator@^0.16.3":
+"@orbit/coordinator@^0.16.4":
   version "0.16.4"
   resolved "https://registry.yarnpkg.com/@orbit/coordinator/-/coordinator-0.16.4.tgz#dedb4e987a123e73e6db8542d641d35e6728c710"
   integrity sha512-fl8LhW1BWFOoowumHo4+Gq59zzXgrQDFirRp6AYa+dDUrARy7ay+YY0Yg32jp25k3/kq6095OrAfy0E4bHUF1A==
@@ -1297,7 +1297,7 @@
   dependencies:
     "@orbit/utils" "^0.16.3"
 
-"@orbit/data@0.16.4", "@orbit/data@^0.16.3", "@orbit/data@^0.16.4":
+"@orbit/data@0.16.4", "@orbit/data@^0.16.4":
   version "0.16.4"
   resolved "https://registry.yarnpkg.com/@orbit/data/-/data-0.16.4.tgz#463ea07b4e01468c140d4b51a60a3a4cbcd64268"
   integrity sha512-vZq4hJ9fg7UADuclgBJRPkUlKcAgEkLhNbWBlzvEwOfdU0BQRPVjUp57arXIPKQy4BDxZLxRIxUjLnc/+OS4gw==
@@ -1305,7 +1305,7 @@
     "@orbit/core" "^0.16.3"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/identity-map@^0.16.3":
+"@orbit/identity-map@^0.16.4":
   version "0.16.4"
   resolved "https://registry.yarnpkg.com/@orbit/identity-map/-/identity-map-0.16.4.tgz#6be48c4809e6146fdab18d6fecf3ca0b497c4513"
   integrity sha512-3qSYTTksFfnuOnE2k9gRrri62aegGG25GLsAkte62Pru5SLwmJ97CB7R3iT0mYsu0+MPhz8EuglU3q5lzDpnSQ==
@@ -1361,7 +1361,7 @@
     "@orbit/record-cache" "^0.16.4"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/memory@^0.16.3":
+"@orbit/memory@^0.16.4":
   version "0.16.4"
   resolved "https://registry.yarnpkg.com/@orbit/memory/-/memory-0.16.4.tgz#1c91dfbf83b0346c5fc3157be676d37fa4c95ae7"
   integrity sha512-p2UR5T04vLZRzznPBDLGc7zJs02Q4gHJSH6n7y9NJ/hHijV6LC92k1s58LxUGsyjAkt6EFJlF45AKi8cdPRPlQ==
@@ -5399,7 +5399,7 @@ ember-assign-polyfill@^2.6.0:
     ember-cli-babel "^6.16.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-auto-import@1.5.3, ember-auto-import@^1.2.14, ember-auto-import@^1.5.2:
+ember-auto-import@1.5.3, ember-auto-import@^1.2.14, ember-auto-import@^1.5.2, ember-auto-import@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-1.5.3.tgz#b32936f874d1ed7057ad2ed3f6116357820be44b"
   integrity sha512-7JfdunM1BmLy/lyUXu7uEoi0Gi4+dxkGM23FgIEyW5g7z4MidhP53Fc61t49oPSnq7+J4lLpbH1f6C+mDMgb4A==
@@ -5916,7 +5916,7 @@ ember-cli-typescript@^2.0.0, ember-cli-typescript@^2.0.0-beta.3, ember-cli-types
     stagehand "^1.0.0"
     walk-sync "^1.0.0"
 
-ember-cli-typescript@^3.0.0:
+ember-cli-typescript@^3.0.0, ember-cli-typescript@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-3.1.2.tgz#696454177c3039b711a19fc0669dfc7c2ce81358"
   integrity sha512-J7sC9EL652pEplZRlCzhGoW0T4F6pt29vhEcK4kA397YEootoAZlqTdIhRpR13o8fmTJ8xRWtXEC7KrPPnqamQ==
@@ -6440,20 +6440,20 @@ ember-offline@devotox/ember-offline:
     fastboot-transform "0.1.3"
     offline-js "^0.7.19"
 
-ember-orbit@devotox/ember-orbit#patch-1:
-  version "0.16.3"
-  uid "700840065c55afc8d698fcf5345935545d9b4f08"
-  resolved "https://codeload.github.com/devotox/ember-orbit/tar.gz/700840065c55afc8d698fcf5345935545d9b4f08"
+ember-orbit@0.16.4:
+  version "0.16.4"
+  resolved "https://registry.yarnpkg.com/ember-orbit/-/ember-orbit-0.16.4.tgz#f7684f3bf036bee250940d0cb6c7baef3d624822"
+  integrity sha512-oj5lTlCdKMoD/0dXkmAre7TCeX2JCN5RqciupzgdtMR5xH+UFKMhje1wxKpLUvDi7Z/dADoPlAzWHeGbjMUZ6w==
   dependencies:
-    "@orbit/coordinator" "^0.16.3"
+    "@orbit/coordinator" "^0.16.4"
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.3"
-    "@orbit/identity-map" "^0.16.3"
-    "@orbit/memory" "^0.16.3"
+    "@orbit/data" "^0.16.4"
+    "@orbit/identity-map" "^0.16.4"
+    "@orbit/memory" "^0.16.4"
     "@orbit/utils" "^0.16.3"
-    ember-auto-import "^1.5.2"
-    ember-cli-babel "^7.11.1"
-    ember-cli-typescript "^3.0.0"
+    ember-auto-import "^1.5.3"
+    ember-cli-babel "^7.13.2"
+    ember-cli-typescript "^3.1.2"
     ember-inflector "^3.0.1"
     ember-native-class-polyfill "^1.0.6"
 
@@ -11158,7 +11158,6 @@ npm@^6.10.3:
     cmd-shim "^3.0.3"
     columnify "~1.5.4"
     config-chain "^1.1.12"
-    debuglog "*"
     detect-indent "~5.0.0"
     detect-newline "^2.1.0"
     dezalgo "~1.0.3"
@@ -11173,7 +11172,6 @@ npm@^6.10.3:
     has-unicode "~2.0.1"
     hosted-git-info "^2.8.5"
     iferr "^1.0.2"
-    imurmurhash "*"
     infer-owner "^1.0.4"
     inflight "~1.0.6"
     inherits "^2.0.4"
@@ -11192,14 +11190,8 @@ npm@^6.10.3:
     libnpx "^10.2.0"
     lock-verify "^2.1.0"
     lockfile "^1.0.4"
-    lodash._baseindexof "*"
     lodash._baseuniq "~4.6.0"
-    lodash._bindcallback "*"
-    lodash._cacheindexof "*"
-    lodash._createcache "*"
-    lodash._getnative "*"
     lodash.clonedeep "~4.5.0"
-    lodash.restparam "*"
     lodash.union "~4.6.0"
     lodash.uniq "~4.5.0"
     lodash.without "~4.4.0"
