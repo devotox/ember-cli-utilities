@@ -10,4 +10,3 @@ module('Unit | Service | navigation', function(hooks) {
 		assert.ok(service);
 	});
 });
-

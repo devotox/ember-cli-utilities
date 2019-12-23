@@ -1,6 +1,8 @@
-import Service, { inject } from '@ember/service';
+import { computed } from '@ember/object';
 
-import { get, set, computed } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+
+import Service, { inject as service } from '@ember/service';
 
 /*
 	@Service
@@ -22,48 +24,38 @@ import { get, set, computed } from '@ember/object';
 			false - only shows link when not logged in
 			undefined - shows link both when logged in and not logged in
  */
-export default Service.extend({
-	live: [], // eslint-disable-line
+export default class NavigationService extends Service {
+	@service intl;
 
-	links: [], // eslint-disable-line
+	@tracked
+	live = [];
 
-	open: false,
+	@tracked
+	links = [];
 
-	intl: inject(),
+	open = false;
 
-	title: 'Default',
+	title = 'Title';
 
-	image: 'favicon.ico',
+	image = 'favicon.ico';
 
-	type: 'sidebar', // sidebar, navbar
+	type = 'sidebar' // sidebar, navbar
 
-	position: 'left', // left, right, top, bottom
+	position = 'left'; // left, right, top, bottom
 
-	nav: computed('links', function() {
-		let intl = this.get('intl');
+	constructor() {
+		super(...arguments);
 
-		let links = this.get('links');
-
-		return links.map((link) => {
-			link.name =  intl.t(`navigation.${link.route}`);
-			return link;
-		});
-	}).property('intl.locale'),
-
-	init() {
-		this._super(...arguments);
-		this.setup();
-	},
-
-	setup() {
-		let live = this.get('live');
-
-		this.get('links').forEach((link) => {
-			let route = get(link, 'route')
-				|| get(link, 'action');
-
-			!live.includes(route)
-				&& set(link, 'hide', true);
-		});
+		this._links.forEach((link) => {
+			let route = link.route || link.action;
+			!this.live.includes(route) && (link.hide = true);
+		})
 	}
-});
+
+	@computed('links', 'intl.locale')
+	get nav() {
+		return this.links.map((link) => {
+			link.name = this.intl.t(`navigation.${link.route}`);
+		})
+	}	
+}
