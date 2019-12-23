@@ -1,7 +1,7 @@
 import { Store } from 'ember-orbit';
 
 export default class DataStore extends Store {
-	query(queryOrExpression, options = { reload: true }, id) {
+	query(queryOrExpression, options = { reload: true }, id = undefined) {
 		return super.query(queryOrExpression, options, id);
 	}
 	findRecordsByAttribute(type, attribute, value, options) {

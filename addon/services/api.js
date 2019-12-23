@@ -58,7 +58,7 @@ export default Service.extend({
 		});
 	},
 
-	async request(method = 'GET', api, data = {}, headers = {}, { form, contentType, responseType, bypassCache, useProxy } = {}) {
+	async request(api, method = 'GET', data = {}, headers = {}, { form, contentType, responseType, bypassCache, useProxy } = {}) {
 		method = method.toLowerCase();
 		bypassCache = bypassCache || false;
 		responseType = responseType || 'json';
@@ -191,7 +191,7 @@ export default Service.extend({
 		return headers;
 	},
 
-	params(obj = {}, prefix) {
+	params(obj = {}, prefix = undefined) {
 		let qs = Object.keys(obj).map((k) => {
 			let v = obj[k];
 			let p = prefix ? `${prefix}[${k}]` : k;
