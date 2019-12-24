@@ -34,7 +34,7 @@ export default {
 			/**
 			 * A handler for any errors thrown as a result of performing the action.
 			 */
-			catch(e, transform) {
+			catch (e, transform) {
 				console.error('Error performing remote.update()', transform, e); // eslint-disable-line
 				this.source.requestQueue.skip(e);
 				this.target.requestQueue.skip(e);
@@ -47,7 +47,9 @@ export default {
 			 * `filter` will be invoked in the context of this strategy (and thus will
 			 * have access to both `this.source` and `this.target`).
 			 */
-			// filter(...args) {};
+			filter() {
+				return false;
+			},
 
 			/**
 			 * Should results returned from calling `action` on the `target` source be
@@ -76,4 +78,3 @@ export default {
 		});
 	}
 };
-

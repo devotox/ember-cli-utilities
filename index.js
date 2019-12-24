@@ -51,13 +51,6 @@ module.exports = {
 				enabled: true
 			}
 		},
-		'ember-font-awesome': {
-			useScss: true,
-			includeComponent: true,
-			includeFontFiles: false,
-			removeUnusedIcons: false,
-			includeFontAwesomeAssets: true
-		},
 		moment: {
 			allowEmpty: true,
 			outputFormat: 'L',
@@ -99,8 +92,7 @@ module.exports = {
 		},
 		EmberHammertime: {
 			touchActionSelectors: ['button', 'input', 'a', 'textarea'],
-			touchActionProperties:
-				'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;'
+			touchActionProperties: 'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;'
 		},
 		emberOffline: {
 			themes: {
