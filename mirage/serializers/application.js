@@ -19,7 +19,7 @@ export default class Application extends JSONAPISerializer {
 			const { attributes, relationships } = item;
 
 			return attributes?.[path] === param.value
-				|| relationships?.[path]?.data.id === param.value;
+				|| relationships?.[path]?.data?.id === param.value;
 		}));
 	}
 
