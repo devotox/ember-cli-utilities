@@ -9,11 +9,13 @@ module.exports = {
 		}
 	},
 	plugins: [
+		'json',
 		'ember'
 	],
 	extends: [
 		'eslint:recommended',
-		'plugin:ember/recommended'
+		'plugin:ember/recommended',
+		'plugin:json/recommended-with-comments'
 	],
 	env: {
 		browser: true
@@ -28,7 +30,6 @@ module.exports = {
 		'indent': ['error', 'tab'],
 		'max-len': ['error', 140],
 		'no-extra-parens': 'error',
-		// 'prettier/prettier': 'error',
 		'comma-dangle': ['error', 'never'],
 		'arrow-parens': ['error', 'always'],
 		'no-cond-assign': ['error', 'always'],
@@ -38,7 +39,7 @@ module.exports = {
 		'max-statements-per-line': ['error', { 'max': 2 }],
 		'new-cap': ['error', { 'capIsNewExceptions': ['A'] }],
 		'no-constant-condition': ['error', { 'checkLoops': false }],
-		'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
+		'brace-style': ['error', '1tbs', { 'allowSingleLine': true }],
 		'generator-star-spacing': ['error', { 'before': false, 'after': true }]
 	},
 	overrides: [
@@ -47,7 +48,6 @@ module.exports = {
 			files: [
 				'.eslintrc.js',
 				'.ember-cli.js',
-				'.prettierrc.js',
 				'.template-lintrc.js',
 				'ember-cli-build.js',
 				'index.js',

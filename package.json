@@ -32,18 +32,25 @@
 		"release-major": "npm version major",
 		"postversion": "git push && git push --tags",
 		"deploy:release": "npm run release; npm run deploy",
-		"format": "find app addon config tests -name '*.js' -type f | xargs prettier --write | xargs eslint --fix",
 		"nearley": "nearleyc app/grammar/index.ne -o app/grammar/index.js; node app/grammar/parser.js; rm -rf app/grammar/index.js",
 		"deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push origin gh-pages; git checkout master",
 		"update:packages": "npx ncu -u --removeRange && yarn install --force --check-files --update-checksums --ignore-engines && yarn upgrade --force --ignore-engines",
 		"deploy:setup": "git add -A; git commit -m \"Added ember-cli-github-pages addon\"; git checkout --orphan gh-pages; rm -rf `bash -c \"ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|([.]{1,2}/?$)'\"`; touch .gitkeep; git add -A; git commit -m \"initial gh-pages commit\"; git checkout master"
 	},
 	"lint-staged": {
-		"*.{js,json,css}": [
-			"prettier --write",
-			"eslint --fix",
+		"*.{css,scss}": [
+			"stylelint --fix",
+			"git add"
+		],
+		"*.{js,json,jsx}": [
+			"eslint . --fix",
 			"git add"
 		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	},
 	"dependencies": {
 		"@glimmer/component": "1.0.0",
@@ -96,11 +103,11 @@
 		"ember-can": "2.1.0",
 		"ember-cli": "3.15.1",
 		"ember-cli-dependency-checker": "3.2.0",
-		"ember-cli-eslint": "5.1.0",
 		"ember-cli-github-pages": "0.2.2",
 		"ember-cli-head": "0.4.1",
 		"ember-cli-inject-live-reload": "2.0.2",
 		"ember-cli-localforage": "2.0.6",
+		"ember-cli-mirage": "^1.1.6",
 		"ember-cli-moment-shim": "3.7.1",
 		"ember-cli-sri": "2.1.1",
 		"ember-cli-string-helpers": "4.0.5",
@@ -135,7 +142,10 @@
 		"ember-try": "1.4.0",
 		"eslint": "6.8.0",
 		"eslint-plugin-ember": "7.7.2",
+		"eslint-plugin-json": "2.0.1",
 		"eslint-plugin-node": "10.0.0",
+		"husky": "3.1.0",
+		"lint-staged": "9.5.0",
 		"loader.js": "4.7.0",
 		"qunit-dom": "^0.9.2"
 	},

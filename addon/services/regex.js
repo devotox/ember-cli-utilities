@@ -21,8 +21,7 @@ export default Service.extend({
 
 		try {
 			return new RegExp(pattern, flags);
-		}
-		catch(error) {
+		} catch(error) {
 			debug('[String To Regex]', error);
 		}
 	},

@@ -39,15 +39,13 @@ export default {
 					setTimeout(() => {
 						remote.requestQueue.retry();
 					}, 3000);
-				}
-				else {
+				} else {
 					// When non-network errors occur, notify the user and
 					// reset state.
 					const label = transform.options && transform.options.label;
 					if (label) {
 						alert(`Unable to complete "${label}"`);
-					}
-					else {
+					} else {
 						alert('Unable to complete operation');
 					}
 

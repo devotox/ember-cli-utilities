@@ -109,8 +109,7 @@ export default Service.extend({
 			}
 			delete fetching[cacheKey];
 			return response;
-		}
-		catch(error) {
+		} catch(error) {
 			return cachedResponse
 				|| this.error(error);
 		}
@@ -125,8 +124,7 @@ export default Service.extend({
 			return response
 				&& response[type]
 				&& response[type]();
-		}
-		catch(e) {
+		} catch(e) {
 			return response;
 		}
 	},
@@ -168,8 +166,7 @@ export default Service.extend({
 
 		if (!endpoint) {
 			throw new Error('No Endpoint Specified');
-		}
-		else if (namespace) {
+		} else if (namespace) {
 			endpoint = endpoint.replace(new RegExp(`^(/+)?(${namespace})?(/+)?`), '');
 		}
 

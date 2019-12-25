@@ -102,12 +102,10 @@ export default Service.extend({
 		try {
 			await options.action;
 			type = 'success';
-		}
-		catch(e) {
+		} catch(e) {
 			// error = e.message;
 			type = 'error';
-		}
-		finally {
+		} finally {
 			this.notificationMessage(type, error || message, options);
 		}
 	},
@@ -131,9 +129,7 @@ export default Service.extend({
 		try {
 			let data = await promise;
 			options.success && options.success(data);
-		}
-		catch(e) { options.failure && options.failure(e);  }
-		finally  { options.callback && options.callback(); }
+		} catch(e) { options.failure && options.failure(e);  } finally  { options.callback && options.callback(); }
 	},
 
 	async offline(options) {

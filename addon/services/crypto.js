@@ -34,16 +34,14 @@ export default Service.extend({
 	toBase64(str) {
 		try {
 			return btoa(unescape(encodeURIComponent(str)));
-		}
-		catch(e) {
+		} catch(e) {
 			return btoa(str);
 		}
 	},
 	fromBase64(str) {
 		try {
 			return decodeURIComponent(escape(atob(str)));
-		}
-		catch(e) {
+		} catch(e) {
 			return atob(str);
 		}
 	},

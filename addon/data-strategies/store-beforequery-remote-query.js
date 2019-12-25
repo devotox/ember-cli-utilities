@@ -1,7 +1,5 @@
 import { RequestStrategy } from '@orbit/coordinator';
 
-import { later } from '@ember/runloop';
-
 // Query remote API optimistically
 export default {
 	create() {
@@ -31,7 +29,17 @@ export default {
 			 * invoked in the context of this strategy (and thus will have access to
 			 * both `this.source` and `this.target`).
 			 */
-			action: 'query',
+
+			action(transform) {
+				const query = this.target.query(transform);
+
+				try {
+					const result = this.source.cache.query(transform);
+					return result && result.length ? result : query;
+				} catch (e) {
+					return query;
+				}
+			},
 
 			/**
 			 * A handler for any errors thrown as a result of performing the action.
@@ -49,23 +57,7 @@ export default {
 			 * `filter` will be invoked in the context of this strategy (and thus will
 			 * have access to both `this.source` and `this.target`).
 			 */
-			filter(query) {
-				const { options = {} } = query;
-				const dataInCache = this.source.cache.query(query);
-				const fetchFromRemote = dataInCache.length <= 0 || options.force;
-				console.log(this._logPrefix, 'remote filter', query); // eslint-disable-line
-
-				if (options.reload && !fetchFromRemote) {
-					const _query = JSON.parse(JSON.stringify(query));
-					_query.options.reload = false;
-					_query.options.force = true;
-
-					// Reload in background after 1 second
-					later(this, () => { this.source.query(_query) }, 1000);
-				}
-
-				return fetchFromRemote;
-			},
+			// filter(...args) {};
 
 			/**
 			 * Should results returned from calling `action` on the `target` source be
