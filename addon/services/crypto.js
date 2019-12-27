@@ -7,6 +7,21 @@ import Service from '@ember/service';
 
 import CircularJSON from 'flatted/esm';
 
+const {
+	URL,	
+	Blob,	
+	btoa,	
+	atob,	
+	escape,	
+	unescape,	
+	FileReader,	
+	Uint8Array,	
+	ArrayBuffer,	
+	Math: { random },	
+	encodeURIComponent,	
+	decodeURIComponent	
+} = window;
+
 export default class CryptoService extends Service {
 	JSON = JSON;
 
@@ -45,7 +60,7 @@ export default class CryptoService extends Service {
 	uuid(len) {
 		let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
 			let r, v;
-			r = Math.random() * 16 | 0;
+			r = random() * 16 | 0;
 			v = c === 'x' ? r : r & 0x3 | 0x8;
 			return v.toString(16);
 		});

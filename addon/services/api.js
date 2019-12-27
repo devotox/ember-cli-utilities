@@ -1,6 +1,6 @@
 import fetch from 'fetch';
 
-import { computed } from '@ember/object';
+import { computed, get, set } from '@ember/object';
 
 import { getOwner } from '@ember/application';
 
@@ -29,12 +29,12 @@ export default class ApiService extends Service {
 	}
 
 	destroyed() {
-		return this.get('isDestroyed') || this.get('isDestroying');
+		return get(this, 'isDestroyed') || get(this, 'isDestroying');
 	}
 
 	invalidateCache(timestamp) {
 		let currentTime = +new Date();
-		let maxCacheTime = this.get('maxCacheTime');
+		let maxCacheTime = get(this, 'maxCacheTime');
 		return currentTime > timestamp + maxCacheTime;
 	}
 
@@ -75,9 +75,9 @@ export default class ApiService extends Service {
 			method: method.toUpperCase()
 		};
 
-		let cache = this.get('cache');
-		let crypto = this.get('crypto');
-		let fetching = this.get('fetching');
+		let cache = get(this, 'cache');
+		let crypto = get(this, 'crypto');
+		let fetching = get(this, 'fetching');
 		let cacheKey = crypto.hash(`${url}-${JSON.stringify(data)}`);
 
 		let cachedResponse = cache[cacheKey];
@@ -92,7 +92,7 @@ export default class ApiService extends Service {
 
 		try {
 			fetching[cacheKey] = fetching[cacheKey] || fetch(url, request);
-			this.set('fetching', fetching);
+			set(this, 'fetching', fetching);
 
 			let timestamp = +new Date();
 			let data = (await fetching[cacheKey]).clone();
@@ -100,7 +100,7 @@ export default class ApiService extends Service {
 
 			if (!this.destroyed()) {
 				cache[cacheKey] = { response, timestamp };
-				this.set('cache', cache);
+				set(this, 'cache', cache);
 			}
 			delete fetching[cacheKey];
 			return response;
@@ -129,7 +129,7 @@ export default class ApiService extends Service {
 		let fromBlob = async() => {
 			if (!response.blob) { return; }
 			let blob = await response.blob();
-			return await this.get('crypto').fromBlob(blob);
+			return await get(this, 'crypto').fromBlob(blob);
 		};
 
 		let message = response.message
@@ -141,8 +141,8 @@ export default class ApiService extends Service {
 		let error = new Error(message);
 		error.code = response.code || response.statusCode || 505;
 
-		if (this.get('fastboot.isFastBoot')) {
-			return this.set('fastboot.response.statusCode', error.code);
+		if (get(this, 'fastboot.isFastBoot')) {
+			return set(this, 'fastboot.response.statusCode', error.code);
 		}
 
 		throw error;
@@ -150,12 +150,12 @@ export default class ApiService extends Service {
 
 	createUrl(endpoint, method, data, useProxy) {
 		let qs = this.params(data);
-		let host = this.get('host');
-		let proxyURL = this.get('proxyURL');
-		let namespace = this.get('namespace');
+		let host = get(this, 'host');
+		let proxyURL = get(this, 'proxyURL');
+		let namespace = get(this, 'namespace');
 
-		if (!host && this.get('fastboot.isFastBoot')) {
-			host = this.get('fastboot.request.host');
+		if (!host && get(this, 'fastboot.isFastBoot')) {
+			host = get(this, 'fastboot.request.host');
 			host = `https://${host}`;
 		}
 
@@ -187,7 +187,7 @@ export default class ApiService extends Service {
 		let qs = Object.keys(obj).map((k) => {
 			let v = obj[k];
 			let p = prefix ? `${prefix}[${k}]` : k;
-			let isObject = this.get('utils').isObject(v);
+			let isObject = get(this, 'utils').isObject(v);
 
 			return isObject
 				? this.params(v, p)
