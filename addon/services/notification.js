@@ -2,53 +2,22 @@ const { Offline } = window;
 
 import moment from 'moment';
 
-import { Promise } from 'rsvp';
-
 import Service, { inject } from '@ember/service';
 
-/*
-	@Service
-	This file handles all notifications from our system
-
-	Functions: { info, alert, error, success, warning, hub }
-		- The hub function states you just want the function to go to the notification hub
-		- These are functions that can be used to send a message that
-		shows up at the top right of the screen and also gets added to the notification hub below
-		- These functions take a message and an options hash as arguments
-		- Possible options are { alert, hub, title, description, action }
-			- Setting alert to false will make sure the notification at the top right does not show
-			- Setting hub to false will make sure no notification is added to the notification hub below
-			- Title, Description, and Action are for the notification hub.
-			This allows us to send a different notification to the hub than the one used in the alert.
-			An action (promise) passed in will cause the hub to stay pending till
-			the promise rejects or resolves and base its message on that.
-			- callbacks that can be passed in options
-				- success, failure, callback
-				- success will only run on success,
-				failure only on errors, and
-				callback will always run
- */
-export default Service.extend({
-
-	push: inject(),
-
-	notificationCenter: inject('emberNotificationCenter'),
-
-	notifications: inject('notifications'),
-
-	init() {
-		this._super(...arguments);
-		// this.defaults();
-		this.setup();
-	},
+export default class NotificationService extends Service {
+	@inject push;
+	@inject notifications;
+	@inject emberNotificationCenter;
 
 	defaults() {
 		let notification = this.get('notifications');
 		notification.setDefaultClearDuration(3500);
 		notification.setDefaultAutoClear(true);
-	},
+	}
 
-	setup() {
+	constructor() {
+		super(...arguments);
+
 		[	// Proxy Functions
 			'hub',
 			'info',
@@ -64,7 +33,7 @@ export default Service.extend({
 			notifyType = notifyType === 'warn' ? 'warning' : notifyType;
 			this[type] = (message,  options) => this.notify(notifyType, message, options);
 		});
-	},
+	}
 
 	async notify(type, message, options = {}) {
 		let title = options.title || this.title(type, message);
@@ -80,7 +49,7 @@ export default Service.extend({
 		}
 
 		if (type === 'hub' || options.hub === true) {
-			let notification = this.get('notificationCenter');
+			let notification = this.get('emberNotificationCenter');
 			notification.pushNotification({ title, description }, promise);
 		}
 
@@ -89,7 +58,7 @@ export default Service.extend({
 		}
 
 		this.callback(promise, options);
-	},
+	}
 
 	async hubNotificationMessage(message, options) {
 		let type = null;
@@ -108,7 +77,7 @@ export default Service.extend({
 		} finally {
 			this.notificationMessage(type, error || message, options);
 		}
-	},
+	}
 
 	notificationMessage(type, message, options = {}) {
 		message = !['success', 'error'].includes(type)
@@ -123,14 +92,14 @@ export default Service.extend({
 		return (type === 'system' || options.system)
 			&& this.get('push').create(title, { icon, body, timeout })
 			|| this.get('notifications')[type](message, options);
-	},
+	}
 
 	async callback(promise, options) {
 		try {
 			let data = await promise;
 			options.success && options.success(data);
 		} catch(e) { options.failure && options.failure(e);  } finally  { options.callback && options.callback(); }
-	},
+	}
 
 	async offline(options) {
 		this.warning('Requests queued and will be reattempted when online!', { hub: false });
@@ -144,7 +113,7 @@ export default Service.extend({
 			};
 			Offline.on('requests:flush', resolveFlush);
 		});
-	},
+	}
 
 	async promise(type, message) {
 		return !['success', 'error'].includes(type)
@@ -152,11 +121,11 @@ export default Service.extend({
 			: type === 'success'
 				? Promise.resolve(message)
 				: Promise.reject(new Error(message));
-	},
+	}
 
 	description(type, message) {
 		return `${message}`;
-	},
+	}
 
 	title(type, message) {
 		let timestamp = moment().format('LTS');
@@ -164,10 +133,10 @@ export default Service.extend({
 
 		return ['success', 'error', 'hub'].includes(type)
 			? timestamp : `${timestamp} ${message}`;
-	},
+	}
 
 	clear() {
 		this.get('push').clear();
 		this.get('notifications').clearAll();
 	}
-});
+}

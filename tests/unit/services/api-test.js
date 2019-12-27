@@ -10,4 +10,3 @@ module('Unit | Service | api', function(hooks) {
 		assert.ok(service);
 	});
 });
-

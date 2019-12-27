@@ -1,6 +1,9 @@
 import sort from 'fast-sort';
 import { JSONAPISerializer } from 'ember-cli-mirage';
 
+const stringToBoolean = (str) =>
+	({ 'true': true, 'false': false }[str?.trim().toLowerCase()] || str);
+
 export default class Application extends JSONAPISerializer {
 	// Can filter by any value on attributes
 	// Or an ID on a relationship that MUST be in the `includes`
@@ -13,13 +16,12 @@ export default class Application extends JSONAPISerializer {
 
 			if (path === 'id') {
 				// Most of the time, the consumer will provide an integer id, hence the `==`.
-				return item?.[path] == param.value;
+				return item?.[path] === param.value;
 			}
 
 			const { attributes, relationships } = item;
-
-			return attributes?.[path] === param.value
-				|| relationships?.[path]?.data?.id === param.value;
+			return attributes?.[path] === param?.value
+				|| relationships?.[path]?.data?.id === param?.value;
 		}));
 	}
 
@@ -64,6 +66,8 @@ export default class Application extends JSONAPISerializer {
 		return Object.entries(queryParams)
 			.filter(([key]) => regex.test(key))
 			.map(([key, value]) => {
+				value = stringToBoolean(value);
+				/^\d+$/.test(value) && (value = Number(value));
 				return { key: regex.exec(key)[1], value };
 			});
 	}

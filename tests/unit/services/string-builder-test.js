@@ -10,4 +10,3 @@ module('Unit | Service | string-builder', function(hooks) {
 		assert.ok(service);
 	});
 });
-

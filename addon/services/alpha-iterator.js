@@ -1,18 +1,14 @@
 import Service from '@ember/service';
 
-export default Service.extend({
-	currentIndex: 0,
+export default class AlphaIteratorService extends Service {
+	currentIndex = 0;
 
-	lowercase: true,
+	lowercase = true;
 
-	characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+	characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-	init() {
-		this._super(...arguments);
-		this.setup();
-	},
-
-	setup() {
+	constructor() {
+		super(...arguments);
 		let lowercase = this.get('lowercase');
 
 		let characters = this.get('characters');
@@ -22,15 +18,15 @@ export default Service.extend({
 			|| (characters = characters.toUpperCase());
 
 		this.set('characters', characters);
-	},
+	}
 
 	next() {
 		this.set('currentIndex', (this.get('currentIndex') + 1) % 26);
 		return this.get('characters').charAt(this.get('currentIndex'));
-	},
+	}
 
 	previous() {
 		this.set('currentIndex', (this.get('currentIndex') - 1) % 26);
 		return this.get('characters').charAt(this.get('currentIndex'));
 	}
-});
+}

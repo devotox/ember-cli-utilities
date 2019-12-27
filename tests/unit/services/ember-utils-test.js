@@ -10,4 +10,3 @@ module('Unit | Service | ember-utils', function(hooks) {
 		assert.ok(service);
 	});
 });
-

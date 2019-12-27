@@ -10,4 +10,3 @@ module('Unit | Service | loading-mask', function(hooks) {
 		assert.ok(service);
 	});
 });
-

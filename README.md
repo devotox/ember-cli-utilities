@@ -84,24 +84,20 @@ Usage
     - set of functions to determine current device
 * ember-utils
     - utility functions combining ember functions
-* ext-store
-    - Ember Data Store which allows slugs / offline
 * data-store
     - Ember Orbit Store with some wrappers for background reload
 * fastboot-store
-    - easier to use fastboot store functions
+    - easier to use FastBoot store functions
+* geometry
+    - Geometry calculations to use with maps
 * logger
     - Ember logger with interface to state where logs coming from
 * loading-mask
     - works in tandem with loading mask component for programmatic access
-* matrix
-    - add matrix type screen sensation
 * navigation
     - navigation shell
 * notification
     - notification hub / notification center mashup
-* printer
-    - TODO: allow arbitrary printing of any ember object
 * regex
     - set of useful regex
 * sandbox

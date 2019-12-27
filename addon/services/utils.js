@@ -10,49 +10,49 @@ import { w, capitalize } from '@ember/string';
 
 const { Set, Math: { round, random, floor } } = window;
 
-export default Service.extend({
+export default class UtilsService extends Service {
 	noop(_) {
 		return _;
-	},
+	}
 	exists(value) {
 		return (
 			(value || value === false || value === 0 || value === '')
 			&& !(value === null || typeof value === 'undefined' || Number.isNaN(value))
 		);
-	},
+	}
 	isObject(value) {
 		return typeof value === 'object' && value !== null && !Array.isArray(value);
-	},
+	}
 	isArray(value) {
 		return typeof value === 'object' && Array.isArray(value);
-	},
+	}
 	isNumber(value) {
 		return !Number.isNaN(parseFloat(value)) && isFinite(value);
-	},
+	}
 	isFunction(value) {
 		return typeof value === 'function';
-	},
+	}
 	isError(value) {
 		return value instanceof Error;
-	},
+	}
 	ucfirst(value) {
 		return value.charAt(0).toUpperCase() + value.slice(1);
-	},
+	}
 	random(min, max) {
 		return floor(random() * (max - min + 1)) + min;
-	},
+	}
 	round(value, decimals) {
 		return Number(`${round(`${value}e${decimals}`)}e-${decimals}`);
-	},
+	}
 	titleize(words) {
 		return w(words.toString())
 			.map(capitalize)
 			.join(' ');
-	},
+	}
 	cleanObject(obj = {}) {
 		Object.keys(obj).forEach((key) => (obj[key] === null || typeof obj[key] === 'undefined') && delete obj[key]);
 		return obj;
-	},
+	}
 	stringToBoolean(value) {
 		value
 			= value
@@ -68,7 +68,7 @@ export default Service.extend({
 			true: true,
 			default: false
 		});
-	},
+	}
 	switch(input, cases = {}) {
 		cases = Object.assign({
 			default() {
@@ -80,7 +80,92 @@ export default Service.extend({
 		return this.exists(cases[input])
 			? this.isFunction(cases[input]) ? cases[input]() : cases[input]
 			: this.isFunction(cases.default) ? cases.default() : cases.default;
-	},
+	}
+	sortObjects(arrayOfObjects, sortBy, reverse) {
+		let sortingFunction = null,
+			ordering = (A, B) => { return  A > B ? 1 : A === B ? 0 : -1 ; },
+			lower = (A, B) => {
+				return [ 
+					this.isFunction(A.toLowerCase) 
+						? A.toLowerCase() 
+						: A, 
+					this.isFunction(B.toLowerCase) 
+						? B.toLowerCase() 
+						: B 
+				]; 
+			};
+
+		if(typeof sortBy === 'string') {
+			sortingFunction = function(a, b) {
+				let A = a[sortBy];
+				let B = b[sortBy];
+				let AB = lower(A, B);
+				return ordering(AB[0], AB[1]);
+			};
+		} else if(this.get('utils').isFunction(sortBy)) {
+			sortingFunction = function(a, b) {
+				let A = sortBy.apply(a);
+				let B = sortBy.apply(b);
+				let AB = lower(A, B);
+				return ordering(AB[0], AB[1]);
+			};
+		}
+		return arrayOfObjects.sort(function() {
+			return sortingFunction.apply(this, arguments) * (reverse ? -1 : 1);
+		});
+	}
+	arrayToTree(rows) {
+		let tree = [];
+
+		let nodeMap = rows.reduce(function(map, node) {
+			map[node.id || node.name] = node;
+			return map;
+		}, {});
+
+		rows.forEach(function(node) {
+			let parent = nodeMap[node.parent_id || node.parent_name];
+			if (parent) {
+				( parent.children || ( parent.children = [] ) ).push(node);
+			} else {
+				tree.push(node);
+			}
+		});
+
+		return tree;
+	}
+	permute(input) {
+		let used = [], permArr = [];
+
+		function _permute(input) {
+			let i, ch;
+			for (i = 0; i < input.length; i++) {
+				ch = input.splice(i, 1)[0];
+				used.push(ch);
+
+				if (input.length === 0) {
+					permArr.push(used.slice());
+				}
+				_permute(input);
+				input.splice(i, 0, ch);
+				used.pop();
+			}
+			return permArr;
+		}
+
+		return _permute(input);
+	}
+	shuffle(array) {
+		let m = array.length, t, i;
+
+		while (m) {
+			i = Math.floor(Math.random() * m--);
+			t = array[m];
+			array[m] = array[i];
+			array[i] = t;
+		}
+
+		return array;
+	}
 	unique(obj, prop) {
 		let result = [];
 		let seen = new Set();
@@ -99,7 +184,7 @@ export default Service.extend({
 			});
 
 		return result;
-	},
+	}
 	contains(obj, item) {
 		if (!obj || !item) {
 			return;
@@ -116,7 +201,7 @@ export default Service.extend({
 				return objId === itemId;
 			})
 		);
-	},
+	}
 	range(left, right, step = 1, inclusive = true) {
 		let range = [];
 		let ascending = left < right;
@@ -125,7 +210,7 @@ export default Service.extend({
 			range.push(i);
 		}
 		return range;
-	},
+	}
 	scrollTo(element, to, duration) {
 		let start = element.scrollTop;
 		let change = to - start;
@@ -153,7 +238,7 @@ export default Service.extend({
 		};
 
 		animateScroll();
-	},
+	}
 	draf(cb) {
 		let raf
 			= typeof requestAnimationFrame !== 'undefined'
@@ -162,4 +247,4 @@ export default Service.extend({
 
 		return raf(() => raf(cb));
 	}
-});
+}

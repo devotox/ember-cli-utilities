@@ -10,4 +10,3 @@ module('Unit | Service | regex', function(hooks) {
 		assert.ok(service);
 	});
 });
-

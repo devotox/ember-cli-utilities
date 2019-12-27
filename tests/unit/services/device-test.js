@@ -10,4 +10,3 @@ module('Unit | Service | device', function(hooks) {
 		assert.ok(service);
 	});
 });
-

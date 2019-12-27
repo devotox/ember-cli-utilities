@@ -1,12 +1,9 @@
 import Service from '@ember/service';
 
-export default Service.extend({
-	init() {
-		this._super(...arguments);
-		this.setup();
-	},
+export default class DeviceService extends Service {
+	constructor() {
+		super(...arguments);
 
-	setup() {
 		let navigator = window.navigator || {};
 		let ua = this.userAgent = navigator.userAgent || '';
 
@@ -49,7 +46,7 @@ export default Service.extend({
 
 		this.isDesktop = !this.isMobile;
 		this.isModernDesktop = !(this.isMobile ||  this.isIE && this.IEVersion < 9);
-	},
+	}
 
 	viewport() {
 		let e = window;
@@ -66,13 +63,13 @@ export default Service.extend({
 			width: e[`${a  }Width`],
 			height: e[`${a  }Height`]
 		};
-	},
+	}
 
 	keycode(k) {
 		return {
 			up: 38, down: 40, left: 37, right: 39
 		}[k];
-	},
+	}
 
 	query(keyToFind) {
 		let found;
@@ -89,4 +86,4 @@ export default Service.extend({
 
 		return found;
 	}
-});
+}

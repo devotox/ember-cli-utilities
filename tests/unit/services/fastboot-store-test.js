@@ -10,4 +10,3 @@ module('Unit | Service | fastboot-store', function(hooks) {
 		assert.ok(service);
 	});
 });
-

@@ -1,5 +1,3 @@
-import { Promise } from 'rsvp';
-
 import Service from '@ember/service';
 
 const needsWindow = ['setTimeout', 'setInterval'];
@@ -15,28 +13,27 @@ const get = (target, key) => {
 
 const has = () => true;
 
-export default Service.extend({
+export default class SandboxService extends Service {
+	sandboxes = new WeakMap(); 
 
-	sandboxes: new WeakMap(), // eslint-disable-line
-
-	globals: { // eslint-disable-line
+	globals = { 
 		Math,
 		console,
 		Object, Promise,
 		parseInt, parseFloat,
 		setTimeout, setInterval
-	},
+	};
 
 	getSandboxKey(context) {
 		return context;
 		// return JSON.stringify(Object.keys(context));
-	},
+	}
 	createSandbox(globals) {
 		let defaultGlobals = this.get('globals');
 		return !globals
 			? defaultGlobals
 			: Object.assign(globals, defaultGlobals);
-	},
+	}
 	compileCode(src, root = {}) {
 		src = `with (context) { ${src} }`;
 		let sandboxes = this.get('sandboxes');
@@ -54,10 +51,10 @@ export default Service.extend({
 			let { proxy, global } = sandboxes.get(sandboxKey);
 			return code.call(global, proxy);
 		};
-	},
+	}
 	runCode(src, globals, root) {
 		let sandbox = this.createSandbox(globals);
 		let code = this.compileCode(src, root);
 		return code(sandbox);
 	}
-});
+}

@@ -6,45 +6,40 @@ import { getOwner } from '@ember/application';
 
 import Service, { inject } from '@ember/service';
 
-export default Service.extend({
+export default class ApiService extends Service {
+	@inject utils;
+	@inject crypto;
+	@inject offline;
 
-	// To be set by extension
-	host: '',
+	host = '';
 
-	proxyURL: '',
+	proxyURL = '';
 
-	namespace: 'api',
+	namespace = 'api';
 
-	maxCacheTime: 5 * 60 * 1000,
+	maxCacheTime = 5 * 60 * 1000;
 
-	// To be set by extension
+	cache = {};
 
-	cache: {}, // eslint-disable-line
+	fetching = {};
 
-	fetching: {}, // eslint-disable-line
-
-	utils: inject(),
-
-	crypto: inject(),
-
-	offline: inject(),
-
-	fastboot: computed(function() {
+	@computed()
+	get fastboot() {
 		return getOwner(this).lookup('service:fastboot');
-	}),
+	}
 
 	destroyed() {
 		return this.get('isDestroyed') || this.get('isDestroying');
-	},
+	}
 
 	invalidateCache(timestamp) {
 		let currentTime = +new Date();
 		let maxCacheTime = this.get('maxCacheTime');
 		return currentTime > timestamp + maxCacheTime;
-	},
+	}
 
 	init() {
-		this._super(...arguments);
+		super.init(...arguments);
 
 		[
 			'get', 'put', 'post',
@@ -56,7 +51,7 @@ export default Service.extend({
 				return self.request(method, ...arguments);
 			};
 		});
-	},
+	}
 
 	async request(api, method = 'GET', data = {}, headers = {}, { form, contentType, responseType, bypassCache, useProxy } = {}) {
 		method = method.toLowerCase();
@@ -113,7 +108,7 @@ export default Service.extend({
 			return cachedResponse
 				|| this.error(error);
 		}
-	},
+	}
 
 	async finish(response, type = 'json') {
 		if (!response.ok) {
@@ -127,7 +122,7 @@ export default Service.extend({
 		} catch(e) {
 			return response;
 		}
-	},
+	}
 
 	async error(response) {
 
@@ -151,7 +146,7 @@ export default Service.extend({
 		}
 
 		throw error;
-	},
+	}
 
 	createUrl(endpoint, method, data, useProxy) {
 		let qs = this.params(data);
@@ -174,7 +169,7 @@ export default Service.extend({
 		url = useProxy ? `${proxyURL}/${url.replace('://', ':/')}` : url;
 
 		return method !== 'get' ? url : `${url}${qs}`;
-	},
+	}
 
 	createHeaders(headers, contentType) {
 		headers = Object.assign({
@@ -186,7 +181,7 @@ export default Service.extend({
 		);
 
 		return headers;
-	},
+	}
 
 	params(obj = {}, prefix = undefined) {
 		let qs = Object.keys(obj).map((k) => {
@@ -202,4 +197,4 @@ export default Service.extend({
 		!prefix && qs && qs.length && (qs = `?${qs}`);
 		return qs && qs.length && qs || '';
 	}
-});
+}

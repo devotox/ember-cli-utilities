@@ -10,4 +10,3 @@ module('Unit | Service | translation', function(hooks) {
 		assert.ok(service);
 	});
 });
-
