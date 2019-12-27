@@ -1,5 +1,7 @@
 import Service from '@ember/service';
 
+import { get } from '@ember/object';
+
 export default class GeometryService extends Service {
 	radius = 6378137;
 	toRadians(degrees) {
@@ -12,7 +14,7 @@ export default class GeometryService extends Service {
 		let area = 0;
 		let sin = Math.sin;
 		let rad = this.toRadians;
-		let radius = this.get('radius');
+		let radius = get(this, 'radius');
 
 		for (let i = 0; i < points.length; i++) {
 			let p1 = points[i];
@@ -29,7 +31,7 @@ export default class GeometryService extends Service {
 	mapArea2(points) {
 		let cos = Math.cos;
 		let rad = this.toRadians;
-		let radius = this.get('radius');
+		let radius = get(this, 'radius');
 		let lat_dist = Math.PI * radius / 180;
 
 		let new_points = points.map( (point) => {

@@ -1,10 +1,12 @@
 import Service from '@ember/service';
 
+import { get } from '@ember/object';
+
 const needsWindow = ['setTimeout', 'setInterval'];
 
 const { WeakMap, Proxy, Symbol, console } = window;
 
-const get = (target, key) => {
+const _get = (target, key) => {
 	return key !== Symbol.unscopables
 		&& needsWindow.includes(key)
 		? target[key].bind(window)
@@ -29,14 +31,14 @@ export default class SandboxService extends Service {
 		// return JSON.stringify(Object.keys(context));
 	}
 	createSandbox(globals) {
-		let defaultGlobals = this.get('globals');
+		let defaultGlobals = get(this, 'globals');
 		return !globals
 			? defaultGlobals
 			: Object.assign(globals, defaultGlobals);
 	}
 	compileCode(src, root = {}) {
 		src = `with (context) { ${src} }`;
-		let sandboxes = this.get('sandboxes');
+		let sandboxes = get(this, 'sandboxes');
 		let code = new Function('context', src);
 
 		return (context) => {
@@ -44,7 +46,7 @@ export default class SandboxService extends Service {
 
 			if (!sandboxes.has(sandboxKey)) {
 				let global = Object.assign(Object.create(null), root);
-				let proxy = new Proxy(context, { has, get });
+				let proxy = new Proxy(context, { has, get: _get });
 				sandboxes.set(sandboxKey, { proxy, global });
 			}
 

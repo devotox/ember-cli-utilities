@@ -1,5 +1,7 @@
 import Service from '@ember/service';
 
+import { get } from '@ember/object';
+
 export default class LoggerService extends Service {
 	logLevel = 'debug';
 	
@@ -22,7 +24,7 @@ export default class LoggerService extends Service {
 	}
 
 	log() {
-		let logLevel = this.get('logLevel');
+		let logLevel = get(this, 'logLevel');
 		this._log(logLevel, ...arguments);
 	}
 

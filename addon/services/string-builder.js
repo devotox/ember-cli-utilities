@@ -1,5 +1,7 @@
 import Service from '@ember/service';
 
+import { get, set } from '@ember/object';
+
 export default class StringBuilderService extends Service {
 	data = [];
 
@@ -10,34 +12,34 @@ export default class StringBuilderService extends Service {
 	}
 
 	append() {
-		let data = this.get('data');
-		let counter = this.get('counter');
+		let data = get(this, 'data');
+		let counter = get(this, 'counter');
 		let args = Array.prototype.slice.call(arguments);
 
 		data[counter + 1] = args.join('').trim();
-		this.set('counter', counter + 1);
-		this.set('data', data);
+		set(this, 'counter', counter + 1);
+		set(this, 'data', data);
 	}
 
 	remove(i, j) {
-		let data = this.get('data');
+		let data = get(this, 'data');
 		data.splice(i, j || 1);
-		this.set('data', data);
+		set(this, 'data', data);
 	}
 
 	insert(i, s) {
-		let data = this.get('data');
+		let data = get(this, 'data');
 		data.splice(i, 0, s);
-		this.set('data', data);
+		set(this, 'data', data);
 	}
 
 	export(s) {
-		let data = this.get('data');
+		let data = get(this, 'data');
 		return data.join(s || '');
 	}
 
 	reset() {
-		this.set('data', []);
-		this.set('counter', 0);
+		set(this, 'data', []);
+		set(this, 'counter', 0);
 	}
 }

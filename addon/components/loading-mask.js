@@ -2,9 +2,9 @@ import { inject } from '@ember/service';
 
 import Component from '@glimmer/component';
 
-import { computed, get } from '@ember/object';
-
 import { getOwner } from '@ember/application';
+
+import { computed, get, set } from '@ember/object';
 
 import { debounceTask, runDisposables } from 'ember-lifeline';
 
@@ -51,7 +51,7 @@ export default class LoadingMaskComponent extends Component {
 
 	show(noHide) {
 		if (this.isRemoved()) { return; }
-		this.set('hidden', false);
+		set(this, 'hidden', false);
 		if (noHide) { return; }
 
 		let mlt = get(this, 'maxLoadingTime');
@@ -60,7 +60,7 @@ export default class LoadingMaskComponent extends Component {
 
 	hide() {
 		if (this.isRemoved()) { return; }
-		this.set('hidden', true);
+		set(this, 'hidden', true);
 	}
 
 	isRemoved() {

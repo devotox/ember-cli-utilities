@@ -1,5 +1,3 @@
-import { get } from '@ember/object';
-
 import { debug } from '@ember/debug';
 
 import { run } from '@ember/runloop';
@@ -7,6 +5,8 @@ import { run } from '@ember/runloop';
 import Service from '@ember/service';
 
 import { w, capitalize } from '@ember/string';
+
+import { get } from '@ember/object';
 
 const { Set, Math: { round, random, floor } } = window;
 
@@ -105,7 +105,7 @@ export default class UtilsService extends Service {
 				let AB = lower(A, B);
 				return ordering(AB[0], AB[1]);
 			};
-		} else if(this.get('utils').isFunction(sortBy)) {
+		} else if(get(this, 'utils').isFunction(sortBy)) {
 			sortingFunction = function(a, b) {
 				let A = sortBy.apply(a);
 				let B = sortBy.apply(b);

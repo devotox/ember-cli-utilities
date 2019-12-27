@@ -1,5 +1,7 @@
 import Service from '@ember/service';
 
+import { get, set } from '@ember/object';
+
 export default class AlphaIteratorService extends Service {
 	currentIndex = 0;
 
@@ -9,24 +11,24 @@ export default class AlphaIteratorService extends Service {
 
 	constructor() {
 		super(...arguments);
-		let lowercase = this.get('lowercase');
+		let lowercase = get(this, 'lowercase');
 
-		let characters = this.get('characters');
+		let characters = get(this, 'characters');
 
 		lowercase
 			&& (characters = characters.toLowerCase())
 			|| (characters = characters.toUpperCase());
 
-		this.set('characters', characters);
+		set(this, 'characters', characters);
 	}
 
 	next() {
-		this.set('currentIndex', (this.get('currentIndex') + 1) % 26);
-		return this.get('characters').charAt(this.get('currentIndex'));
+		set(this, 'currentIndex', (get(this, 'currentIndex') + 1) % 26);
+		return get(this, 'characters').charAt(get(this, 'currentIndex'));
 	}
 
 	previous() {
-		this.set('currentIndex', (this.get('currentIndex') - 1) % 26);
-		return this.get('characters').charAt(this.get('currentIndex'));
+		set(this, 'currentIndex', (get(this, 'currentIndex') - 1) % 26);
+		return get(this, 'characters').charAt(get(this, 'currentIndex'));
 	}
 }

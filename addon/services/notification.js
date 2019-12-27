@@ -4,13 +4,15 @@ import moment from 'moment';
 
 import Service, { inject } from '@ember/service';
 
+import { get } from '@ember/object';
+
 export default class NotificationService extends Service {
 	@inject push;
 	@inject notifications;
 	@inject emberNotificationCenter;
 
 	defaults() {
-		let notification = this.get('notifications');
+		let notification = get(this, 'notifications');
 		notification.setDefaultClearDuration(3500);
 		notification.setDefaultAutoClear(true);
 	}
@@ -49,7 +51,7 @@ export default class NotificationService extends Service {
 		}
 
 		if (type === 'hub' || options.hub === true) {
-			let notification = this.get('emberNotificationCenter');
+			let notification = get(this, 'emberNotificationCenter');
 			notification.pushNotification({ title, description }, promise);
 		}
 
@@ -90,8 +92,8 @@ export default class NotificationService extends Service {
 		let { icon = '', title = '', timeout = 5000 } = options;
 
 		return (type === 'system' || options.system)
-			&& this.get('push').create(title, { icon, body, timeout })
-			|| this.get('notifications')[type](message, options);
+			&& get(this, 'push').create(title, { icon, body, timeout })
+			|| get(this, 'notifications')[type](message, options);
 	}
 
 	async callback(promise, options) {
@@ -136,7 +138,7 @@ export default class NotificationService extends Service {
 	}
 
 	clear() {
-		this.get('push').clear();
-		this.get('notifications').clearAll();
+		get(this, 'push').clear();
+		get(this, 'notifications').clearAll();
 	}
 }

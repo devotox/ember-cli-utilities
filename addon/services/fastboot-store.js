@@ -1,6 +1,6 @@
 import Service from '@ember/service';
 
-import { computed } from '@ember/object';
+import { computed, get } from '@ember/object';
 
 import { alias } from '@ember/object/computed';
 
@@ -19,14 +19,14 @@ export default class FastbootStoreService extends Service {
 	}
 
 	createStore(storeName, store = {}) {
-		this.get('isFastBoot')
-			&& this.get('shoebox').put(storeName, store);
+		get(this, 'isFastBoot')
+			&& get(this, 'shoebox').put(storeName, store);
 		return store;
 	}
 
 	getStore(storeName) {
-		storeName = storeName || this.get('globalStore');
-		return this.get('shoebox').retrieve(storeName)
+		storeName = storeName || get(this, 'globalStore');
+		return get(this, 'shoebox').retrieve(storeName)
 			|| this.createStore(storeName);
 	}
 
@@ -37,12 +37,12 @@ export default class FastbootStoreService extends Service {
 	}
 
 	setItem(key, data, storeName) {
-		return !this.get('isFastBoot') && data
+		return !get(this, 'isFastBoot') && data
 			|| (this.getStore(storeName)[key] = data);
 	}
 
 	removeItem(key, storeName) {
-		!this.get('isFastBoot')
+		!get(this, 'isFastBoot')
 			&& delete this.getStore(storeName)[key];
 	}
 }
