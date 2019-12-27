@@ -1,14 +1,13 @@
 import { A, isArray } from '@ember/array';
 
-import DS from 'ember-data';
+import Transform from '@ember-data/serializer/transform';
 
-const { Transform } = DS;
-
-export default Transform.extend({
+export default class ArrayTransform extends Transform {
 	deserialize(value) {
 		return isArray(value) ? A(value) : A();
-	},
+	}
+
 	serialize(value) {
 		return isArray(value) ? A(value) : A();
 	}
-});
+}

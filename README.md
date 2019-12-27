@@ -65,14 +65,6 @@ Usage
 * loading-mask
     - Added anywhere as a contextual component, sets a loading mask for the whole viewport that also yields the hide, show, loading actions 
 
-## Mixins
-* after-render
-    - can hook into afterRender schedule on any ember object
-* reset-scroll
-    - scrolls back to top of window on route change
-* setup-controller
-    - adds application controller / after-render to current Ember object
-
 ## Services
 * api
     - generic api connector to run all HTTP methods using ember-fetch

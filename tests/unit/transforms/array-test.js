@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('transform:array', 'Unit | Transform | array', function(hooks) {
+module('Unit | Transform | array', function(hooks) {
 	setupTest(hooks);
 
 	// Replace this with your real tests.

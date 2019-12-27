@@ -19,7 +19,6 @@ module.exports = {
 				'@babel/plugin-proposal-throw-expressions',
 				'@babel/plugin-proposal-optional-chaining',
 				'@babel/plugin-proposal-object-rest-spread',
-				'@babel/plugin-transform-async-to-generator',
 				'@babel/plugin-proposal-export-namespace-from',
 				'@babel/plugin-proposal-nullish-coalescing-operator',
 				'@babel/plugin-proposal-logical-assignment-operators',
@@ -156,14 +155,5 @@ module.exports = {
 		if (!opt) { return topLevelOptions || parentOptions; }
 		return topLevelOptions && topLevelOptions[opt]
 			|| parentOptions && parentOptions[opt];
-	},
-
-	_ensureThisImport() {
-		if (!this.import) {
-			this.import = function importShim(asset, options) {
-				let app = this._findHost();
-				app.import(asset, options);
-			};
-		}
 	}
 };

@@ -1,73 +1,74 @@
-import { Promise } from 'rsvp';
-
 import { inject } from '@ember/service';
 
-import { computed } from '@ember/object';
+import Component from '@glimmer/component';
 
-import Component from '@ember/component';
+import { computed, get } from '@ember/object';
 
 import { getOwner } from '@ember/application';
 
-import RunMixin from 'ember-lifeline/mixins/run';
+import { debounceTask, runDisposables } from 'ember-lifeline';
 
-export default Component.extend(RunMixin, {
-	promise: null,
+export default class LoadingMaskComponent extends Component {
+	promise = null;
 
-	hidden: false,
+	hidden = false;
 
-	maxLoadingTime: 5000,
+	@inject loadingMask;
 
-	loadingMask: inject(),
+	maxLoadingTime = 5000;
 
-	fastboot: computed(function() {
+	@computed()
+	get fastboot() {
 		return getOwner(this).lookup('service:fastboot');
-	}),
+	}
 
-	init() {
-		this._super(...arguments);
-		this.setLoadingMaskService();
-	},
+	constructor() {
+		super(...arguments);
 
-	didReceiveAttrs() {
-		if (this.get('fastboot.isFastBoot')) { return this.hide(); }
-		if (this.get('hidden')) { return; }
-
-		let promise = this.get('promise');
-		this.loadPromise(promise);
-	},
-
-	setLoadingMaskService() {
-		this.get('loadingMask')
+		get(this, 'loadingMask')
 			.setProperties({
 				hide: this.hide.bind(this),
 				show: this.show.bind(this),
 				loadPromise: this.loadPromise.bind(this),
-				maxLoadingTime: this.get('maxLoadingTime')
+				maxLoadingTime: get(this, 'maxLoadingTime')
 			});
-	},
+	}
+
+	didReceiveAttrs() {
+		if (get(this, 'fastboot.isFastBoot')) { return this.hide(); }
+		if (get(this, 'hidden')) { return; }
+
+		let promise = get(this, 'promise');
+		this.loadPromise(promise);
+	}
 
 	loadPromise(promise) {
 		this.show();
 
 		promise && Promise.resolve(promise)
 			.then(this.hide.bind(this));
-	},
+	}
 
 	show(noHide) {
 		if (this.isRemoved()) { return; }
 		this.set('hidden', false);
 		if (noHide) { return; }
 
-		let mlt = this.get('maxLoadingTime');
-		this.debounceTask('hide', mlt);
-	},
+		let mlt = get(this, 'maxLoadingTime');
+		debounceTask('hide', mlt);
+	}
 
 	hide() {
 		if (this.isRemoved()) { return; }
 		this.set('hidden', true);
-	},
+	}
 
 	isRemoved() {
 		return this.isDestroyed || this.isDestroying;
 	}
-});
+	
+	willDestroy() {
+		super.willDestroy(...arguments);
+		runDisposables(this);
+	}
+}
