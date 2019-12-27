@@ -8897,9 +8897,9 @@ inquirer@^7.0.0, inquirer@^7.0.1:
     through "^2.3.6"
 
 intersection-observer-admin@~0.2.8:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.2.9.tgz#95a4173ac729990d4c791e530f6c8c295ddb20d5"
-  integrity sha512-lpZoEMa9VrHWnpy0uRFqVvPXL+mZ8vYPpOMPC9H64kAF7f+256gCjrwvIl/MjCIobrblAD3VVxLoiUqIKIfYTw==
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.2.10.tgz#f5577240c8713612e7df68e71528e986a84b8c8a"
+  integrity sha512-qQo6SDLSSJYMDYo46b9rDA47VFiCn4pOhEMb97I4+iuFJBRfB28+nWpFtlAfkMwUyST30YNlovtebQOwsGKX1g==
 
 intl@^1.2.5:
   version "1.2.5"
