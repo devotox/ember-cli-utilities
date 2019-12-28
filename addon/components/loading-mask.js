@@ -25,21 +25,19 @@ export default class LoadingMaskComponent extends Component {
 	constructor() {
 		super(...arguments);
 
-		get(this, 'loadingMask')
-			.setProperties({
-				hide: this.hide.bind(this),
-				show: this.show.bind(this),
-				loadPromise: this.loadPromise.bind(this),
-				maxLoadingTime: get(this, 'maxLoadingTime')
-			});
+		Object.assign(this.loadingMask, {
+			hide: this.hide.bind(this),
+			show: this.show.bind(this),
+			maxLoadingTime: this.maxLoadingTime,
+			loadPromise: this.loadPromise.bind(this)
+		});
 	}
 
 	didReceiveAttrs() {
 		if (get(this, 'fastboot.isFastBoot')) { return this.hide(); }
-		if (get(this, 'hidden')) { return; }
+		if (this.hidden) { return; }
 
-		let promise = get(this, 'promise');
-		this.loadPromise(promise);
+		this.loadPromise( this.promise);
 	}
 
 	loadPromise(promise) {
@@ -54,7 +52,7 @@ export default class LoadingMaskComponent extends Component {
 		set(this, 'hidden', false);
 		if (noHide) { return; }
 
-		let mlt = get(this, 'maxLoadingTime');
+		let mlt = this.maxLoadingTime
 		debounceTask('hide', mlt);
 	}
 

@@ -157,11 +157,12 @@ export default class UtilsService extends Service {
 
 		return _permute(input);
 	}
-	shuffle(array) {
+	shuffle(array = []) {
+		array = array.slice(0);
 		let m = array.length, t, i;
 
 		while (m) {
-			i = Math.floor(Math.random() * m--);
+			i = floor(random() * m--);
 			t = array[m];
 			array[m] = array[i];
 			array[i] = t;
