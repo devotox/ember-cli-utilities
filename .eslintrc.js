@@ -46,6 +46,7 @@ module.exports = {
 		// node files
 		{
 			files: [
+				'.huskyrc.js',
 				'.eslintrc.js',
 				'.ember-cli.js',
 				'.template-lintrc.js',
