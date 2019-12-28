@@ -4,9 +4,9 @@ import { run } from '@ember/runloop';
 
 import Service from '@ember/service';
 
-import { w, capitalize } from '@ember/string';
-
 import { get } from '@ember/object';
+
+import { w, capitalize } from '@ember/string';
 
 const { Set, Math: { round, random, floor } } = window;
 
@@ -84,19 +84,15 @@ export default class UtilsService extends Service {
 			? this.isFunction(cases[input]) ? cases[input]() : cases[input]
 			: this.isFunction(cases.default) ? cases.default() : cases.default;
 	}
+	toLowerCase(str) {
+		return this.isFunction(str?.toLowerCase) 
+			? str.toLowerCase() 
+			: str;
+	}
 	sortObjects(arrayOfObjects, sortBy, reverse) {
-		let sortingFunction = null,
-			ordering = (A, B) => { return  A > B ? 1 : A === B ? 0 : -1 ; },
-			lower = (A, B) => {
-				return [ 
-					this.isFunction(A.toLowerCase) 
-						? A.toLowerCase() 
-						: A, 
-					this.isFunction(B.toLowerCase) 
-						? B.toLowerCase() 
-						: B 
-				]; 
-			};
+		let sortingFunction = null;
+		let ordering = (A, B) => A > B ? 1 : A === B ? 0 : -1;
+		let lower = (A, B) => [this.toLowerCase(A), this.toLowerCase(B)]; 
 
 		if(typeof sortBy === 'string') {
 			sortingFunction = function(a, b) {
@@ -105,7 +101,7 @@ export default class UtilsService extends Service {
 				let AB = lower(A, B);
 				return ordering(AB[0], AB[1]);
 			};
-		} else if(get(this, 'utils').isFunction(sortBy)) {
+		} else if(this.isFunction(sortBy)) {
 			sortingFunction = function(a, b) {
 				let A = sortBy.apply(a);
 				let B = sortBy.apply(b);
@@ -170,7 +166,7 @@ export default class UtilsService extends Service {
 
 		return array;
 	}
-	unique(obj, prop) {
+	unique(obj, prop, lower = true) {
 		let result = [];
 		let seen = new Set();
 
@@ -181,10 +177,13 @@ export default class UtilsService extends Service {
 				let test = !prop
 					? value
 					: value[prop];
+					
+				lower 
+					&& (test = this.toLowerCase(test));
 
 				!seen.has(test)
-				&& seen.add(test)
-				&& result.push(value);
+					&& seen.add(test)
+					&& result.push(value);
 			});
 
 		return result;
