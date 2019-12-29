@@ -1,0 +1,40 @@
+.locale-select {
+    height: 2.4em;
+    font-size: 0.5em;
+    margin-left: auto;
+    margin-top: 0.6em;
+    align-self: flex-start;
+
+    md-input-container {
+        margin: 0;
+    }
+
+    md-select {
+        padding-right: 0;
+
+        md-select-value {
+            border-bottom: none;
+        }
+    }
+
+    /* Small (sm) */
+    @media (min-width: 640px) {
+        font-size: 0.6em;
+    }
+
+    /* Medium (md) */
+    @media (min-width: 768px) {
+        font-size: 0.7em;
+    }
+
+    /* Large (lg) */
+    @media (min-width: 1024px) {
+        font-size: 0.8em;
+    }
+
+    /* Extra Large (xl) */
+    @media (min-width: 1280px) {
+        font-size: 0.9em;
+        /* ... */
+    }
+}

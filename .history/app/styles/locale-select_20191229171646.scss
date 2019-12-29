@@ -1,0 +1,27 @@
+.locale-select {
+    height: 2.4em;
+    font-size: 1em;
+    margin-left: auto;
+    margin-top: 0.6em;
+    align-self: flex-start;
+
+    md-input-container {
+        margin: 0;
+    }
+
+    md-select {
+        padding-right: 0;
+
+        md-select-value {
+            border-bottom: none;
+        }
+    }
+
+    @media (max-width: 639px) {
+        font-size: 0.6em;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 0.7em;
+    }
+}
