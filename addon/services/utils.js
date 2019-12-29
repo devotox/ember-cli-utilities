@@ -74,10 +74,7 @@ export default class UtilsService extends Service {
 	}
 	switch(input, cases = {}) {
 		cases = Object.assign({
-			default() {
-				let message = 'default run for unhandled case:';
-				debug(message, input);
-			}
+			default: () => debug(`default run for unhandled case: ${input}`)
 		}, cases);
 
 		return this.exists(cases[input])
