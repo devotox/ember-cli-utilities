@@ -4398,7 +4398,7 @@ clean-css-promise@^0.1.0:
     clean-css "^3.4.5"
     pinkie-promise "^2.0.0"
 
-clean-css@^3.4.5, clean-css@devotox/clean-css#patch-1:
+clean-css@^3.4.5:
   version "3.4.28"
   resolved "https://codeload.github.com/devotox/clean-css/tar.gz/1842ed95f30c3154ccc5bba2909ab831db7c5149"
   dependencies:
@@ -5914,10 +5914,9 @@ ember-cli-normalize-entity-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-notifications@5.0.0-0:
+ember-cli-notifications@jacobq/ember-cli-notifications#fix/postcss:
   version "5.0.0-0"
-  resolved "https://registry.yarnpkg.com/ember-cli-notifications/-/ember-cli-notifications-5.0.0-0.tgz#2e0499110b63194fff280825c3f874d97d9b6b63"
-  integrity sha512-qpd5bP0wDOUqRLsfTEajmc2B+vmsNyBNfStCEYlHplRBWAZl4Uf8VAiAKTi5HzJ73yJwqAqsz6iyuc5aKMtO7w==
+  resolved "https://codeload.github.com/jacobq/ember-cli-notifications/tar.gz/c8a02b53dfa1f126eaff816e83160343c5885b0c"
   dependencies:
     ember-cli-babel "^7.11.1"
     ember-cli-htmlbars "^4.0.0"

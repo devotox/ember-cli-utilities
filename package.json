@@ -62,7 +62,7 @@
 		"ember-cli-build-notifications": "0.4.0",
 		"ember-cli-fastclick": "1.5.0",
 		"ember-cli-htmlbars": "4.2.0",
-		"ember-cli-notifications": "5.0.0-0",
+		"ember-cli-notifications": "jacobq/ember-cli-notifications#fix/postcss",
 		"ember-cli-pushjs": "2.0.8",
 		"ember-cli-roboto-fontface": "2.0.5",
 		"ember-cli-sass": "10.0.1",
@@ -163,8 +163,5 @@
 	"volta": {
 		"node": "10.18.0",
 		"yarn": "1.21.1"
-	},
-	"resolutions": {
-		"clean-css": "devotox/clean-css#patch-1"
 	}
 }
