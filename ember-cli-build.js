@@ -49,7 +49,8 @@ module.exports = function(defaults) {
 			enabled: isProduction
 		},
 		'minifyCSS': {
-			enabled: false
+			enabled: isProduction,
+			options: { processImport: false }
 		},
 		'minifyHTML': {
 			enabled: isProduction,

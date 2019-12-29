@@ -1,3 +1,7 @@
-[data-ember-action], a, button, input, .link {
+a,
+input,
+.link,
+button,
+[data-ember-action] {
 	cursor: pointer;
 }

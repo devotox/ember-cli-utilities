@@ -6,13 +6,6 @@ module.exports = {
 	name,
 
 	options: {
-		sassOptions: {
-			includePaths: [
-				'app/styles',
-				'addon/styles',
-				'addon/components/'
-			]
-		},
 		babel: {
 			plugins: [
 				'@babel/plugin-transform-block-scoping',
