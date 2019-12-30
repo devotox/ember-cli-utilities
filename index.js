@@ -18,6 +18,9 @@ module.exports = {
 				['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }]
 			]
 		},
+		'ember-fetch': {
+			preferNative: false
+		},
 		'ember-cli-babel': {
 			compileModules: true,
 			includePolyfill: true,
