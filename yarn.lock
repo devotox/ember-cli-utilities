@@ -6422,17 +6422,17 @@ ember-in-element-polyfill@^0.1.3:
     ember-cli-version-checker "^2.1.0"
     ember-wormhole "^0.5.4"
 
-ember-in-viewport@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.7.0.tgz#ca931418d22aaa1b88e02f2b913cbc04d8617502"
-  integrity sha512-MzEpYeIo5y6mYU55MUoEMn/W7URMk1TbHx0v/5J+JWiQIIwWA56IJi0npxrtpeGJj/Rp3Qkh47ZWLl0Rvv6f+w==
+ember-in-viewport@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.7.1.tgz#8bbef5039bc02351b023bb5689b59ab2246ecb2f"
+  integrity sha512-ZOyCBmMKk2uRIqvWCbJmeN5Ay4iDMc5R0DxePq0adtSQh6Rp4M3RQaGpguhcZveW8ibfJVfD+K7r6lXe4Eu1sA==
   dependencies:
     ember-auto-import "^1.5.2"
     ember-cli-babel "^7.7.3"
     ember-modifier "^1.0.2"
     fast-deep-equal "^2.0.1"
-    intersection-observer-admin "~0.2.8"
-    raf-pool "~0.1.3"
+    intersection-observer-admin "~0.2.10"
+    raf-pool "~0.1.4"
 
 ember-inflector@3.0.1, "ember-inflector@^2.0.0 || ^3.0.0", ember-inflector@^3.0.1:
   version "3.0.1"
@@ -9079,7 +9079,7 @@ inquirer@^7.0.0, inquirer@^7.0.1:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-intersection-observer-admin@~0.2.8:
+intersection-observer-admin@~0.2.10:
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.2.10.tgz#f5577240c8713612e7df68e71528e986a84b8c8a"
   integrity sha512-qQo6SDLSSJYMDYo46b9rDA47VFiCn4pOhEMb97I4+iuFJBRfB28+nWpFtlAfkMwUyST30YNlovtebQOwsGKX1g==
@@ -13277,7 +13277,7 @@ raf-polyfill@^1.0.0:
   resolved "https://registry.yarnpkg.com/raf-polyfill/-/raf-polyfill-1.0.0.tgz#cc6019be5bbb7112b8eeaae0ea8b5077100802e2"
   integrity sha512-WwyjuX5kZFOslF+8mGjVrMvDYmOwlN50Eqoc876td1abMaesf1sK4uiOZor3bvJfBRCwCHuJNR3TN4KztC/IhA==
 
-raf-pool@~0.1.3:
+raf-pool@~0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/raf-pool/-/raf-pool-0.1.4.tgz#6b9f75ea1903c16e162ffe8c76688f5a625bc2cd"
   integrity sha512-BBPamTVuSprPq7CUmgxc+ycbsYUtUYnQtJYEfMHXMaostPaNpQzipLfSa/rwjmlgjBPiD7G+I+8W340sLOPu6g==
