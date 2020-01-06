@@ -133,6 +133,72 @@ Usage
 * Has everything needed to have `memory + backup + remote` secenario
     - [Scenario](https://github.com/orbitjs/todomvc-ember-orbit#scenario-4-memory--backup--remote)
 Contributing
+
+## Defaults
+* ember-fetch
+    - preferNative: true
+* ember-paper
+    - insertFontLinks: false
+* ember-cli-mirage
+    - enabled: false
+* ember-cli-head
+    - suppressBrowserRender: false
+* ember-cli-notifications
+    - includeFontAwesome: false
+    - clearDuration: 3500
+    - autoClear: true
+* ember-load-css
+    - enabled: true
+    - minifyJS: 
+        - enabled: true
+* ember-hammertime
+    - touchActionSelectors: ['button', 'input', 'a', 'textarea']
+    - touchActionProperties: 'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;'
+* ember-offline
+    - themes
+        - theme: chrome
+        - language: english
+    - checkOnLoad: true
+    - interceptRequests: true
+    - requests: true
+    - deDupBody: true
+    - game: false
+    - checks:
+        - xhr: 
+            - url: 'api/status'
+    - reconnect
+        - initalDelay: 10
+        - delay: null 
+* moment
+    - allowEmpty: true,
+    - outputFormat: 'L',
+    - includeLocales: ['en'],
+    - includeTimezone: 'subset'
+* pace
+    - color: blue
+    - target: body 
+    - theme: minimal 
+    - minTime: 100
+    - ghostTime: 50
+    - catchupTime: 50 
+    - easeFactor: 1.25 
+    - initialRate: 0.01 
+    - startOnPageLoad: true 
+    - maxProgressPerFrame: 20 
+    - restartOnPushState: true 
+    - restartOnRequestAfter: 500 
+    - elements: 
+        - checkInterval: 100
+        - selectors: ['body', '.ember-view']
+    - eventLag:
+        - minSamples: 10 
+        - sampleCount: 3
+        - lagThreshold: 3
+    - ajax:
+        - trackMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
+        - trackWebSockets: false
+        - ignoreUrls: []
+
 ------------------------------------------------------------------------------
 
 See the [Contributing](CONTRIBUTING.md) guide for details.

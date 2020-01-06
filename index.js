@@ -18,13 +18,13 @@ module.exports = {
 				['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }]
 			]
 		},
-		'ember-fetch': {
-			preferNative: false
-		},
 		'ember-cli-babel': {
 			compileModules: true,
 			includePolyfill: true,
 			disableDebugTooling: true
+		},
+		'ember-fetch': {
+			preferNative: true
 		},
 		'ember-paper': {
 			insertFontLinks: false
@@ -80,7 +80,7 @@ module.exports = {
 				lagThreshold: 3
 			},
 			ajax: {
-				trackMethods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+				trackMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
 				trackWebSockets: false,
 				ignoreURLs: []
 			}
