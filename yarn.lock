@@ -5915,9 +5915,10 @@ ember-cli-normalize-entity-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-notifications@jacobq/ember-cli-notifications#fix/postcss:
-  version "5.0.0-0"
-  resolved "https://codeload.github.com/jacobq/ember-cli-notifications/tar.gz/c8a02b53dfa1f126eaff816e83160343c5885b0c"
+ember-cli-notifications@5.0.0-1:
+  version "5.0.0-1"
+  resolved "https://registry.yarnpkg.com/ember-cli-notifications/-/ember-cli-notifications-5.0.0-1.tgz#2eb3735deb65041ddd6c265e18c3097525fabb1a"
+  integrity sha512-aSLAFpBXZN4RK2LIYGDik2vXzxw+0IvqWX6gqR6sh/Fd05CRfw/0Vlcn++UrZ9hgp+5SifCFkRvxPsxLbQYL6w==
   dependencies:
     ember-cli-babel "^7.11.1"
     ember-cli-htmlbars "^4.0.0"
