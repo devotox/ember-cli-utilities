@@ -5790,7 +5790,7 @@ ember-cli-htmlbars@3.0.1:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-htmlbars@4.2.0, ember-cli-htmlbars@^4.0.0, ember-cli-htmlbars@^4.0.5, ember-cli-htmlbars@^4.2.0:
+ember-cli-htmlbars@4.2.0, ember-cli-htmlbars@^4.0.5, ember-cli-htmlbars@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-4.2.0.tgz#a3694ab31f6d571c45786a3041b9c76e4eb30989"
   integrity sha512-YymJLg/rRiclK5jxbTFpaRNlbS+f3SY6SplnMExjcrcbSjMRsBuams50+mppENEu7iKfd6PBqH3FHVbYsukHSQ==
@@ -5915,13 +5915,13 @@ ember-cli-normalize-entity-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-notifications@5.0.0-1:
-  version "5.0.0-1"
-  resolved "https://registry.yarnpkg.com/ember-cli-notifications/-/ember-cli-notifications-5.0.0-1.tgz#2eb3735deb65041ddd6c265e18c3097525fabb1a"
-  integrity sha512-aSLAFpBXZN4RK2LIYGDik2vXzxw+0IvqWX6gqR6sh/Fd05CRfw/0Vlcn++UrZ9hgp+5SifCFkRvxPsxLbQYL6w==
+ember-cli-notifications@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-notifications/-/ember-cli-notifications-5.1.0.tgz#88aee273ac5ec072b5937378b6afad2cd87218b3"
+  integrity sha512-Qs/h0RoM+ftk9TAgnygCLlL70JZRysbiCEI5HoC4wTCMOFh8+0SMHWh2TiDYQrKto1LVK+/XkeKTLRXWzVARSg==
   dependencies:
-    ember-cli-babel "^7.11.1"
-    ember-cli-htmlbars "^4.0.0"
+    ember-cli-babel "^7.13.0"
+    ember-cli-htmlbars "^4.2.0"
     ember-cli-postcss "^5.0.0"
     ember-get-config "^0.2.4"
     postcss-preset-env "^6.7.0"
