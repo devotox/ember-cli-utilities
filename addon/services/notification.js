@@ -2,9 +2,9 @@ const { Offline } = window;
 
 import moment from 'moment';
 
-import Service, { inject } from '@ember/service';
-
 import { get } from '@ember/object';
+
+import Service, { inject } from '@ember/service';
 
 export default class NotificationService extends Service {
 	@inject push;
@@ -130,8 +130,7 @@ export default class NotificationService extends Service {
 	}
 
 	title(type, message) {
-		let timestamp = moment().format('LTS');
-		timestamp = `[${timestamp}]`;
+		let timestamp = `[${moment().format('LTS')}]`;
 
 		return ['success', 'error', 'hub'].includes(type)
 			? timestamp : `${timestamp} ${message}`;
