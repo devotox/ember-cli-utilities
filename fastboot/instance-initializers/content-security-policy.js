@@ -14,7 +14,9 @@ export function initialize(appInstance) {
 		return;
 	}
 
-	const { policy, reportOnly } = readAddonConfig(appInstance);
+	const { policy, reportOnly } = readAddonConfig(appInstance) || {};
+	if (!policy) { return; }
+
 	const header = reportOnly ? 'Content-Security-Policy-Report-Only' : 'Content-Security-Policy';
 	fastboot.get('response.headers').set(header, policy);
 }
