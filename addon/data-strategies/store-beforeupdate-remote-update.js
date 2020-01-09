@@ -47,9 +47,7 @@ export default {
 			 * `filter` will be invoked in the context of this strategy (and thus will
 			 * have access to both `this.source` and `this.target`).
 			 */
-			filter() {
-				return false;
-			},
+			// filter(...args) {};
 
 			/**
 			 * Should results returned from calling `action` on the `target` source be
