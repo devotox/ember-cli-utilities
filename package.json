@@ -78,7 +78,7 @@
 		"flatted": "2.0.1",
 		"json-fn": "1.1.1",
 		"normalize.css": "8.0.1",
-		"sass": "1.24.2"
+		"sass": "1.24.4"
 	},
 	"devDependencies": {
 		"@babel/core": "7.7.7",
