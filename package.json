@@ -1,6 +1,6 @@
 {
 	"name": "ember-cli-utilities",
-	"version": "3.1.16",
+	"version": "3.2.0",
 	"description": "Utility Components / Services / Mixins for Ember",
 	"keywords": [
 		"ember-addon",
@@ -62,11 +62,13 @@
 		"ember-cli-build-notifications": "0.4.0",
 		"ember-cli-fastclick": "1.5.0",
 		"ember-cli-htmlbars": "4.2.1",
-		"ember-cli-notifications": "5.1.0",
+		"ember-cli-moment-shim": "3.7.1",
+		"ember-cli-notifications": "6.0.0",
 		"ember-cli-pushjs": "2.0.8",
 		"ember-cli-roboto-fontface": "2.0.5",
 		"ember-cli-sass": "10.0.1",
 		"ember-material-design-icons-shim": "0.1.13",
+		"ember-moment": "8.0.0",
 		"ember-notification-hub": "devotox/ember-notification-hub",
 		"ember-offline": "devotox/ember-offline",
 		"ember-orbit": "0.16.4",
@@ -77,8 +79,6 @@
 		"fast-sort": "2.0.1",
 		"flatted": "2.0.1",
 		"json-fn": "1.1.1",
-		"ember-moment": "8.0.0",
-		"ember-cli-moment-shim": "3.7.1",
 		"normalize.css": "8.0.1",
 		"sass": "1.24.4"
 	},
