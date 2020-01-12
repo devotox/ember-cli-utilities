@@ -156,10 +156,10 @@
   dependencies:
     "@babel/types" "^7.7.4"
 
-"@babel/helper-plugin-utils@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz#bbb3fbee98661c569034237cc03967ba99b4f250"
-  integrity sha512-CYAOUCARwExnEixLdB6sDm2dIJ/YgEAKDM1MOeMeZu9Ld/bDgVo8aiWrXwcY7OBh+1Ea2uUcVRcxKk0GJvW7QA==
+"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.8.0":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.8.0.tgz#59ec882d43c21c544ccb51decaecb306b34a8231"
+  integrity sha512-+hAlRGdf8fHQAyNnDBqTHQhwdLURLdrCROoWaEQYiQhk2sV9Rhs+GoFZZfMJExTq9HG8o2NX3uN2G90bFtmFdA==
 
 "@babel/helper-regex@^7.0.0", "@babel/helper-regex@^7.4.4":
   version "7.5.5"
@@ -472,12 +472,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-transform-block-scoping@7.7.4", "@babel/plugin-transform-block-scoping@^7.6.2", "@babel/plugin-transform-block-scoping@^7.6.3", "@babel/plugin-transform-block-scoping@^7.7.4":
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.7.4.tgz#200aad0dcd6bb80372f94d9e628ea062c58bf224"
-  integrity sha512-2VBe9u0G+fDt9B5OV5DQH4KBf5DoiNkwFKOz0TCvBWvdAN2rOykCTkrL+jTLxfCAm76l9Qo5OqL7HBOx2dWggg==
+"@babel/plugin-transform-block-scoping@7.8.0", "@babel/plugin-transform-block-scoping@^7.6.2", "@babel/plugin-transform-block-scoping@^7.6.3", "@babel/plugin-transform-block-scoping@^7.7.4":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.8.0.tgz#f6a81bc8c76dbbd202b718cb9e681a27f1d0af8f"
+  integrity sha512-FKTK4hzg7W950Yu9iqMl12WBixCmusMc5HBt3/ErvpFLnvr3/6mu/EBTZoCEJ0mw/lQUDfU01vTcZY9oEahlMg==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.8.0"
     lodash "^4.17.13"
 
 "@babel/plugin-transform-classes@^7.7.4":
