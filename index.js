@@ -8,6 +8,7 @@ module.exports = {
 	options: {
 		babel: {
 			plugins: [
+				'ember-auto-import/babel-plugin',
 				'@babel/plugin-transform-block-scoping',
 				'@babel/plugin-proposal-throw-expressions',
 				'@babel/plugin-proposal-optional-chaining',
