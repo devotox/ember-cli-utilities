@@ -38,8 +38,8 @@ export default class ApiService extends Service {
 		return currentTime > timestamp + maxCacheTime;
 	}
 
-	init() {
-		super.init(...arguments);
+	constructor() {
+		super(...arguments);
 
 		[
 			'get', 'put', 'post',
