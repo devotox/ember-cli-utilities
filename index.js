@@ -51,7 +51,7 @@ module.exports = {
 			allowEmpty: true,
 			outputFormat: 'L',
 			includeLocales: ['en'],
-			includeTimezone: 'subset'
+			includeTimezone: 'none'
 			// localeOutputPath: 'assets/moment-locales'
 		},
 		pace: {
