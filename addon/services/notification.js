@@ -1,5 +1,7 @@
 const { Offline } = window;
 
+import 'moment-timezone';
+
 import moment from 'moment';
 
 import { get } from '@ember/object';

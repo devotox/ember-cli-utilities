@@ -1,6 +1,6 @@
 {
 	"name": "ember-cli-utilities",
-	"version": "3.2.3",
+	"version": "3.2.4",
 	"description": "Utility Components / Services / Mixins for Ember",
 	"keywords": [
 		"ember-addon",
@@ -79,6 +79,8 @@
 		"fast-sort": "2.0.1",
 		"flatted": "2.0.1",
 		"json-fn": "1.1.1",
+		"moment": "2.24.0",
+		"moment-timezone": "0.5.27",
 		"normalize.css": "8.0.1",
 		"sass": "1.25.0"
 	},
