@@ -9,11 +9,13 @@ module.exports = {
 		babel: {
 			plugins: [
 				'ember-auto-import/babel-plugin',
+				'@babel/plugin-syntax-top-level-await',
 				'@babel/plugin-transform-block-scoping',
 				'@babel/plugin-proposal-throw-expressions',
 				'@babel/plugin-proposal-optional-chaining',
 				'@babel/plugin-proposal-object-rest-spread',
 				'@babel/plugin-proposal-export-namespace-from',
+				'@babel/plugin-proposal-optional-catch-binding',
 				'@babel/plugin-proposal-nullish-coalescing-operator',
 				'@babel/plugin-proposal-logical-assignment-operators',
 				['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }]
