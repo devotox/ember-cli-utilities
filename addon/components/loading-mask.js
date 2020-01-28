@@ -53,7 +53,7 @@ export default class LoadingMaskComponent extends Component {
 		if (noHide) { return; }
 
 		let mlt = this.maxLoadingTime
-		debounceTask('hide', mlt);
+		debounceTask(this, 'hide', mlt);
 	}
 
 	hide() {
@@ -64,7 +64,7 @@ export default class LoadingMaskComponent extends Component {
 	isRemoved() {
 		return this.isDestroyed || this.isDestroying;
 	}
-	
+
 	willDestroy() {
 		super.willDestroy(...arguments);
 		runDisposables(this);
