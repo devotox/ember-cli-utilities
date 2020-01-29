@@ -1,6 +1,6 @@
 {
 	"name": "ember-cli-utilities",
-	"version": "3.2.10",
+	"version": "3.3.0",
 	"description": "Utility Components / Services / Mixins for Ember",
 	"keywords": [
 		"ember-addon",
@@ -43,6 +43,9 @@
 		],
 		"*.{js,json,jsx}": [
 			"eslint . --fix"
+		],
+		"*.{hbs}": [
+			"yarn lint:hbs --fix"
 		]
 	},
 	"dependencies": {
