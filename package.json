@@ -1,6 +1,6 @@
 {
 	"name": "ember-cli-utilities",
-	"version": "3.2.8",
+	"version": "3.2.9",
 	"description": "Utility Components / Services / Mixins for Ember",
 	"keywords": [
 		"ember-addon",
