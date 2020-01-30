@@ -5584,9 +5584,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.338, electron-to-chromium@^1.3.47:
-  version "1.3.343"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.343.tgz#a60f76a8b9980d44e39276c199fbfb6a39e8b115"
-  integrity sha512-zSPaMbYuNpas96cCf4hcKB1Zs/1ClntnsH3S+CvFi75LBBsa767Xnmo5jhCI1HiG0za6rJMRk5n2MCgd8w2iYA==
+  version "1.3.344"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.344.tgz#f1397a633c35e726730c24be1084cd25c3ee8148"
+  integrity sha512-tvbx2Wl8WBR+ym3u492D0L6/jH+8NoQXqe46+QhbWH3voVPauGuZYeb1QAXYoOAWuiP2dbSvlBx0kQ1F3hu/Mw==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
