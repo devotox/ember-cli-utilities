@@ -1,11 +1,11 @@
-[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-utilities.svg)](http://emberobserver.com/addons/ember-cli-utilities)
-[![Build Status](https://travis-ci.org/devotox/ember-cli-utilities.svg)](http://travis-ci.org/devotox/ember-cli-utilities)
-[![Coverage Status](https://codecov.io/gh/devotox/ember-cli-utilities/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-utilities)
-[![NPM Version](https://badge.fury.io/js/ember-cli-utilities.svg)](http://badge.fury.io/js/ember-cli-utilities)
-[![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-utilities.svg)](https://www.npmjs.org/package/ember-cli-utilities)
 [![Dependency Status](https://david-dm.org/devotox/ember-cli-utilities.svg)](https://david-dm.org/devotox/ember-cli-utilities)
 [![DevDependency Status](https://david-dm.org/devotox/ember-cli-utilities/dev-status.svg)](https://david-dm.org/devotox/ember-cli-utilities#info=devDependencies)
-[![Dependabot](https://api.dependabot.com/badges/status?host=github&repo=devotox/ember-cli-utilities)
+[![Dependabot](https://api.dependabot.com/badges/status?host=github&repo=devotox/ember-cli-utilities)](https://github.com/devotox/ember-cli-utilities)
+[![Github Workflow](https://github.com/devotox/zenunu/workflows/CI/badge.svg)](https://github.com/devotox/zenunu/actions?query=workflow%3ACI)
+[![Coverage Status](https://codecov.io/gh/devotox/ember-cli-utilities/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-utilities)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-utilities.svg)](http://emberobserver.com/addons/ember-cli-utilities)
+[![NPM Version](https://badge.fury.io/js/ember-cli-utilities.svg)](http://badge.fury.io/js/ember-cli-utilities)
+[![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-utilities.svg)](https://www.npmjs.org/package/ember-cli-utilities)
 
 ember-cli-utilities
 ==============================================================================
