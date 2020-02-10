@@ -63,23 +63,31 @@ module.exports = function(defaults) {
 		},
 		'ember-cli-babel': {
 			compileModules: true,
-			disableDebugTooling: true,
+			disablePresetEnv: false,
+			disableDebugTooling: false,
 			includeExternalHelpers: true,
 			includePolyfill: isProduction,
-			throwUnlessParallelizable: false
+			throwUnlessParallelizable: false,
+			disableDecoratorTransforms: false,
+			disableEmberModulesAPIPolyfill: false,
+			disableEmberDataPackagesPolyfill: false
 		},
 		'babel': {
+			useBuiltIns: false,
+			debug: isDevelopment,
+			sourceMaps: isProduction,
 			plugins: [
+				'ember-auto-import/babel-plugin',
+				'@babel/plugin-syntax-top-level-await',
+				'@babel/plugin-transform-block-scoping',
 				'@babel/plugin-proposal-throw-expressions',
 				'@babel/plugin-proposal-optional-chaining',
 				'@babel/plugin-proposal-object-rest-spread',
 				'@babel/plugin-proposal-export-namespace-from',
+				'@babel/plugin-proposal-optional-catch-binding',
 				'@babel/plugin-proposal-nullish-coalescing-operator',
 				'@babel/plugin-proposal-logical-assignment-operators',
-				[
-					'@babel/plugin-proposal-pipeline-operator',
-					{ proposal: 'minimal' }
-				]
+				['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }]
 			]
 		}
 	});

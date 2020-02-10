@@ -1,0 +1,22 @@
+name: Auto Cancel
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - master
+  # pull_request: {}
+  # schedule:
+  #   - cron: '0 6 * * 0' # weekly, on sundays
+
+jobs:
+  cancel:
+    name: 'Cancel Previous Runs'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: styfle/cancel-workflow-action@master
+        with:
+          workflow_id: 434399
+          access_token: ${{ secrets.GITHUB_TOKEN }}

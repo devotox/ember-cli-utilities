@@ -1,0 +1,44 @@
+# unconventional js
+/blueprints/*/files/
+/vendor/
+
+# compiled output
+/dist/
+/tmp/
+/electron-out/
+/corber/
+/functions/dist/
+
+# dependencies
+/bower_components/
+/node_modules/
+node_modules
+/functions/node_modules/
+
+# misc
+/coverage/
+!.*
+
+# ember-try
+/.node_modules.ember-try/
+/bower.json.ember-try
+/package.json.ember-try
+testem.js
+testem-electron.js
+
+.netlify/
+.history/
+.vscode/
+
+# ember-electron
+/electron-app/
+dist
+api/
+
+*.*
+.*
+
+!*.css
+!*.scss
+!**/*.css
+!**/*.scss

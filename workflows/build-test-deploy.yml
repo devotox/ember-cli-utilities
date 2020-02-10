@@ -1,0 +1,270 @@
+name: Build-Test-Deploy
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - master
+  # pull_request: {}
+  # schedule:
+  #   - cron: '0 6 * * 0' # weekly, on sundays
+
+env:
+  NODE_ENV: production
+  EXPERIMENTAL_RENDER_MODE_SERIALIZE: true
+  DEPLOY_MESSAGE: "'[${{ github.event.head_commit.timestamp }}]<${{ github.sha }}>'"
+
+jobs:
+  build-test-app:
+    timeout-minutes: 20
+    name: Build & Test App
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Setup Volta
+        uses: rwjblue/setup-volta@v1
+      - name: Setup Ember Testing
+        uses: mydea/actions-ember-testing@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set Yarn Cache Directory
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn Cache
+        id: yarn-cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-all-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-all-
+            ${{ runner.os }}-yarn-
+      - name: Install APP Dependencies
+        run: |
+          yarn install --prefer-offline
+          yarn autoclean --force
+      - name: Install API Dependencies
+        run: |
+          yarn install --prefer-offline
+          yarn autoclean --force
+        working-directory: ./serverless
+        if: steps.cache.outputs.yarn-cache-hit != 'true'
+      - name: Build Distribution
+        run: yarn build
+      - name: Archive Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
+      - name: Lint JS
+        run: yarn lint:js
+      - name: Lint HBS
+        run: yarn lint:hbs
+      - name: Lint CSS
+        run: yarn lint:css
+      - name: Run tests
+        run: yarn test --path=dist
+  build-test-api:
+    timeout-minutes: 20
+    needs: [build-test-app]
+    name: Build & Test API
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Setup Volta
+        uses: rwjblue/setup-volta@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set Yarn Cache Directoryz
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn Cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-api-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-api-
+            ${{ runner.os }}-yarn-
+      - name: Download App Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+      - name: Install Dependencies
+        run: |
+          yarn install --prefer-offline
+          yarn autoclean --force
+        working-directory: ./serverless
+      - name: Build Distribution
+        run: yarn build
+        working-directory: ./serverless
+      - name: Build Serverless API
+        run: yarn build:serverless
+        working-directory: ./serverless
+      - name: Archive Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: serverless-dist
+          path: serverless-dist
+      - name: Lint JS
+        run: yarn lint:js
+        working-directory: ./serverless
+      - name: Run tests
+        run: yarn test
+        working-directory: ./serverless
+  deploy-zeit-now:
+    timeout-minutes: 20
+    name: Deploy To Zeit Now
+    runs-on: ubuntu-latest
+    needs: [build-test-app, build-test-api]
+    if: "!contains(github.event.head_commit.message, 'deploy skip')"
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Setup Volta
+        uses: rwjblue/setup-volta@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set Yarn Cache Directory
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn Cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-all-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-all-
+            ${{ runner.os }}-yarn-api-
+            ${{ runner.os }}-yarn-
+      - name: Download App Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+      - name: Download API Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: serverless-dist
+          path: serverless-dist
+      - name: Install Dependencies
+        run: |
+          yarn install --prefer-offline --cwd serverless-dist
+          yarn autoclean --force --cwd serverless-dist
+      - name: Deploy to Zeit Now
+        uses: amondnet/now-deployment@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          zeit-token: ${{ secrets.ZEIT_TOKEN }}
+          now-args: --prod --debug --force
+  deploy-firebase:
+    timeout-minutes: 20
+    name: Deploy To Firebase
+    runs-on: ubuntu-latest
+    needs: [build-test-app, build-test-api]
+    if: "!contains(github.event.head_commit.message, 'deploy skip')"
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Setup Volta
+        uses: rwjblue/setup-volta@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set Yarn Cache Directory
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn Cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-all-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-all-
+            ${{ runner.os }}-yarn-api-
+            ${{ runner.os }}-yarn-
+      - name: Download App Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+      - name: Download API Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: serverless-dist
+          path: serverless-dist
+      - name: Install Dependencies
+        run: |
+          yarn install --prefer-offline --cwd serverless-dist
+          yarn autoclean --force --cwd serverless-dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v1.1.0
+        with:
+          args: deploy --only "functions,hosting" --message "${{ env.DEPLOY_MESSAGE }}"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  deploy-netlify:
+    timeout-minutes: 20
+    name: Deploy To Netlify
+    runs-on: ubuntu-latest
+    needs: [build-test-app, build-test-api]
+    if: "!contains(github.event.head_commit.message, 'deploy skip')"
+    env:
+      PLATFORM: netlify
+    steps:
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Setup Volta
+        uses: rwjblue/setup-volta@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set Yarn Cache Directory
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn Cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-all-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-all-
+            ${{ runner.os }}-yarn-api-
+            ${{ runner.os }}-yarn-
+      - name: Download App Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+      - name: Download API Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: serverless-dist
+          path: serverless-dist
+      - name: Install Dependencies
+        run: |
+          yarn install --prefer-offline --cwd serverless-dist
+          yarn autoclean --force --cwd serverless-dist
+      - name: Extra Changes for Netlify
+        run: yarn build:serverless:extras --platform=netlify
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --prod --message "${{ env.DEPLOY_MESSAGE }}"
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

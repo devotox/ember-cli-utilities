@@ -1,0 +1,11 @@
+{
+	"*.{js,json,jsx}": [
+		"yarn lint:js --fix"
+	],
+	"*.{hbs}": [
+		"yarn lint:hbs --fix"
+	],
+	"*.{css,scss}": [
+		"yarn lint:css --fix"
+	]
+}

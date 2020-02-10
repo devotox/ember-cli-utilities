@@ -1,0 +1,60 @@
+name: Build-Test
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - master
+
+jobs:
+  build-test-addon:
+    timeout-minutes: 20
+    name: Build & Test Addon
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Setup Volta
+        uses: rwjblue/setup-volta@v1
+      - name: Setup Ember Testing
+        uses: mydea/actions-ember-testing@v2
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Set Yarn Cache Directory
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn Cache
+        id: yarn-cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-yarn-all-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-all-
+            ${{ runner.os }}-yarn-
+      - name: Install APP Dependencies
+        run: |
+          yarn install --prefer-offline
+          yarn autoclean --force
+        if: steps.cache.outputs.yarn-cache-hit != 'true'
+      - name: Build Distribution
+        run: yarn build
+      - name: Archive Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
+      - name: Lint JS
+        run: yarn lint:js
+      - name: Lint HBS
+        run: yarn lint:hbs
+      - name: Lint CSS
+        run: yarn lint:css
+      - name: Run tests
+        run: yarn test --path=dist

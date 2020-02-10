@@ -6,7 +6,7 @@ module.exports = {
 	name,
 
 	options: {
-		babel: {
+		'babel': {
 			plugins: [
 				'ember-auto-import/babel-plugin',
 				'@babel/plugin-syntax-top-level-await',
@@ -24,7 +24,13 @@ module.exports = {
 		'ember-cli-babel': {
 			compileModules: true,
 			includePolyfill: true,
-			disableDebugTooling: true
+			disablePresetEnv: false,
+			disableDebugTooling: false,
+			// includeExternalHelpers: true,
+			throwUnlessParallelizable: false,
+			disableDecoratorTransforms: false,
+			disableEmberModulesAPIPolyfill: false,
+			disableEmberDataPackagesPolyfill: false
 		},
 		'ember-fetch': {
 			preferNative: true
