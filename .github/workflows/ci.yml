@@ -1,4 +1,4 @@
-name: Build-Test
+name: CI
 
 on:
   push:
@@ -34,22 +34,14 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-yarn-all-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-all-
             ${{ runner.os }}-yarn-
-      - name: Install APP Dependencies
+      - name: Install Dependencies
         run: |
           yarn install --prefer-offline
           yarn autoclean --force
         if: steps.cache.outputs.yarn-cache-hit != 'true'
-      - name: Build Distribution
-        run: yarn build
-      - name: Archive Artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: dist
-          path: dist
       - name: Lint JS
         run: yarn lint:js
       - name: Lint HBS
@@ -57,4 +49,4 @@ jobs:
       - name: Lint CSS
         run: yarn lint:css
       - name: Run tests
-        run: yarn test --path=dist
+        run: yarn test
