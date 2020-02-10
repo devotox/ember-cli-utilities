@@ -28,7 +28,7 @@
 		"lint:hbs": "ember-template-lint .",
 		"postversion": "git push && git push --tags",
 		"deploy:release": "npm run release; npm run deploy",
-		"preversion": "npm run lint:hbs && npm run lint:js && npm test",
+		"preversion": "npm run lint:hbs && npm run lint:js && npm run lint:css && npm test",
 		"nearley": "nearleyc app/grammar/index.ne -o app/grammar/index.js; node app/grammar/parser.js; rm -rf app/grammar/index.js",
 		"deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push origin gh-pages; git checkout master",
 		"update:packages": "npx ncu -u --removeRange && yarn install --force --check-files --update-checksums --ignore-engines && yarn upgrade --force --ignore-engines",

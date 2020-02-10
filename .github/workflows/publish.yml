@@ -8,7 +8,7 @@ on:
     types: [published]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: '10.x'
           registry-url: https://registry.npmjs.org/
+      - run: npm publish --access public
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN }}
-      - run: npm publish --access public
