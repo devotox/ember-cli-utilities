@@ -130,7 +130,7 @@
 		"eslint-plugin-ember": "7.8.0",
 		"eslint-plugin-json": "2.0.1",
 		"eslint-plugin-node": "11.0.0",
-		"husky": "4.2.2",
+		"husky": "4.2.3",
 		"lint-staged": "10.0.7",
 		"loader.js": "4.7.0",
 		"prettier": "1.19.1",
