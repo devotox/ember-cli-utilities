@@ -14,6 +14,19 @@ export default class DataStore extends Store {
 			return result;
 		}, options);
 	}
+	findRelatedRecords(type, id, relatedType, { filter, sort, page, include, ...options }) {
+		include && put(options, 'sources.remote.include', include);
+
+		return this.query((q) => {
+			let result = q.findRelatedRecords({ type, id }, relatedType);
+
+			page && (result = result.page(page));
+			sort && (result = result.sort(...sort));
+			filter && (result = result.filter(...filter));
+
+			return result;
+		}, options);
+	}
 	findRecordsByAttribute(type, attribute, value, options) {
 		return this.findRecords(type, {
 			...options,
@@ -22,6 +35,10 @@ export default class DataStore extends Store {
 	}
 	async findRecordByAttribute(type, attribute, value, options) {
 		const [record] = await this.findRecordsByAttribute(type, attribute, value, options);
+		return record;
+	}
+	async findRelatedRecord(type, id, relatedType, options) {
+		const [record] = await this.findRelatedRecords(type, id, relatedType, options);
 		return record;
 	}
 }
