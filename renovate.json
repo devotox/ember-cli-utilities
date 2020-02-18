@@ -1,0 +1,102 @@
+{
+	"automerge": true,
+	"masterIssue": true,
+	"rangeStrategy": "pin",
+	"semanticCommits": false,
+	"schedule": "at any time",
+	"node": {
+		"supportPolicy": [
+			"lts_latest"
+		]
+	},
+	"extends": [
+		"config:base",
+		"group:linters",
+		"group:monorepos",
+		"group:allNonMajor",
+		"group:testNonMajor",
+		"group:definitelyTyped"
+	],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"stabilityDays": 0,
+		"schedule": "at any time",
+		"masterIssueApproval": true
+	},
+	"labels": [
+		"renovate",
+		"dependencies"
+	],
+	"ignorePaths": [
+		"lib"
+	],
+	"packageRules": [
+		{
+			"packageNames": [
+				"node"
+			],
+			"enabled": false
+		},
+		{
+			"updateTypes": [
+				"major"
+			],
+			"labels": [
+				"UPDATE-MAJOR"
+			]
+		},
+		{
+			"paths": [
+				"package.json"
+			]
+		},
+		{
+			"packagePatterns": [
+				"^@ember*"
+			],
+			"groupName": "Ember"
+		},
+		{
+			"packagePatterns": [
+				"^@ember-data*"
+			],
+			"groupName": "Ember Data"
+		},
+		{
+			"packagePatterns": [
+				"^ember-*"
+			],
+			"groupName": "Ember Addons"
+		},
+		{
+			"packagePatterns": [
+				"^@babel*"
+			],
+			"groupName": "Babel Transpilation"
+		},
+		{
+			"packagePatterns": [
+				"^@types\/*"
+			],
+			"groupName": "Type Definitions"
+		},
+		{
+			"packagePatterns": [
+				"^@embroider*"
+			],
+			"groupName": "embroider"
+		},
+		{
+			"packagePatterns": [
+				"^@typescript*"
+			],
+			"groupName": "TypeScript"
+		},
+		{
+			"packagePatterns": [
+				"^@electron*"
+			],
+			"groupName": "Electron"
+		}
+	]
+}
