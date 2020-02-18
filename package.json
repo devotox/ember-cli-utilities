@@ -121,7 +121,7 @@
 		"ember-qunit": "4.6.0",
 		"ember-resolver": "7.0.0",
 		"ember-route-action-helper": "2.0.8",
-		"ember-source": "3.16.2",
+		"ember-source": "3.16.3",
 		"ember-source-channel-url": "2.0.1",
 		"ember-template-lint": "1.13.2",
 		"ember-truth-helpers": "2.1.0",
@@ -153,6 +153,6 @@
 	},
 	"volta": {
 		"node": "10.18.0",
-		"yarn": "1.21.1"
+		"yarn": "1.22.0"
 	}
 }
