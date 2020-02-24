@@ -50,7 +50,7 @@
 		"ember-cli-fastclick": "1.5.0",
 		"ember-cli-htmlbars": "4.2.3",
 		"ember-cli-moment-shim": "3.7.1",
-		"ember-cli-notifications": "6.1.0",
+		"ember-cli-notifications": "6.2.0",
 		"ember-cli-pushjs": "2.0.8",
 		"ember-cli-roboto-fontface": "2.0.5",
 		"ember-cli-sass": "10.0.1",
@@ -69,7 +69,7 @@
 		"moment": "2.24.0",
 		"moment-timezone": "0.5.28",
 		"normalize.css": "8.0.1",
-		"sass": "1.25.0"
+		"sass": "1.26.0"
 	},
 	"devDependencies": {
 		"@babel/core": "7.8.4",
