@@ -72,7 +72,7 @@
 		"sass": "1.26.2"
 	},
 	"devDependencies": {
-		"@babel/core": "7.8.6",
+		"@babel/core": "7.8.7",
 		"@babel/plugin-proposal-export-namespace-from": "7.8.3",
 		"@babel/plugin-proposal-logical-assignment-operators": "7.8.3",
 		"@babel/plugin-proposal-nullish-coalescing-operator": "7.8.3",
