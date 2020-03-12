@@ -1492,13 +1492,13 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@orbit/coordinator@^0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/coordinator/-/coordinator-0.16.4.tgz#dedb4e987a123e73e6db8542d641d35e6728c710"
-  integrity sha512-fl8LhW1BWFOoowumHo4+Gq59zzXgrQDFirRp6AYa+dDUrARy7ay+YY0Yg32jp25k3/kq6095OrAfy0E4bHUF1A==
+"@orbit/coordinator@^0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/coordinator/-/coordinator-0.16.5.tgz#b5cc2388f34e740409bc6c08d1831b6e769f7afd"
+  integrity sha512-GupOoLT5CstDxDeozpe88mywB+kFfBzg2fP4XyyaSGtH5sdDvSpE4UUbkoiL7zsKQkykrEsGrnkSFp+b/X8pTg==
   dependencies:
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
+    "@orbit/data" "^0.16.5"
     "@orbit/utils" "^0.16.3"
 
 "@orbit/core@^0.16.3":
@@ -1508,18 +1508,18 @@
   dependencies:
     "@orbit/utils" "^0.16.3"
 
-"@orbit/data@0.16.4", "@orbit/data@^0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/data/-/data-0.16.4.tgz#463ea07b4e01468c140d4b51a60a3a4cbcd64268"
-  integrity sha512-vZq4hJ9fg7UADuclgBJRPkUlKcAgEkLhNbWBlzvEwOfdU0BQRPVjUp57arXIPKQy4BDxZLxRIxUjLnc/+OS4gw==
+"@orbit/data@0.16.5", "@orbit/data@^0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/data/-/data-0.16.5.tgz#1ebbe06198fbea77ecee217b8d8a74e678002a8b"
+  integrity sha512-v1RV8Nb5VM8NOsS80MmwxZi/CwOlFrhOHhs0fD10pkO6vAT08LxbyZAKLN0QddURcAjImy/ghuXi8Rsx0iHznA==
   dependencies:
     "@orbit/core" "^0.16.3"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/identity-map@^0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/identity-map/-/identity-map-0.16.4.tgz#6be48c4809e6146fdab18d6fecf3ca0b497c4513"
-  integrity sha512-3qSYTTksFfnuOnE2k9gRrri62aegGG25GLsAkte62Pru5SLwmJ97CB7R3iT0mYsu0+MPhz8EuglU3q5lzDpnSQ==
+"@orbit/identity-map@^0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/identity-map/-/identity-map-0.16.5.tgz#eb5d42321f2af6c5fe0326fa2684f1ddd3a4f051"
+  integrity sha512-fTXcEHXh+tDYjcLckjOOWIcA8QFrBjfc1CpV/FcjAfowrFXzHCKVbdV1QL4mK3RpHSHXOuXaLFOELZFBQR3Xcg==
 
 "@orbit/immutable@^0.16.3":
   version "0.16.3"
@@ -1534,23 +1534,23 @@
     "@orbit/core" "^0.16.3"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/indexeddb@0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/indexeddb/-/indexeddb-0.16.4.tgz#3c4f57895934e6cc7da643f16dc6588b55505389"
-  integrity sha512-+xWV0xjspE1mxnufyp++bME1L/KHjbIS0RGkCwEKWStruDPjOvGUXImSXENt03DNQ9dpQmGTRbz+RnyeYLjCPw==
+"@orbit/indexeddb@0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/indexeddb/-/indexeddb-0.16.5.tgz#7ccff9688ecd1e89fb1501b0f5c55216dc83af33"
+  integrity sha512-vqcD2dFl10q5NUH3z9Lf6Cj8OpfcNQMwbbz1Hk0SoHeclykwvuHC+uKUCIZrbOHHE4r3F/MWlZkq9VEmfwgoYw==
   dependencies:
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
-    "@orbit/record-cache" "^0.16.4"
+    "@orbit/data" "^0.16.5"
+    "@orbit/record-cache" "^0.16.5"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/jsonapi@0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/jsonapi/-/jsonapi-0.16.4.tgz#b4b7d0a8acdd90132f1313aa42c5983a3cdee641"
-  integrity sha512-VdmMVK237wn+CBPHA8Xb5ZZTE+GRS0LPsFEEFLWKKFA+wDYddIRqaWoXXDLGjbxeUewjg3PQCm2tsVKoV5OEkQ==
+"@orbit/jsonapi@0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/jsonapi/-/jsonapi-0.16.5.tgz#d02fa7a3ad381555cc763e71470a02217255ba22"
+  integrity sha512-6/Z5rGLnn4E1x00ZrIyu+pgJO06sqXoMnF5/RBWi3rCkL37PX9re353deCe6bkEv173PgWbqY8dp5gfEKJtWmg==
   dependencies:
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
+    "@orbit/data" "^0.16.5"
     "@orbit/serializers" "^0.16.3"
     "@orbit/utils" "^0.16.3"
 
@@ -1562,34 +1562,34 @@
     "@orbit/core" "^0.16.3"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/local-storage@0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/local-storage/-/local-storage-0.16.4.tgz#611eed259ffc32a1c7ac28a2db3c9cb8d28225d8"
-  integrity sha512-vvyoSMBf83dARw89s1Cz3Cm8p344dmHk7kcSOPIaNXNKAXHyQz7vjezp5XtVxrVv698Z4uYaSXYchUQADWrRYA==
+"@orbit/local-storage@0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/local-storage/-/local-storage-0.16.5.tgz#e7b914aea1bf06a449d080d7f6fbe88a45ff750d"
+  integrity sha512-tR6ODiztCNWgmwn6Tw+cmoI6fG8/cmS4RJ4O0eZOi1ST6rebagn/e28+KqRjHcyFCrJ8jo87VR1YGQDr8lrLUg==
   dependencies:
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
-    "@orbit/record-cache" "^0.16.4"
+    "@orbit/data" "^0.16.5"
+    "@orbit/record-cache" "^0.16.5"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/memory@^0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/memory/-/memory-0.16.4.tgz#1c91dfbf83b0346c5fc3157be676d37fa4c95ae7"
-  integrity sha512-p2UR5T04vLZRzznPBDLGc7zJs02Q4gHJSH6n7y9NJ/hHijV6LC92k1s58LxUGsyjAkt6EFJlF45AKi8cdPRPlQ==
+"@orbit/memory@^0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/memory/-/memory-0.16.5.tgz#1ac46597308c8d4f65a251e3d633a26cb35587d5"
+  integrity sha512-P4eSlUIap4Z4X4/elDrt7Mv0++SC+cZTx5vCj6C5d6E0ke75gQNItOYuynRcyNODlVTfjThFch61oUOHz5a4kA==
   dependencies:
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
+    "@orbit/data" "^0.16.5"
     "@orbit/immutable" "^0.16.3"
-    "@orbit/record-cache" "^0.16.4"
+    "@orbit/record-cache" "^0.16.5"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/record-cache@^0.16.4":
-  version "0.16.4"
-  resolved "https://registry.yarnpkg.com/@orbit/record-cache/-/record-cache-0.16.4.tgz#6502bc956c84cbff0f4d5f5dfd87cfaf3495ed1d"
-  integrity sha512-VKJmrlZOZBobVp4McfDrQ7uwQG4ee6BeRa5mFFYxNPAgRK+z6sZZ3GHaMe2lvStU0chFTvXocHpzTH4uIjSxuQ==
+"@orbit/record-cache@^0.16.5":
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@orbit/record-cache/-/record-cache-0.16.5.tgz#7a2360864e7a812697f4b9bbfca713509af4e694"
+  integrity sha512-hM2hzeU3XqQikKb72EaLjYSFTuKUXguJeT48DlALkOsdfLMpDTKYyc0RjnNebSbVCzY+kDdOYb2l+4PchkGacg==
   dependencies:
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
+    "@orbit/data" "^0.16.5"
     "@orbit/utils" "^0.16.3"
 
 "@orbit/serializers@^0.16.3":
@@ -5811,7 +5811,7 @@ ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.0:
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.0.tgz#de3baedd093163b6c2461f95964888c1676325ac"
   integrity sha512-Zr4my8Xn+CzO0gIuFNXji0eTRml5AxZUTDQz/wsNJ5AJAtyFWCY4QtKdoELNNbiCVGt1lq5yLiwTm4scGKu6xA==
 
-ember-cli-babel@7.18.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.1.3, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.17.2, ember-cli-babel@^7.5.0, ember-cli-babel@^7.7.3, ember-cli-babel@^7.8.0:
+ember-cli-babel@7.18.0, ember-cli-babel@^7.1.0, ember-cli-babel@^7.1.2, ember-cli-babel@^7.1.3, ember-cli-babel@^7.10.0, ember-cli-babel@^7.11.0, ember-cli-babel@^7.11.1, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.17.2, ember-cli-babel@^7.18.0, ember-cli-babel@^7.5.0, ember-cli-babel@^7.7.3, ember-cli-babel@^7.8.0:
   version "7.18.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.18.0.tgz#e979b73eee00cd93f63452c6170d045e8832f29c"
   integrity sha512-OLPfYD8wSfCrmGHcUf8zEfySSvbAL+5Qp2RWLycJIMaBZhg+SncKj5kVkL3cPJR5n2hVHPdfmKTQIYjOYl6FnQ==
@@ -6284,7 +6284,7 @@ ember-cli-typescript@^2.0.0, ember-cli-typescript@^2.0.0-beta.3, ember-cli-types
     stagehand "^1.0.0"
     walk-sync "^1.0.0"
 
-ember-cli-typescript@^3.1.2, ember-cli-typescript@^3.1.3:
+ember-cli-typescript@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-3.1.3.tgz#a2c7ec6a8a5e57c38eb52d83e36d8e18c7071e60"
   integrity sha512-bFi15H60L9TLYfn9XUzi+RAP1gTWHFtVdSy9IHvxXHlCvTlFZ+2rfuugr/f8reQLz9gvJccKc5TyRD7v+uhx0Q==
@@ -6825,20 +6825,20 @@ ember-offline@devotox/ember-offline:
     fastboot-transform "0.1.3"
     offline-js "^0.7.19"
 
-ember-orbit@0.16.5:
-  version "0.16.5"
-  resolved "https://registry.yarnpkg.com/ember-orbit/-/ember-orbit-0.16.5.tgz#d19772a4db40fcfc85fb2e8b0fc66e5826708c16"
-  integrity sha512-offUIJUNbsGcLufdUMNHlofeSkfe7CLR7IZBrS1hmP8r8xGpcPo7BF9S4+LvUcKG7ZX8Cr4wQH55/+pINLAzyQ==
+ember-orbit@0.16.6:
+  version "0.16.6"
+  resolved "https://registry.yarnpkg.com/ember-orbit/-/ember-orbit-0.16.6.tgz#a3c942c0fa2a7ff0d7c4a4d2dffcd74e67cb4819"
+  integrity sha512-SIu+FzxIdhaRfBwXVcrpNHxTpGvdRpEX6FF0qpDg3RQFF/E0ZjJj0zVyYAA9nrDa9FarXWsryIwO5jABOzp8Nw==
   dependencies:
-    "@orbit/coordinator" "^0.16.4"
+    "@orbit/coordinator" "^0.16.5"
     "@orbit/core" "^0.16.3"
-    "@orbit/data" "^0.16.4"
-    "@orbit/identity-map" "^0.16.4"
-    "@orbit/memory" "^0.16.4"
+    "@orbit/data" "^0.16.5"
+    "@orbit/identity-map" "^0.16.5"
+    "@orbit/memory" "^0.16.5"
     "@orbit/utils" "^0.16.3"
     ember-auto-import "^1.5.3"
-    ember-cli-babel "^7.13.2"
-    ember-cli-typescript "^3.1.2"
+    ember-cli-babel "^7.18.0"
+    ember-cli-typescript "^3.1.3"
     ember-inflector "^3.0.1"
     ember-native-class-polyfill "^1.0.6"
 
