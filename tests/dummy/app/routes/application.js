@@ -7,13 +7,7 @@ import { inject as service } from '@ember/service';
 export default class ApplicationRoute extends Route {
 	@service crypto;
 
-	@service loadingMask;
-
 	@service notification;
-
-	afterModel() {
-		setTimeout(() => this.loadingMask.hide(), 100);
-	}
 
 	setupController(controller) {
 		super.setupController(...arguments);
@@ -24,11 +18,6 @@ export default class ApplicationRoute extends Route {
 				return 'test';
 			}
 		}, null, 4);
-	}
-
-	@action
-	loading(type = 'show') {
-		this.loadingMask[type]();
 	}
 
 	@action
