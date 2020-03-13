@@ -1,4 +1,4 @@
-<div class={{concat "loading-mask" (if this.hidden " hide")}}>
+<div class="loading-mask">
 	<div class="load-indicator-wrapper">
 		<div class="load-indicator">
 			<div class="indicator"></div>
@@ -9,12 +9,3 @@
 		</div>
 	</div>
 </div>
-
-
-{{yield (hash
-	hide=(action this.hide)
-	show=(action this.show)
-	promise=this.promise
-	maxLoadingTime=this.maxLoadingTime
-	loadPromise=(action this.loadPromise)
-)}}

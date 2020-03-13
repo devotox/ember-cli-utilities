@@ -73,8 +73,8 @@ module.exports = function(defaults) {
 			disableEmberDataPackagesPolyfill: false
 		},
 		'babel': {
+			debug: false,
 			useBuiltIns: false,
-			debug: isDevelopment,
 			sourceMaps: isProduction,
 			plugins: [
 				'ember-auto-import/babel-plugin',

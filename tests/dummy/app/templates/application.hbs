@@ -1,8 +1,9 @@
 <h2 id="title">Ember CLI Utilities</h2>
+
 <NotificationContainer @position="top-right" />
 
 <p>
- The <a href="https://github.com/devotox/ember-cli-utilities">README</a> lists all the utilities in this addon
+	The <a href="https://github.com/devotox/ember-cli-utilities">README</a> lists all the utilities in this addon
 </p>
 
 <h3>Locale Select</h3>
@@ -10,33 +11,7 @@
 
 <h3>Notifications</h3>
 {{#each (array "alert" "warn" "error" "success"  "hub" "system") as |type|}}
-	<PaperButton
-		@raised={{true}}
-		{{on 'click' (fn (route-action 'notify') type)}}
-	>
-		{{titleize type}}
-	</PaperButton>
-{{/each}}
-
-
-<br><br>
-
-<h3>Loading Mask (Block Component)</h3>
-<LoadingMask as |mask|>
-	<PaperButton
-		@raised={{true}}
-		{{on 'click' (fn mask.show)}}
-	>
-  Show Loading Mask
- </PaperButton>
-</LoadingMask>
-
-<h3>Loading Mask (Using Service)</h3>
-{{#each (array "show" "hide") as |type|}}
-	<PaperButton
-		@raised={{true}}
-		{{on 'click' (fn (route-action 'loading') type)}}
-	>
+	<PaperButton @raised={{true}} {{on 'click' (fn (route-action 'notify') type)}}>
 		{{titleize type}}
 	</PaperButton>
 {{/each}}
@@ -44,8 +19,4 @@
 <br><br>
 
 <h3>JSON FN</h3>
-<code>
- {{this.jsonString}}
-</code>
-
-<NotificationCenter />
+<code>{{this.jsonString}}</code>

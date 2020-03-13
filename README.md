@@ -33,33 +33,45 @@ Usage
 ## Addons
 * Dependencies
 ```
-        "animate.css": "3.7.2",
-        "ember-auto-import": "1.5.3",
-        "ember-cli-babel": "7.13.2",
-        "ember-cli-build-notifications": "0.4.0",
-        "ember-cli-fastclick": "1.5.0",
-        "ember-cli-htmlbars": "4.2.0",
-        "ember-cli-notifications": "5.0.0-0",
-        "ember-cli-pushjs": "2.0.8",
-        "ember-cli-roboto-fontface": "2.0.5",
-        "ember-cli-sass": "10.0.1",
-        "ember-material-design-icons-shim": "0.1.13",
-        "ember-notification-hub": "devotox/ember-notification-hub",
-        "ember-offline": "devotox/ember-offline",
-        "ember-reactive-helpers": "devotox/ember-reactive-helpers",
-        "ember-simple-auth": "2.1.1",
-        "ember-skeleton": "devotox/ember-skeleton",
-        "ember-string-helpers": "devotox/ember-string-helpers",
-        "flatted": "2.0.1",
-        "json-fn": "1.1.1",
-        "normalize.css": "8.0.1",
-        "sass": "1.24.0"
+		"@glimmer/component": "1.0.0",
+		"@glimmer/tracking": "1.0.0",
+		"@orbit/data": "0.16.5",
+		"@orbit/indexeddb": "0.16.5",
+		"@orbit/indexeddb-bucket": "0.16.3",
+		"@orbit/jsonapi": "0.16.5",
+		"@orbit/local-storage": "0.16.5",
+		"@orbit/local-storage-bucket": "0.16.3",
+		"animate.css": "3.7.2",
+		"ember-api-actions": "0.2.8",
+		"ember-auto-import": "1.5.3",
+		"ember-cli-babel": "7.18.0",
+		"ember-cli-build-notifications": "0.4.0",
+		"ember-cli-fastclick": "1.5.0",
+		"ember-cli-htmlbars": "4.2.3",
+		"ember-cli-moment-shim": "3.7.1",
+		"ember-cli-notifications": "6.2.0",
+		"ember-cli-pushjs": "2.0.8",
+		"ember-cli-roboto-fontface": "2.0.5",
+		"ember-cli-sass": "10.0.1",
+		"ember-hammertime": "1.6.0",
+		"ember-material-design-icons-shim": "0.1.13",
+		"ember-moment": "8.0.0",
+		"ember-offline": "devotox/ember-offline",
+		"ember-orbit": "0.16.6",
+		"ember-reactive-helpers": "devotox/ember-reactive-helpers",
+		"ember-simple-auth": "3.0.0",
+		"ember-skeleton": "devotox/ember-skeleton",
+		"ember-string-helpers": "devotox/ember-string-helpers",
+		"fast-sort": "2.1.1",
+		"flatted": "2.0.1",
+		"json-fn": "1.1.1",
+		"moment": "2.24.0",
+		"moment-timezone": "0.5.28",
+		"normalize.css": "8.0.1",
+		"sass": "1.26.3"
 ```
 
 ## Components
-* notification-center
-    - used with notification service
-    - To be added at the bottom of application.hbs and can hold notifications based on using the notification service
 * notification-container
     - To be used with notification service to warn, alert, error notifications
 * loading-mask
