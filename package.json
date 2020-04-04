@@ -44,7 +44,7 @@
 		"@orbit/local-storage": "0.16.5",
 		"@orbit/local-storage-bucket": "0.16.3",
 		"animate.css": "3.7.2",
-		"ember-api-actions": "0.2.8",
+		"ember-api-actions": "0.2.9",
 		"ember-auto-import": "1.5.3",
 		"ember-cli-babel": "7.19.0",
 		"ember-cli-build-notifications": "0.4.0",
