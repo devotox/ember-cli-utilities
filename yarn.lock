@@ -7115,10 +7115,10 @@ ember-in-viewport@3.7.2:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-intl@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/ember-intl/-/ember-intl-4.3.0.tgz#ff5081e5a2cd861f066658998cedbf5fa5307fe1"
-  integrity sha512-H55yim6LhEXm8lxEzinI2DKuiWSMZM7DXeUxuN216pcvxIze81kkcSD2UpPO50jn31xc4VcEkVSA8zPDRO4nzw==
+ember-intl@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/ember-intl/-/ember-intl-4.3.1.tgz#0a00be2f1ff957572a4d0dc1ed831179755ebfaa"
+  integrity sha512-svD+u9hyruaKPpBlXyloPHk/ldRK1UuDqkGs9SLt4PNp29O/c6OpEMOpewSv69QX+I8S9SrxuiqdyYLOQ6FDuQ==
   dependencies:
     "@ember-intl/broccoli-cldr-data" "^3.1.0"
     "@ember-intl/intl-messageformat" "^2.5.0"
@@ -7773,10 +7773,10 @@ escodegen@^1.11.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-ember@8.1.1:
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-8.1.1.tgz#c00aa09b5be5d588bd69084368273d4e3cc9770f"
-  integrity sha512-KfjT1LToDx5Pc/XBsqP7sYHGeVwtHHJaoxlkyUPcoi+7K8w8kgDUSE9XRVe3zpTzrI6xa3x9Tr8808xQWiO+9A==
+eslint-plugin-ember@8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-8.2.0.tgz#90c14c82a6e81280c27baaf64b62c1c4786b5f26"
+  integrity sha512-QJhqkYoLOoEm2jodozxztGA5nxvc6pmeUJCdhxIyDCCRGb7+E/FS6dfJ/WMqTbiePlmNJ0EZSOUgUG54LdHsRQ==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     ember-rfc176-data "^0.3.12"
