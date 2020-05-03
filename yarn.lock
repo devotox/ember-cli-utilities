@@ -7206,15 +7206,15 @@ ember-in-viewport@3.7.2:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-intl@5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/ember-intl/-/ember-intl-5.0.4.tgz#ce1aa3d812ec676649d487ac52f2b53c2c676bc7"
-  integrity sha512-ImNOYGB5zQOFSBnE5yFSXvVH6AXdOHRLfaMhm/jqcd49tIZfOxBmFcjVA7jomT5ztcn8or4Q1y/na/58GT41Aw==
+ember-intl@5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/ember-intl/-/ember-intl-5.0.5.tgz#268ea24bdfc93f69bb2eccd3f040fff4a4c61e6c"
+  integrity sha512-0ud3PbJkpvDtrGOzp0+8sEvOJtQUMOo1RsTHKRPZSEzxMcTp5GJJnwODrXWQNfLDh+NyaDgg8yVFgOIwq6BD8Q==
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-funnel "^3.0.2"
     broccoli-merge-files "^0.8.0"
-    broccoli-merge-trees "^4.1.0"
+    broccoli-merge-trees "^4.2.0"
     broccoli-source "^3.0.0"
     broccoli-stew "^3.0.0"
     calculate-cache-key-for-tree "^2.0.0"
@@ -7224,15 +7224,15 @@ ember-intl@5.0.4:
     extend "^3.0.2"
     fast-memoize "^2.5.2"
     has-unicode "^2.0.1"
-    intl-messageformat "^8.3.2"
-    intl-messageformat-parser "^5.0.0"
+    intl-messageformat "^8.3.9"
+    intl-messageformat-parser "^5.0.2"
     js-yaml "^3.13.1"
     json-stable-stringify "^1.0.1"
     locale-emoji "^0.3.0"
     lodash.castarray "^4.4.0"
     lodash.last "^3.0.0"
     lodash.omit "^4.5.0"
-    mkdirp "^1.0.3"
+    mkdirp "^1.0.4"
     silent-error "^1.1.1"
 
 ember-invoke-action@^1.5.1:
@@ -9859,14 +9859,14 @@ intl-format-cache@^4.2.26:
     "@types/chai" "^4.2.11"
     chai "^4.2.0"
 
-intl-messageformat-parser@^5.0.0, intl-messageformat-parser@^5.0.2:
+intl-messageformat-parser@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-5.0.2.tgz#878c0d66459b366f4135a812007a873789875b95"
   integrity sha512-7logOIMKQX4cWTAGdMSPdlzlGG2aGcpdTr/Laroi3/LTgXvYqMQ8fbC7DolygSEWUxbYrzDIuQsoQGJO6Kp8Gg==
   dependencies:
     "@formatjs/intl-unified-numberformat" "^3.3.5"
 
-intl-messageformat@^8.3.2:
+intl-messageformat@^8.3.9:
   version "8.3.9"
   resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-8.3.9.tgz#fa57e6f5abdd4b5ad03dd767c965435bd38cbd78"
   integrity sha512-WHIopaMiZ14UJ76d14FfqbeNE3knGJT7pJg6eJVxh1G5ziL656BqfQk6dYxPZ2VvoaY7wnT3dLlIXy1MTE0blw==
@@ -11949,7 +11949,7 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mkdirp@^1.0.3:
+mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
