@@ -6345,7 +6345,7 @@ ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.0:
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.0.tgz#de3baedd093163b6c2461f95964888c1676325ac"
   integrity sha512-Zr4my8Xn+CzO0gIuFNXji0eTRml5AxZUTDQz/wsNJ5AJAtyFWCY4QtKdoELNNbiCVGt1lq5yLiwTm4scGKu6xA==
 
-ember-cli-babel@7.19.0:
+ember-cli-babel@7.19.0, ember-cli-babel@^7.19.0:
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.19.0.tgz#e6eddea18a867231fcf90a80689e92b98be9a63b"
   integrity sha512-HiWKuoyy35vGEr+iCw6gUnQ3pS5qslyTlKEDW8cVoMbvZNGYBgRxHed5nklVUh+BS74AwR9lsp25BTAagYAP9Q==
@@ -6813,7 +6813,7 @@ ember-cli-typescript@3.0.0:
     stagehand "^1.0.0"
     walk-sync "^2.0.0"
 
-ember-cli-typescript@^2.0.0, ember-cli-typescript@^2.0.2:
+ember-cli-typescript@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-2.0.2.tgz#464984131fbdc05655eb61d1c3cdd911d3137f0d"
   integrity sha512-7I5azCTxOgRDN8aSSnJZIKSqr+MGnT+jLTUbBYqF8wu6ojs2DUnTePxUcQMcvNh3Q3B1ySv7Q/uZFSjdU9gSjA==
@@ -7238,13 +7238,13 @@ ember-invoke-action@^1.5.1:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-lifeline@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ember-lifeline/-/ember-lifeline-5.0.0.tgz#65326245e62268ec8c8bda4f351f4108e2324455"
-  integrity sha512-SClDe/sNnVzQ4Rj2dm6GnTKpNMvtAGVztU+KSlDUEk+V8+455rPC+ewnxRdqvelYHFt+ACqfbGHj5ogaiJdh9A==
+ember-lifeline@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/ember-lifeline/-/ember-lifeline-5.1.0.tgz#6b7bcde7912333551e0d0643908c2b8511e586a9"
+  integrity sha512-gmGHqroVQ19Z7KLha33hBg/2QNxamsbKRdpJiC46iKirk31KHInS4D3scl6iwMZXWBjHO+5VyTNmPTNww9AGOQ==
   dependencies:
-    ember-cli-babel "^7.1.3"
-    ember-cli-typescript "^2.0.0"
+    ember-cli-babel "^7.19.0"
+    ember-cli-typescript "^3.1.3"
 
 ember-load-initializers@2.1.1:
   version "2.1.1"
