@@ -8333,10 +8333,10 @@ fast-ordered-set@^1.0.0, fast-ordered-set@^1.0.2:
   dependencies:
     blank-object "^1.0.1"
 
-fast-sort@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/fast-sort/-/fast-sort-2.1.1.tgz#b44f908b5bc28c442986682098eb879dba7f07f9"
-  integrity sha512-X8DNrUzoejZZ+AdAHCVXdKHUrbzz57jKG5/prsKKzyaVKwzSwzm0HQ76cPdo69LObWDShJ77Cn1nPMSXP87FOQ==
+fast-sort@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/fast-sort/-/fast-sort-2.1.2.tgz#b5f4fc3857dba3a5e73e0ec22fbfe6c36cec26ab"
+  integrity sha512-rX8sOX5JAQE5C81BkKU3c4PCatzrEvJqwcMsH5DIqh2MB8J3qw63T0DALiggUpdeQgEKQoglMG3CRkO/m+P2xg==
 
 fast-sourcemap-concat@^1.4.0:
   version "1.4.0"
