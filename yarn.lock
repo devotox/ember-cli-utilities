@@ -6359,6 +6359,19 @@ ember-basic-dropdown@^2.0.13:
     ember-maybe-in-element "^0.4.0"
     ember-truth-helpers "2.1.0"
 
+ember-basic-dropdown@^2.0.15:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-2.0.15.tgz#f86600cfa22ff67de6599fcfb701ad851cc3c6a0"
+  integrity sha512-gRUCoFLZJ+qu758xDZpfE20LtBRRZWOShtGrPPd18iuseK+6SLkM/uzsL+nANQp3F8hD9kW+aLjsK7E8Khd2Wg==
+  dependencies:
+    "@ember-decorators/component" "^6.1.0"
+    "@ember/render-modifiers" "^1.0.2"
+    ember-cli-babel "^7.11.0"
+    ember-cli-htmlbars "^4.0.8"
+    ember-element-helper "^0.2.0"
+    ember-maybe-in-element "^0.4.0"
+    ember-truth-helpers "2.1.0"
+
 ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.0.tgz#de3baedd093163b6c2461f95964888c1676325ac"
@@ -7403,10 +7416,10 @@ ember-page-title@5.2.1:
     ember-cli-htmlbars "^3.0.1"
     ember-copy "^1.0.0"
 
-ember-paper@1.0.0-beta.29:
-  version "1.0.0-beta.29"
-  resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.29.tgz#d71b5e1467719f665722263338ce3a98d06b2b96"
-  integrity sha512-FxfsJZydptx/FYWuMPgWRnY7jKsTPwUNq4y2/40Ix6jizwvgpsgvNvlY3uhXJj4vdcmMYsQdpjehHxUWweH93A==
+ember-paper@1.0.0-beta.30:
+  version "1.0.0-beta.30"
+  resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.30.tgz#73074609b4a15b1ae1f6dd6e6813145b7863c689"
+  integrity sha512-n8LaGp0b9qXV4KsYda8BxN7PbVy7uFmmRQzgGrD8r1J8+FTAWQnpk/EcgTg12WllfpYLSlud6rn5Yk+jPhyDfA==
   dependencies:
     "@html-next/vertical-collection" "^1.0.0"
     angular-material-styles "1.1.21"
@@ -7417,7 +7430,7 @@ ember-paper@1.0.0-beta.29:
     classlist-polyfill "^1.2.0"
     element-closest "^3.0.2"
     ember-auto-import "^1.5.3"
-    ember-basic-dropdown "^2.0.13"
+    ember-basic-dropdown "^2.0.15"
     ember-cli-babel "^7.17.2"
     ember-cli-htmlbars "^4.2.2"
     ember-cli-polyfill-importer "^0.0.2"
