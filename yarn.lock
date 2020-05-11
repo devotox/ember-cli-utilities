@@ -2623,10 +2623,10 @@ angular-material-styles@1.1.21:
   resolved "https://registry.yarnpkg.com/angular-material-styles/-/angular-material-styles-1.1.21.tgz#c3509452e188f81a75a659fc8d1249fdb61038b1"
   integrity sha512-xa/j8sBrfqgSUQVkyDOwbDr+239z5NB9uBc2455qO6RXuyUU8tQRpkWIl2hyeeZRdNnf2dV6wQXh4gb0wSv4+g==
 
-animate.css@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.0.0.tgz#28b13e476cbb7cf936b2d71b07f46ca87e9a14b3"
-  integrity sha512-/BZp99OByWGftfTt2KoYcfER0k5jum82h16+ZIb3S6ghz1nMXIVCtwZYjgVAc+WNO5vHN/8+cypdhSP0maayiw==
+animate.css@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.1.0.tgz#dec2aabe4babfc6f6777f9a5cccd132838729b50"
+  integrity sha512-0aVcfWDeU9ykV6vjn1P67ZSs01jxoUQZCGaYbkk0SIIelIG8kUdLrIkua1+VabHfTtsSivDRMMn0ILPvZum2gw==
 
 ansi-align@^2.0.0:
   version "2.0.0"
