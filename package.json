@@ -68,7 +68,7 @@
 		"flatted": "2.0.2",
 		"json-fn": "1.1.1",
 		"moment": "2.25.3",
-		"moment-timezone": "0.5.29",
+		"moment-timezone": "0.5.30",
 		"normalize.css": "8.0.1",
 		"sass": "1.26.5"
 	},
