@@ -136,7 +136,7 @@
 		"stylelint-config-prettier": "8.0.1",
 		"stylelint-config-recommended-scss": "4.2.0",
 		"stylelint-prettier": "1.1.2",
-		"stylelint-scss": "3.17.2"
+		"stylelint-scss": "3.18.0"
 	},
 	"ember-addon": {
 		"configPath": "tests/dummy/config",
