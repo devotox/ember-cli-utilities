@@ -9145,10 +9145,10 @@ ember-in-element-polyfill@^1.0.0:
     ember-cli-htmlbars "^4.3.1"
     ember-cli-version-checker "^5.0.2"
 
-ember-in-viewport@3.7.7:
-  version "3.7.7"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.7.7.tgz#2ab4d83306256349f453dd9252ae7d07c47bb7e9"
-  integrity sha512-5fhpHKtsUXuOxUAU9XNcotzHmyQCOpJ3MiVU+nCqlh19OHsIwA0DIPLk/UcEev40zQQ4br539LzhMkSI+Er8MQ==
+ember-in-viewport@3.7.8:
+  version "3.7.8"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.7.8.tgz#0542cb4dad7763bd93ee6a5c660f39b2d28ea1d5"
+  integrity sha512-XEQ4q+ca3SaREL72Eb7XQRGrmNTjOS52ZUj7KvKLpywoyYKTpAfFoSHZMpyk15X9D7dtAihayTpEgeVoHaLa3Q==
   dependencies:
     ember-auto-import "^1.5.2"
     ember-cli-babel "^7.7.3"
