@@ -104,7 +104,7 @@
 		"ember-export-application-global": "2.0.1",
 		"ember-fetch": "8.0.1",
 		"ember-get-config": "0.2.4",
-		"ember-href-to": "3.1.0",
+		"ember-href-to": "4.0.0",
 		"ember-in-viewport": "3.8.0",
 		"ember-intl": "5.4.1",
 		"ember-lifeline": "6.0.0",
