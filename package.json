@@ -116,7 +116,7 @@
 		"ember-paper": "1.0.0-beta.31",
 		"ember-promise-helpers": "1.0.9",
 		"ember-qunit": "4.6.0",
-		"ember-resolver": "8.0.0",
+		"ember-resolver": "8.0.1",
 		"ember-route-action-helper": "2.0.8",
 		"ember-source": "3.20.3",
 		"ember-source-channel-url": "3.0.0",
