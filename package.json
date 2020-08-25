@@ -128,7 +128,7 @@
 		"eslint-plugin-json": "2.1.2",
 		"eslint-plugin-node": "11.1.0",
 		"husky": "4.2.5",
-		"lint-staged": "10.2.11",
+		"lint-staged": "10.2.12",
 		"loader.js": "4.7.0",
 		"prettier": "2.1.0",
 		"qunit-dom": "1.4.0",
