@@ -9504,10 +9504,10 @@ ember-page-title@5.2.3:
     ember-cli-htmlbars "^3.0.1"
     ember-copy "^1.0.0"
 
-ember-paper@1.0.0-beta.32:
-  version "1.0.0-beta.32"
-  resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.32.tgz#85a5914b4266ba4c5877f2835a0810969136e623"
-  integrity sha512-LR8QmyTfiziVg2cs+C1SUyjNFPx+nAXeONFC99CUpt1oATCQKCoIgmUBRl+r6Iy6pkFvZzcl2C+mcgpFHS4+cg==
+ember-paper@1.0.0-beta.33:
+  version "1.0.0-beta.33"
+  resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.33.tgz#7217f52b9101c56d9477ba92af9ebb7211d32fa5"
+  integrity sha512-tmZgxMbHzKUQNrC7mgAH5p2Wrwc2n6gSMMd6hARviylhxNdNcVwdw7+0B8VAdaZHnTKlk/0psVqQpFWyij8vKA==
   dependencies:
     "@html-next/vertical-collection" "^1.0.0"
     angular-material-styles "1.1.21"
