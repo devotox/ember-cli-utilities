@@ -35,8 +35,8 @@
 		"deploy:setup": "git add -A; git commit -m \"Added ember-cli-github-pages addon\"; git checkout --orphan gh-pages; rm -rf `bash -c \"ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|([.]{1,2}/?$)'\"`; touch .gitkeep; git add -A; git commit -m \"initial gh-pages commit\"; git checkout master"
 	},
 	"dependencies": {
-		"@glimmer/component": "1.0.1",
-		"@glimmer/tracking": "1.0.1",
+		"@glimmer/component": "1.0.2",
+		"@glimmer/tracking": "1.0.2",
 		"@orbit/data": "0.16.7",
 		"@orbit/indexeddb": "0.16.7",
 		"@orbit/indexeddb-bucket": "0.16.3",
