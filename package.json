@@ -70,7 +70,7 @@
 		"moment": "2.28.0",
 		"moment-timezone": "0.5.31",
 		"normalize.css": "8.0.1",
-		"sass": "1.26.10"
+		"sass": "1.26.11"
 	},
 	"devDependencies": {
 		"@babel/core": "7.11.6",
