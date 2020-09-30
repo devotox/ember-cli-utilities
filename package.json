@@ -65,7 +65,7 @@
 		"ember-skeleton": "devotox/ember-skeleton",
 		"ember-string-helpers": "devotox/ember-string-helpers",
 		"fast-sort": "2.2.0",
-		"flatted": "3.0.5",
+		"flatted": "3.1.0",
 		"json-fn": "1.1.1",
 		"moment": "2.29.0",
 		"moment-timezone": "0.5.31",
