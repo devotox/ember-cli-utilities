@@ -9145,13 +9145,14 @@ ember-cli-path-utils@^1.0.0:
   resolved "https://registry.yarnpkg.com/ember-cli-path-utils/-/ember-cli-path-utils-1.0.0.tgz#4e39af8b55301cddc5017739b77a804fba2071ed"
   integrity sha1-Tjmvi1UwHN3FAXc5t3qAT7ogce0=
 
-ember-cli-polyfill-importer@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-polyfill-importer/-/ember-cli-polyfill-importer-0.0.3.tgz#935ceafd18b4262a61ed00f05e166311b8468567"
-  integrity sha512-tvGfRa7vJLJwEcnEBsRSpDrXwHzDTtvtepOL3MpBw2eD7/1N4SoIK7fqOyza49wXxoPYcyj+9+o1heLIHGE8cQ==
+ember-cli-polyfill-importer@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-polyfill-importer/-/ember-cli-polyfill-importer-0.0.4.tgz#2306b87c18b651bcf73db31e7f6894f4f215e733"
+  integrity sha512-wzaA7/o2v1nJ6LZP8EWrHOQErfRsr1N7y1kpyKivske8GKH0XQTp3tlmVuVa+8lHSdv76PbXYuZm9lgDm/6cSA==
   dependencies:
     browserslist "^4.14.5"
     caniuse-api "^3.0.0"
+    resolve "^1.18.1"
 
 ember-cli-preprocess-registry@^3.3.0:
   version "3.3.0"
@@ -9919,10 +9920,10 @@ ember-page-title@6.0.2:
   dependencies:
     ember-cli-babel "^7.22.1"
 
-ember-paper@1.0.0-beta.34:
-  version "1.0.0-beta.34"
-  resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.34.tgz#9f846f7151a6cbe36d72ada8c8b254b84c3106c6"
-  integrity sha512-NK/27e7CRS6+T/uTJ7i4BmUDDTG0Ci8zRiq1ko4BG0PgczrGRl+IacgLBuHLGK/Zi+kT0hwAxaq29R3p04OzCg==
+ember-paper@1.0.0-beta.35:
+  version "1.0.0-beta.35"
+  resolved "https://registry.yarnpkg.com/ember-paper/-/ember-paper-1.0.0-beta.35.tgz#69dae2a82c5361e5225f3b37fb9b13dcb7796f5e"
+  integrity sha512-EOGfkcGJxY+fczxfFUSq8idQMRrkb2we9Y0OddDFkbjaFMisEzQJh03J+PhM52bT324n55Eq0cvyqpbRqe5UuA==
   dependencies:
     "@html-next/vertical-collection" "^1.0.0"
     angular-material-styles "1.1.21"
@@ -9936,7 +9937,7 @@ ember-paper@1.0.0-beta.34:
     ember-basic-dropdown "^2.0.15"
     ember-cli-babel "^7.17.2"
     ember-cli-htmlbars "^4.2.2"
-    ember-cli-polyfill-importer "^0.0.3"
+    ember-cli-polyfill-importer "^0.0.4"
     ember-cli-sass "^10.0.1"
     ember-composability-tools "^0.0.12"
     ember-css-transitions "^0.1.16"
@@ -12690,6 +12691,13 @@ is-cidr@^3.0.0:
   integrity sha512-3kxTForpuj8O4iHn0ocsn1jxRm5VYm60GDghK6HXmpn4IyZOoRy9/GmdjFA2yEMqw91TB1/K3bFTuI7FlFNR1g==
   dependencies:
     cidr-regex "^2.0.10"
+
+is-core-module@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.0.0.tgz#58531b70aed1db7c0e8d4eb1a0a2d1ddd64bd12d"
+  integrity sha512-jq1AH6C8MuteOoBPwkxHafmByhL9j5q4OaPGdbuD+ZtQJVzH+i6E3BJDQcBA09k57i2Hh2yQbEG8yObZ0jdlWw==
+  dependencies:
+    has "^1.0.3"
 
 is-data-descriptor@^0.1.4:
   version "0.1.4"
@@ -17475,6 +17483,14 @@ resolve@^1.17.0:
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
   integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
   dependencies:
+    path-parse "^1.0.6"
+
+resolve@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.18.1.tgz#018fcb2c5b207d2a6424aee361c5a266da8f4130"
+  integrity sha512-lDfCPaMKfOJXjy0dPayzPdF1phampNWr3qFCjAu+rw/qbQmr5jWH5xN2hwh9QKfw9E5v4hwV7A+jrCmL8yjjqA==
+  dependencies:
+    is-core-module "^2.0.0"
     path-parse "^1.0.6"
 
 responselike@1.0.2, responselike@^1.0.2:
