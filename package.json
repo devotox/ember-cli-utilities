@@ -127,7 +127,7 @@
 		"eslint-plugin-ember": "10.0.2",
 		"eslint-plugin-json": "2.1.2",
 		"eslint-plugin-node": "11.1.0",
-		"husky": "4.3.0",
+		"husky": "4.3.4",
 		"lint-staged": "10.5.3",
 		"loader.js": "4.7.0",
 		"prettier": "2.2.1",
