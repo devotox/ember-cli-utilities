@@ -83,7 +83,7 @@
 		"@babel/plugin-proposal-pipeline-operator": "7.12.1",
 		"@babel/plugin-proposal-throw-expressions": "7.12.1",
 		"@babel/plugin-syntax-top-level-await": "7.12.1",
-		"@babel/plugin-transform-block-scoping": "7.12.1",
+		"@babel/plugin-transform-block-scoping": "7.12.11",
 		"@ember/optional-features": "2.0.0",
 		"babel-eslint": "10.1.0",
 		"broccoli-asset-rev": "3.0.0",
