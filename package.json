@@ -70,7 +70,7 @@
 		"moment": "2.29.1",
 		"moment-timezone": "0.5.32",
 		"normalize.css": "8.0.1",
-		"sass": "1.32.4"
+		"sass": "1.32.5"
 	},
 	"devDependencies": {
 		"@babel/core": "7.12.10",
@@ -112,7 +112,7 @@
 		"ember-math-helpers": "2.15.0",
 		"ember-maybe-import-regenerator": "0.1.6",
 		"ember-object-update": "0.5.1",
-		"ember-page-title": "6.1.0",
+		"ember-page-title": "6.2.0",
 		"ember-paper": "1.0.0-beta.35",
 		"ember-promise-helpers": "1.0.9",
 		"ember-qunit": "5.1.1",
