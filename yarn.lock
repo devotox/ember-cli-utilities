@@ -10580,10 +10580,10 @@ ember-orbit@0.16.9:
     ember-inflector "^3.0.1"
     ember-native-class-polyfill "^1.0.6"
 
-ember-page-title@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ember-page-title/-/ember-page-title-6.1.0.tgz#66a9bea3a197c8732d893f19d1075c62b75ba3a1"
-  integrity sha512-AogwY4D7ocpISuSfApT5DpSbCHmSLRCeX/x45ZMt9reI6Nf7Rcwd9I2bikesjBn6MviStrtjwQFmKN8mfMDNkQ==
+ember-page-title@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/ember-page-title/-/ember-page-title-6.2.0.tgz#d79f7422299ebb8f8ac819399596e8f54f01a0e9"
+  integrity sha512-mgzI59rVH6Q00uG1OnsbrSfic+MxFQbtsjX3BuDWGgU7hWahDhAAgaQrKIFx99aEqWoiL+OiX4tQLPnxyZEceA==
   dependencies:
     ember-cli-babel "^7.22.1"
 
@@ -18539,10 +18539,10 @@ sane@^4.0.0, sane@^4.1.0:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sass@1.32.4:
-  version "1.32.4"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.4.tgz#308bf29dd7f53d44ae4f06580e9a910ad9aa411e"
-  integrity sha512-N0BT0PI/t3+gD8jKa83zJJUb7ssfQnRRfqN+GIErokW6U4guBpfYl8qYB+OFLEho+QvnV5ZH1R9qhUC/Z2Ch9w==
+sass@1.32.5:
+  version "1.32.5"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.5.tgz#2882d22ad5748c05fa9bff6c3b0ffbc4f4b9e1dc"
+  integrity sha512-kU1yJ5zUAmPxr7f3q0YXTAd1oZjSR1g3tYyv+xu0HZSl5JiNOaE987eiz7wCUvbm4I9fGWGU2TgApTtcP4GMNQ==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
