@@ -70,7 +70,7 @@
 		"moment": "2.29.1",
 		"moment-timezone": "0.5.33",
 		"normalize.css": "8.0.1",
-		"sass": "1.32.7"
+		"sass": "1.32.8"
 	},
 	"devDependencies": {
 		"@babel/core": "7.12.17",
@@ -120,7 +120,7 @@
 		"ember-route-action-helper": "2.0.8",
 		"ember-source": "3.25.1",
 		"ember-source-channel-url": "3.0.0",
-		"ember-template-lint": "2.18.1",
+		"ember-template-lint": "2.19.0",
 		"ember-truth-helpers": "3.0.0",
 		"ember-try": "1.4.0",
 		"eslint": "7.20.0",
