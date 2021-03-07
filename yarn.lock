@@ -4577,10 +4577,10 @@
     "@orbit/core" "^0.16.3"
     "@orbit/utils" "^0.16.3"
 
-"@orbit/indexeddb@0.16.7":
-  version "0.16.7"
-  resolved "https://registry.yarnpkg.com/@orbit/indexeddb/-/indexeddb-0.16.7.tgz#3a372f2bce4eaf213a6f487e9caeb7ddc136d015"
-  integrity sha512-6Cg+Vr94LLVXpa1Xokc/2yX2LvQbbRaLKiv6sM2Z4brwe8u1k6rFkDg9wHj1Gm+lYP9MuZS36+skMsQiGCBlXw==
+"@orbit/indexeddb@0.16.8":
+  version "0.16.8"
+  resolved "https://registry.yarnpkg.com/@orbit/indexeddb/-/indexeddb-0.16.8.tgz#38189d6762a47ac2512470f74deb1441476cd2b3"
+  integrity sha512-FzwDTCSjd4Xq08Zb+RJ3peAg1fp+uyDuyAAZwe8iX0gR8iFOZmF9DrKQDR61KQVWcLF49kQmDydYtKOmuSHqag==
   dependencies:
     "@orbit/core" "^0.16.3"
     "@orbit/data" "^0.16.7"
@@ -11122,10 +11122,10 @@ ember-string-helpers@devotox/ember-string-helpers:
   dependencies:
     ember-cli-babel "7.6.0"
 
-ember-template-lint@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-3.1.0.tgz#3f634c733ac5e4b19d8ad782b653b02da04910cd"
-  integrity sha512-muGPBr71ZfesSxYtm6lLqbO3mpGh8JJnamqByPdN474/7MNexWGvmWDvV7bklrQ7UOoZ66Miu/0WRb9PYPrX9w==
+ember-template-lint@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-3.1.1.tgz#56f7f4be11241e88a96d436893387229e105fb0d"
+  integrity sha512-4xtcPPuqGteHhM/5qgy4pHT5bobmcltFyAVIsbdOsqtRJ048KZNd6lLhT521fxmTCbAHkqUGNdPmzCk4VfH5Xg==
   dependencies:
     "@ember-template-lint/todo-utils" "^8.0.0-beta.3"
     chalk "^4.0.0"
