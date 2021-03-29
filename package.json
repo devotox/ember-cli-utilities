@@ -73,7 +73,7 @@
 		"sass": "1.32.8"
 	},
 	"devDependencies": {
-		"@babel/core": "7.13.13",
+		"@babel/core": "7.13.14",
 		"@babel/plugin-proposal-export-namespace-from": "7.12.13",
 		"@babel/plugin-proposal-logical-assignment-operators": "7.13.8",
 		"@babel/plugin-proposal-nullish-coalescing-operator": "7.13.8",
@@ -87,7 +87,7 @@
 		"@ember/optional-features": "2.0.0",
 		"babel-eslint": "10.1.0",
 		"broccoli-asset-rev": "3.0.0",
-		"ember-cli": "3.25.2",
+		"ember-cli": "3.25.3",
 		"ember-cli-dependency-checker": "3.2.0",
 		"ember-cli-github-pages": "0.2.2",
 		"ember-cli-head": "1.0.0",
