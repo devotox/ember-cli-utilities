@@ -12449,10 +12449,10 @@ fast-ordered-set@^1.0.0, fast-ordered-set@^1.0.2:
   dependencies:
     blank-object "^1.0.1"
 
-fast-sort@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fast-sort/-/fast-sort-3.0.1.tgz#428f0154784df8ee124d9067747630416a3498cc"
-  integrity sha512-fTokJ4ik5WOIcEU9kDONOlJ+w9X50fhtmWAHJprX3tOqFwn4eJHVj1wr0FnfZBnCxGsHSif9yPcEzAKuP9gI/A==
+fast-sort@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/fast-sort/-/fast-sort-3.0.2.tgz#98e5d77f85b48932bc4c395e3025b7a26051b6c2"
+  integrity sha512-DIKDkHBt+IubEEU44/kEulX3SbIuufEHIhRfw0MCh7f/HLGWmR/Dk7xg2tapT28pVFqnEV1ZDtl6SeViAyVe4Q==
 
 fast-sourcemap-concat@^1.4.0:
   version "1.4.0"
