@@ -9890,7 +9890,7 @@ ember-api-actions@0.2.9:
     ember-cli-babel "^7.1.3"
     ember-cli-typescript "^3.0.0"
 
-ember-auto-import@1.11.3:
+ember-auto-import@1.11.3, ember-auto-import@^1.11.2:
   version "1.11.3"
   resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-1.11.3.tgz#6e3384a7fbb163384a34546f2e902cd297b0e683"
   integrity sha512-ekq/XCvsonESobFU30zjZ0I4XMy2E/2ZILCYWuQ1JdhcCSTYhnXDZcqRW8itUG7kbsPqAHT/XZ1LEZYm3seVwQ==
@@ -9966,40 +9966,6 @@ ember-auto-import@^1.2.19, ember-auto-import@^1.5.3:
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/preset-env" "^7.0.0"
-    "@babel/traverse" "^7.1.6"
-    "@babel/types" "^7.1.6"
-    "@embroider/core" "^0.4.3"
-    babel-core "^6.26.3"
-    babel-loader "^8.0.6"
-    babel-plugin-syntax-dynamic-import "^6.18.0"
-    babel-template "^6.26.0"
-    babylon "^6.18.0"
-    broccoli-debug "^0.6.4"
-    broccoli-plugin "^1.3.0"
-    debug "^3.1.0"
-    ember-cli-babel "^6.6.0"
-    enhanced-resolve "^4.0.0"
-    fs-extra "^6.0.1"
-    fs-tree-diff "^1.0.0"
-    handlebars "^4.3.1"
-    js-string-escape "^1.0.1"
-    lodash "^4.17.10"
-    mkdirp "^0.5.1"
-    pkg-up "^2.0.0"
-    resolve "^1.7.1"
-    rimraf "^2.6.2"
-    symlink-or-copy "^1.2.0"
-    typescript-memoize "^1.0.0-alpha.3"
-    walk-sync "^0.3.3"
-    webpack "~4.28"
-
-ember-auto-import@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-1.6.0.tgz#00a498172b04f7084a5d2a327f76f577038ed403"
-  integrity sha512-BRBrmbDXRuXG/WYbn/2DXM7bFNyQuT80du1scUrrX0+xFVkDOU08s46ZPCvzYprzSg2htgrztQ/nVdnfbIBV+Q==
-  dependencies:
-    "@babel/core" "^7.1.6"
-    "@babel/preset-env" "^7.10.2"
     "@babel/traverse" "^7.1.6"
     "@babel/types" "^7.1.6"
     "@embroider/core" "^0.4.3"
@@ -11217,16 +11183,16 @@ ember-in-element-polyfill@^1.0.0:
     ember-cli-htmlbars "^4.3.1"
     ember-cli-version-checker "^5.0.2"
 
-ember-in-viewport@3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.9.0.tgz#2d1eea2e7ea058f8816f1e7a9b5bcc86e632f6fe"
-  integrity sha512-OhHKqJKseF1S3NefCRe0jeaGEVOmXqinrlYpi7jfjhsjwHCt8MUAhBZiWycwOmbYwVBPRwpFlDrLNmN1uJxAYA==
+ember-in-viewport@3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.10.0.tgz#0b35fa8f7ae493adbb1d6395f668490725d86fd5"
+  integrity sha512-qXS/OHUvm1z8KXYOr+Fe/j4llicLqf9eICxgL8/oy6lG3ZQrkbU08Ut7OWVLra8uoqiV6zCmRZEDAVSIOibqIw==
   dependencies:
-    ember-auto-import "^1.6.0"
-    ember-cli-babel "^7.22.1"
+    ember-auto-import "^1.11.2"
+    ember-cli-babel "^7.26.3"
     ember-modifier "^2.1.0"
     fast-deep-equal "^2.0.1"
-    intersection-observer-admin "~0.2.13"
+    intersection-observer-admin "~0.3.0"
     raf-pool "~0.1.4"
 
 "ember-inflector@^2.0.0 || ^3.0.0 || ^4.0.0", ember-inflector@^4.0.1:
@@ -14185,10 +14151,10 @@ inquirer@^7.3.3:
     strip-ansi "^6.0.0"
     through "^2.3.6"
 
-intersection-observer-admin@~0.2.13:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.2.13.tgz#00a021695bf5aef8d198204514d2f849fd27d089"
-  integrity sha512-REIM59IHXPe9U5eTnowurzzfhgqVkSImZJnOSJZTAJ0LnyJqw8S/eD5s8ZYneQfm9JszhGIBwudF9gF02A3BpQ==
+intersection-observer-admin@~0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.3.0.tgz#b317469813aee4fadac64c53e917a4046d935f40"
+  integrity sha512-S5CsK0o52tVJWGALZdk/sCAewWEQMLc2iemPjAnxmSwk/9Bul0PAQrjwX/KWg/xYN4nm3x/LgLOEPTNKEBlGyQ==
 
 intl-messageformat-parser@^6.0.5, intl-messageformat-parser@^6.0.6:
   version "6.0.6"
