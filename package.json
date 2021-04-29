@@ -73,7 +73,7 @@
 		"sass": "1.32.12"
 	},
 	"devDependencies": {
-		"@babel/core": "7.13.16",
+		"@babel/core": "7.14.0",
 		"@babel/plugin-proposal-export-namespace-from": "7.12.13",
 		"@babel/plugin-proposal-logical-assignment-operators": "7.13.8",
 		"@babel/plugin-proposal-nullish-coalescing-operator": "7.13.8",
@@ -120,7 +120,7 @@
 		"ember-route-action-helper": "2.0.8",
 		"ember-source": "3.26.1",
 		"ember-source-channel-url": "3.0.0",
-		"ember-template-lint": "3.3.0",
+		"ember-template-lint": "3.3.1",
 		"ember-truth-helpers": "3.0.0",
 		"ember-try": "1.4.0",
 		"eslint": "7.25.0",
