@@ -2350,10 +2350,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/plugin-transform-block-scoping@7.13.16":
-  version "7.13.16"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.13.16.tgz#a9c0f10794855c63b1d629914c7dcfeddd185892"
-  integrity sha512-ad3PHUxGnfWF4Efd3qFuznEtZKoBp0spS+DgqzVzRPV7urEBvPLue3y2j80w4Jf2YLzZHj8TOv/Lmvdmh3b2xg==
+"@babel/plugin-transform-block-scoping@7.14.1":
+  version "7.14.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.14.1.tgz#ac1b3a8e3d8cbb31efc6b9be2f74eb9823b74ab2"
+  integrity sha512-2mQXd0zBrwfp0O1moWIhPpEeTKDvxyHcnma3JATVP1l+CctWBuot6OJG8LQ4DnBj4ZZPSmlb/fm4mu47EOAnVA==
   dependencies:
     "@babel/helper-plugin-utils" "^7.13.0"
 
@@ -11301,16 +11301,16 @@ ember-in-element-polyfill@^1.0.0:
     ember-cli-htmlbars "^4.3.1"
     ember-cli-version-checker "^5.0.2"
 
-ember-in-viewport@3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.10.0.tgz#0b35fa8f7ae493adbb1d6395f668490725d86fd5"
-  integrity sha512-qXS/OHUvm1z8KXYOr+Fe/j4llicLqf9eICxgL8/oy6lG3ZQrkbU08Ut7OWVLra8uoqiV6zCmRZEDAVSIOibqIw==
+ember-in-viewport@3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/ember-in-viewport/-/ember-in-viewport-3.10.1.tgz#2a57bcbf2ea0ed2309a3ede9155ad420fc341b73"
+  integrity sha512-Y7TuofJ7lSrr3seC8JWagLjcehikFuldpolQP5tmAA89YMWrXIPKmxljlqcWDtcjnq/WmYt9A8qGNfFGoxohLw==
   dependencies:
     ember-auto-import "^1.11.2"
     ember-cli-babel "^7.26.3"
     ember-modifier "^2.1.0"
     fast-deep-equal "^2.0.1"
-    intersection-observer-admin "~0.3.0"
+    intersection-observer-admin "~0.3.1"
     raf-pool "~0.1.4"
 
 "ember-inflector@^2.0.0 || ^3.0.0 || ^4.0.0", ember-inflector@^4.0.1:
@@ -14269,10 +14269,10 @@ inquirer@^7.3.3:
     strip-ansi "^6.0.0"
     through "^2.3.6"
 
-intersection-observer-admin@~0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.3.0.tgz#b317469813aee4fadac64c53e917a4046d935f40"
-  integrity sha512-S5CsK0o52tVJWGALZdk/sCAewWEQMLc2iemPjAnxmSwk/9Bul0PAQrjwX/KWg/xYN4nm3x/LgLOEPTNKEBlGyQ==
+intersection-observer-admin@~0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/intersection-observer-admin/-/intersection-observer-admin-0.3.1.tgz#845d648558336a595821c55216d43ba73a71b998"
+  integrity sha512-hMrk4pWMSAyx9sUIIeLI/oU/TuvItVh+BTpiDgQo+gAIhxWY62xiXmWfoHTDHdnRFzk7HBN+XrWPC4fKYBlI3Q==
 
 intl-messageformat-parser@^6.0.5, intl-messageformat-parser@^6.0.6:
   version "6.0.6"
