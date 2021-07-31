@@ -70,7 +70,7 @@
 		"moment": "2.29.1",
 		"moment-timezone": "0.5.33",
 		"normalize.css": "8.0.1",
-		"sass": "1.36.0"
+		"sass": "1.37.0"
 	},
 	"devDependencies": {
 		"@babel/core": "7.14.8",
@@ -123,7 +123,7 @@
 		"ember-template-lint": "3.5.1",
 		"ember-truth-helpers": "3.0.0",
 		"ember-try": "1.4.0",
-		"eslint": "7.31.0",
+		"eslint": "7.32.0",
 		"eslint-plugin-ember": "10.5.1",
 		"eslint-plugin-json": "3.0.0",
 		"eslint-plugin-node": "11.1.0",
