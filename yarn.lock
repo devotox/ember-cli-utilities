@@ -10539,7 +10539,7 @@ ember-cli-babel@7.6.0:
     ensure-posix-path "^1.0.2"
     semver "^5.5.0"
 
-ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.1:
+ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.18.0.tgz#3f6435fd275172edeff2b634ee7b29ce74318957"
   integrity sha512-7ceC8joNYxY2wES16iIBlbPSxwKDBhYwC8drU3ZEvuPDMwVv1KzxCNu1fvxyFEBWhwaRNTUxSCsEVoTd9nosGA==
@@ -10835,7 +10835,7 @@ ember-cli-head@2.0.0:
     ember-cli-htmlbars "^5.7.1"
     ember-in-element-polyfill "^1.0.0"
 
-ember-cli-htmlbars@5.7.1, ember-cli-htmlbars@^5.7.1:
+ember-cli-htmlbars@5.7.1, ember-cli-htmlbars@^5.3.1, ember-cli-htmlbars@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-5.7.1.tgz#eb5b88c7d9083bc27665fb5447a9b7503b32ce4f"
   integrity sha512-9laCgL4tSy48orNoQgQKEHp93MaqAs9ZOl7or5q+8iyGGJHW6sVXIYrVv5/5O9HfV6Ts8/pW1rSoaeKyLUE+oA==
@@ -11593,7 +11593,7 @@ ember-get-config@0.3.0, "ember-get-config@^0.2.4 || ^0.3.0":
     broccoli-file-creator "^1.1.1"
     ember-cli-babel "^7.0.0"
 
-"ember-getowner-polyfill@^1.1.0 || ^2.0.0", ember-getowner-polyfill@^2.0.0, ember-getowner-polyfill@^2.2.0:
+"ember-getowner-polyfill@^1.1.0 || ^2.0.0", ember-getowner-polyfill@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-2.2.0.tgz#38e7dccbcac69d5ec694000329ec0b2be651d2b2"
   integrity sha512-rwGMJgbGzxIAiWYjdpAh04Abvt0s3HuS/VjHzUFhVyVg2pzAuz45B9AzOxYXzkp88vFC7FPaiA4kE8NxNk4A4Q==
@@ -11720,15 +11720,6 @@ ember-load-initializers@2.1.2:
     ember-cli-babel "^7.13.0"
     ember-cli-typescript "^2.0.2"
 
-ember-macro-helpers@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/ember-macro-helpers/-/ember-macro-helpers-4.2.2.tgz#dfb28b2b21f9fd49ade599f68c99e73ce5692cdc"
-  integrity sha512-E46MnpjMu+ZXRw/5A1tADZKFJADGpSAcsclcaBNfV/B1aRPV3PTTnCpDvYC1wfJ4kwwUh0DRLDH/OpBv+/41pQ==
-  dependencies:
-    ember-cli-babel "^7.7.3"
-    ember-cli-string-utils "^1.1.0"
-    ember-cli-test-info "^1.0.0"
-
 ember-material-design-icons-shim@0.1.13:
   version "0.1.13"
   resolved "https://registry.yarnpkg.com/ember-material-design-icons-shim/-/ember-material-design-icons-shim-0.1.13.tgz#c62ab3172fdc4bb2bdc2ef586b9052a44db64de0"
@@ -11798,14 +11789,16 @@ ember-modifier@^2.1.0:
     ember-destroyable-polyfill "^2.0.1"
     ember-modifier-manager-polyfill "^1.2.0"
 
-ember-moment@8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/ember-moment/-/ember-moment-8.0.2.tgz#6e5034045e9d1447fa6c0af80983b93ee62bb1be"
-  integrity sha512-2S4byvP7sSj8vn30280EA6mA62moe9TCpg2mtuioWYQV3shAUAX4FrfC2oCzNBU+TcKw3dSXnhGi9Pt5krMhAg==
+ember-moment@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/ember-moment/-/ember-moment-9.0.0.tgz#454498051f6cb1c101bed85229a6230bece8f66b"
+  integrity sha512-G8YB/yExbnIgUeJPRaBGYlBKDOwLbdvKD1qZcA1pzgLvQzLhlW7hSAoQQkMEO4ZKvsXUOWPUtkAdAQx8YVjT2Q==
   dependencies:
-    ember-cli-babel "^6.7.2"
-    ember-getowner-polyfill "^2.2.0"
-    ember-macro-helpers "^4.2.2"
+    ember-auto-import "^1.10.1"
+    ember-cli-babel "^7.23.0"
+    ember-cli-htmlbars "^5.3.1"
+    moment "^2.29.1"
+    moment-timezone "^0.5.33"
 
 ember-native-class-polyfill@^1.0.6:
   version "1.0.6"
@@ -17058,7 +17051,7 @@ modify-values@^1.0.0:
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
   integrity sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==
 
-moment-timezone@0.5.33:
+moment-timezone@0.5.33, moment-timezone@^0.5.33:
   version "0.5.33"
   resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.33.tgz#b252fd6bb57f341c9b59a5ab61a8e51a73bbd22c"
   integrity sha512-PTc2vcT8K9J5/9rDEPe5czSIKgLoGsH8UNpA4qZTVw0Vd/Uz19geE9abbIOQKaAQFcnQ3v5YEXrbSc5BpshH+w==
@@ -17072,7 +17065,7 @@ moment-timezone@^0.5.13:
   dependencies:
     moment ">= 2.9.0"
 
-moment@2.29.1:
+moment@2.29.1, moment@^2.29.1:
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
