@@ -130,7 +130,7 @@
 		"husky": "7.0.2",
 		"lint-staged": "11.1.2",
 		"loader.js": "4.7.0",
-		"prettier": "2.4.0",
+		"prettier": "2.4.1",
 		"qunit-dom": "2.0.0",
 		"stylelint": "13.13.1",
 		"stylelint-config-prettier": "8.0.2",
