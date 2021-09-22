@@ -11773,10 +11773,10 @@ ember-modifier@^2.1.0:
     ember-destroyable-polyfill "^2.0.1"
     ember-modifier-manager-polyfill "^1.2.0"
 
-ember-moment@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/ember-moment/-/ember-moment-9.0.0.tgz#454498051f6cb1c101bed85229a6230bece8f66b"
-  integrity sha512-G8YB/yExbnIgUeJPRaBGYlBKDOwLbdvKD1qZcA1pzgLvQzLhlW7hSAoQQkMEO4ZKvsXUOWPUtkAdAQx8YVjT2Q==
+ember-moment@9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/ember-moment/-/ember-moment-9.0.1.tgz#fcf06cb8ef07c8d0108820c1639778590d613b38"
+  integrity sha512-mwcj2g/37pIQua3uTpJWu/zpcnyvbgg9YmkKR6nhtY7FXBaGSIU3aeG95VAoPcfET9DazkPOyqxVB+Dcd5BP5g==
   dependencies:
     ember-auto-import "^1.10.1"
     ember-cli-babel "^7.23.0"

@@ -57,7 +57,7 @@
 		"ember-cli-sass": "10.0.1",
 		"ember-hammertime": "1.6.0",
 		"ember-material-design-icons-shim": "0.1.13",
-		"ember-moment": "9.0.0",
+		"ember-moment": "9.0.1",
 		"ember-offline": "devotox/ember-offline",
 		"ember-orbit": "0.16.9",
 		"ember-reactive-helpers": "devotox/ember-reactive-helpers",
