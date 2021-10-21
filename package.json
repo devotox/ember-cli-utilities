@@ -132,11 +132,11 @@
 		"loader.js": "4.7.0",
 		"prettier": "2.4.1",
 		"qunit-dom": "2.0.0",
-		"stylelint": "13.13.1",
+		"stylelint": "14.0.0",
 		"stylelint-config-prettier": "9.0.3",
-		"stylelint-config-recommended-scss": "4.3.0",
+		"stylelint-config-recommended-scss": "5.0.0",
 		"stylelint-prettier": "1.2.0",
-		"stylelint-scss": "3.21.0"
+		"stylelint-scss": "4.0.0"
 	},
 	"ember-addon": {
 		"configPath": "tests/dummy/config",
