@@ -135,7 +135,7 @@
 		"stylelint": "14.0.1",
 		"stylelint-config-prettier": "9.0.3",
 		"stylelint-config-recommended-scss": "5.0.1",
-		"stylelint-prettier": "1.2.0",
+		"stylelint-prettier": "2.0.0",
 		"stylelint-scss": "4.0.0"
 	},
 	"ember-addon": {
