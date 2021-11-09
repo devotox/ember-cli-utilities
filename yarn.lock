@@ -10743,7 +10743,7 @@ ember-cli-head@2.0.0:
     ember-cli-htmlbars "^5.7.1"
     ember-in-element-polyfill "^1.0.0"
 
-ember-cli-htmlbars@6.0.0:
+ember-cli-htmlbars@6.0.0, ember-cli-htmlbars@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.0.0.tgz#9d0b67c0f107467b6c8ecdc47d64e877489841bf"
   integrity sha512-7h9Lb1kfvLecMUOX8wCbwjzCsgXdNDs8qpOsDuKV6YaGS9jDZHu4P5xTYLX78YepEUnwOw1atCYWzBUsJHWrzA==
@@ -11649,14 +11649,14 @@ ember-material-design-icons-shim@0.1.13:
     semantic-release "^15.10.7"
     travis-deploy-once "^5.0.9"
 
-ember-math-helpers@2.17.3:
-  version "2.17.3"
-  resolved "https://registry.yarnpkg.com/ember-math-helpers/-/ember-math-helpers-2.17.3.tgz#02ca780c855de0ec333fc91d17d74790bbbe8d35"
-  integrity sha512-qCeoOaqKmZ6TVdPZouLQGEX8RBM/4osTFWpAndkBN3mQ9qb6FRB1g7BUVAR8NmaTnBM6bnVTTl+QchrcclPGdQ==
+ember-math-helpers@2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/ember-math-helpers/-/ember-math-helpers-2.18.0.tgz#e11f2050d6f9f1df328528f4d9cf91af4294a09e"
+  integrity sha512-i7eYer/4mJK+PhAy9RA/kFAV6WXFMRCGgIE8cAjifZYlwQ8IsKsqP2PjerCeL28wcQzT3b3KIOI5Xmh1O7zsuQ==
   dependencies:
     broccoli-funnel "^3.0.8"
     ember-cli-babel "^7.26.6"
-    ember-cli-htmlbars "^5.7.1"
+    ember-cli-htmlbars "^6.0.0"
 
 ember-maybe-import-regenerator@1.0.0:
   version "1.0.0"
