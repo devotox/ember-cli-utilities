@@ -114,7 +114,7 @@
 		"ember-object-update": "0.5.1",
 		"ember-page-title": "7.0.0",
 		"ember-paper": "1.0.0-beta.35",
-		"ember-promise-helpers": "1.0.9",
+		"ember-promise-helpers": "2.0.0",
 		"ember-qunit": "5.1.5",
 		"ember-resolver": "8.0.3",
 		"ember-route-action-helper": "2.0.8",
