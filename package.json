@@ -64,7 +64,7 @@
 		"ember-simple-auth": "4.1.0",
 		"ember-skeleton": "devotox/ember-skeleton",
 		"ember-string-helpers": "devotox/ember-string-helpers",
-		"fast-sort": "3.1.0",
+		"fast-sort": "3.1.1",
 		"flatted": "3.2.4",
 		"json-fn": "1.1.1",
 		"moment": "2.29.1",
