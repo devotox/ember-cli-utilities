@@ -51,7 +51,7 @@
 		"ember-cli-fastclick": "1.5.0",
 		"ember-cli-htmlbars": "6.0.1",
 		"ember-cli-moment-shim": "3.8.0",
-		"ember-cli-notifications": "7.0.0",
+		"ember-cli-notifications": "8.0.0",
 		"ember-cli-pushjs": "2.0.8",
 		"ember-cli-roboto-fontface": "2.0.5",
 		"ember-cli-sass": "10.0.1",
