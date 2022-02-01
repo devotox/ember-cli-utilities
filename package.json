@@ -37,12 +37,12 @@
 	"dependencies": {
 		"@glimmer/component": "1.0.4",
 		"@glimmer/tracking": "1.0.4",
-		"@orbit/data": "0.16.7",
-		"@orbit/indexeddb": "0.16.8",
-		"@orbit/indexeddb-bucket": "0.16.3",
-		"@orbit/jsonapi": "0.16.7",
-		"@orbit/local-storage": "0.16.7",
-		"@orbit/local-storage-bucket": "0.16.3",
+		"@orbit/data": "0.17.0",
+		"@orbit/indexeddb": "0.17.0",
+		"@orbit/indexeddb-bucket": "0.17.0",
+		"@orbit/jsonapi": "0.17.0",
+		"@orbit/local-storage": "0.17.0",
+		"@orbit/local-storage-bucket": "0.17.0",
 		"animate.css": "4.1.1",
 		"ember-api-actions": "0.2.9",
 		"ember-auto-import": "2.4.0",
@@ -70,7 +70,7 @@
 		"moment": "2.29.1",
 		"moment-timezone": "0.5.34",
 		"normalize.css": "8.0.1",
-		"sass": "1.49.0"
+		"sass": "1.49.4"
 	},
 	"devDependencies": {
 		"@babel/core": "7.16.12",
