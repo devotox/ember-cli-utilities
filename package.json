@@ -59,7 +59,7 @@
 		"ember-material-design-icons-shim": "0.1.13",
 		"ember-moment": "10.0.0",
 		"ember-offline": "devotox/ember-offline",
-		"ember-orbit": "0.17.1",
+		"ember-orbit": "0.17.2",
 		"ember-reactive-helpers": "devotox/ember-reactive-helpers",
 		"ember-simple-auth": "4.2.0",
 		"ember-skeleton": "devotox/ember-skeleton",
