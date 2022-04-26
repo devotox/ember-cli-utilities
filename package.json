@@ -54,7 +54,7 @@
 		"ember-cli-notifications": "8.0.0",
 		"ember-cli-pushjs": "2.0.8",
 		"ember-cli-roboto-fontface": "2.0.5",
-		"ember-cli-sass": "11.0.0",
+		"ember-cli-sass": "11.0.1",
 		"ember-hammertime": "1.6.0",
 		"ember-material-design-icons-shim": "0.1.13",
 		"ember-moment": "10.0.0",
