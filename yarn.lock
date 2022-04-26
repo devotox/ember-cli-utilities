@@ -17534,10 +17534,10 @@ linkify-it@^3.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-lint-staged@12.4.0:
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.4.0.tgz#1fb8c73ac7a1c670b87bd2c1bf1e302c866e77af"
-  integrity sha512-3X7MR0h9b7qf4iXf/1n7RlVAx+EzpAZXoCEMhVSpaBlgKDfH2ewf+QUm7BddFyq29v4dgPP+8+uYpWuSWx035A==
+lint-staged@12.4.1:
+  version "12.4.1"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.4.1.tgz#63fa27bfc8a33515f6902f63f6670864f1fb233c"
+  integrity sha512-PTXgzpflrQ+pODQTG116QNB+Q6uUTDg5B5HqGvNhoQSGt8Qy+MA/6zSnR8n38+sxP5TapzeQGTvoKni0KRS8Vg==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -23055,10 +23055,10 @@ stylelint-scss@^4.0.0:
     postcss-selector-parser "^6.0.6"
     postcss-value-parser "^4.1.0"
 
-stylelint@14.7.1:
-  version "14.7.1"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.7.1.tgz#f1b3236cbf9e1b25a04d03f76250943a58d3f37f"
-  integrity sha512-rUOWm67hrzGXXyO/cInENEejF4urh1dLgOb9cr/3XLDb/t/A+rXQp3p6+no8o8QCKTgBUdhVUq/bXMgE988PJw==
+stylelint@14.8.0:
+  version "14.8.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.8.0.tgz#506959bc1424610cdac9eaefca8fb2420292cf73"
+  integrity sha512-uIyIWMSBSVcj73Gn3nTvPyNsYdwTpxo1W6dWTIa1nm8JKgUi3FIobSXLgrRE6joLidoA0FdgAhCaqxwTF2ikrQ==
   dependencies:
     balanced-match "^2.0.0"
     colord "^2.9.2"
