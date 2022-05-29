@@ -3263,10 +3263,10 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/plugin-transform-block-scoping@7.17.12":
-  version "7.17.12"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.17.12.tgz#68fc3c4b3bb7dfd809d97b7ed19a584052a2725c"
-  integrity sha512-jw8XW/B1i7Lqwqj2CbrViPcZijSxfguBWZP2aN59NHgxUyO/OcO1mfdCxH13QhN5LbWhPkX+f+brKGhZTiqtZQ==
+"@babel/plugin-transform-block-scoping@7.18.4":
+  version "7.18.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.18.4.tgz#7988627b3e9186a13e4d7735dc9c34a056613fb9"
+  integrity sha512-+Hq10ye+jlvLEogSOtq4mKvtk7qwcUQ1f0Mrueai866C82f844Yom2cttfJdMdqRLTxWpsbfbkIkOIfovyUQXw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.17.12"
 
