@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '10.x'
       - name: Setup Volta
-        uses: rwjblue/setup-volta@v1
+        uses: rwjblue/setup-volta@v2
       - name: Setup Ember Testing
         uses: mydea/actions-ember-testing@v2
       - name: Checkout Repo
