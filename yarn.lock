@@ -13225,13 +13225,13 @@ ember-cli-babel@^7.26.3:
     rimraf "^3.0.1"
     semver "^5.5.0"
 
-ember-cli-build-notifications@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-build-notifications/-/ember-cli-build-notifications-1.0.1.tgz#e5ce57f125bf89ab54f1ff920fee2357434f16dc"
-  integrity sha512-//2dPa/K4uDQvW/DEJtDCN0R+vQA0zWlHEH78Htq4gPPIPeIUT3PNQWC6qOyFwcYWN/hEvyWVXzIevPqcvassw==
+ember-cli-build-notifications@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-build-notifications/-/ember-cli-build-notifications-2.0.0.tgz#f60ab1223ada9d561f2d1168ed6ba8f2acabb7cf"
+  integrity sha512-ZLSSOWxDq7l7sdIkPcks1ZQCc2Q7ohRcg85/qsDCr7IGokbsxvjBPFi7/KRcccN2+zDEmWqdUS9VP/SLyJ0rpw==
   dependencies:
     ember-cli-babel "^7.26.11"
-    ember-cli-htmlbars "^6.0.1"
+    ember-cli-htmlbars "^6.1.1"
     heimdalljs-graph "^1.0.0"
     node-notifier "^10.0.0"
 
