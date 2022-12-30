@@ -12864,7 +12864,7 @@ ember-cli-babel-plugin-helpers@^1.1.1:
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.1.tgz#5016b80cdef37036c4282eef2d863e1d73576879"
   integrity sha512-sKvOiPNHr5F/60NLd7SFzMpYPte/nnGkq/tMIfXejfKHIhaiIkYFqX8Z9UFTKWLLn+V7NOaby6niNPZUdvKCRw==
 
-ember-cli-babel@7.26.11, ember-cli-babel@^7.26.0, ember-cli-babel@^7.26.10, ember-cli-babel@^7.26.11, ember-cli-babel@^7.26.5:
+ember-cli-babel@7.26.11, ember-cli-babel@^7.26.0, ember-cli-babel@^7.26.11, ember-cli-babel@^7.26.5:
   version "7.26.11"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.26.11.tgz#50da0fe4dcd99aada499843940fec75076249a9f"
   integrity sha512-JJYeYjiz/JTn34q7F5DSOjkkZqy8qwFOOxXfE6pe9yEJqWGu4qErKxlz8I22JoVEQ/aBUO+OcKTpmctvykM9YA==
@@ -13225,13 +13225,13 @@ ember-cli-babel@^7.26.3:
     rimraf "^3.0.1"
     semver "^5.5.0"
 
-ember-cli-build-notifications@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-build-notifications/-/ember-cli-build-notifications-1.0.0.tgz#ab52750d028b309388155af8e07c308819bbb2e6"
-  integrity sha512-EP8gisaPyqAwpzqGkUzsz2xBttOc2q23v2igJrk91IdjwQ0lSpbrnbGea+aB++A/1IRtt340mUA+W7m4UKvhYQ==
+ember-cli-build-notifications@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-build-notifications/-/ember-cli-build-notifications-1.0.1.tgz#e5ce57f125bf89ab54f1ff920fee2357434f16dc"
+  integrity sha512-//2dPa/K4uDQvW/DEJtDCN0R+vQA0zWlHEH78Htq4gPPIPeIUT3PNQWC6qOyFwcYWN/hEvyWVXzIevPqcvassw==
   dependencies:
-    ember-cli-babel "^7.26.10"
-    ember-cli-htmlbars "^5.7.2"
+    ember-cli-babel "^7.26.11"
+    ember-cli-htmlbars "^6.0.1"
     heimdalljs-graph "^1.0.0"
     node-notifier "^10.0.0"
 
@@ -13349,7 +13349,7 @@ ember-cli-htmlbars@^4.3.1:
     strip-bom "^4.0.0"
     walk-sync "^2.0.2"
 
-ember-cli-htmlbars@^5.1.0, ember-cli-htmlbars@^5.2.0, ember-cli-htmlbars@^5.3.1, ember-cli-htmlbars@^5.7.2:
+ember-cli-htmlbars@^5.1.0, ember-cli-htmlbars@^5.2.0, ember-cli-htmlbars@^5.3.1:
   version "5.7.2"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-5.7.2.tgz#e0cd2fb3c20d85fe4c3e228e6f0590ee1c645ba8"
   integrity sha512-Uj6R+3TtBV5RZoJY14oZn/sNPnc+UgmC8nb5rI4P3fR/gYoyTFIZSXiIM7zl++IpMoIrocxOrgt+mhonKphgGg==
