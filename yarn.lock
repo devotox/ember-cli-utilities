@@ -24273,10 +24273,10 @@ stylelint-config-prettier@9.0.5:
   resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-9.0.5.tgz#9f78bbf31c7307ca2df2dd60f42c7014ee9da56e"
   integrity sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==
 
-stylelint-config-recommended-scss@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-9.0.0.tgz#e755cf3654f3a3a6d7bdf84fe0a814595754a386"
-  integrity sha512-5e9pn3Ztfncd8s9OqvvCW7tZpYe+vGmPi7VEXX7XEp+Kj38PnKCrvFCBL+hQ7rkD4d5QzjB3BxlFEyo/30UWUw==
+stylelint-config-recommended-scss@9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-9.0.1.tgz#7ea233ea637ac2d8f0b50d8aad236257e44e2cbb"
+  integrity sha512-qAmz/TdrqslwiMTuLM3QXeISUkfEDUXGMfRBCHm/xrkCJNnQefv+mzG2mWTsWkqcVk8HAyUkug10dwAcYp2fCQ==
   dependencies:
     postcss-scss "^4.0.2"
     stylelint-config-recommended "^10.0.1"
