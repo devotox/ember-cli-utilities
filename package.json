@@ -68,9 +68,9 @@
 		"flatted": "3.2.7",
 		"json-fn": "1.1.1",
 		"moment": "2.29.4",
-		"moment-timezone": "0.5.41",
+		"moment-timezone": "0.5.42",
 		"normalize.css": "8.0.1",
-		"sass": "1.59.3"
+		"sass": "1.60.0"
 	},
 	"devDependencies": {
 		"@babel/core": "7.21.3",
@@ -130,7 +130,7 @@
 		"husky": "8.0.3",
 		"lint-staged": "13.2.0",
 		"loader.js": "4.7.0",
-		"prettier": "2.8.6",
+		"prettier": "2.8.7",
 		"qunit-dom": "2.0.0",
 		"stylelint": "15.3.0",
 		"stylelint-config-prettier": "9.0.5",
