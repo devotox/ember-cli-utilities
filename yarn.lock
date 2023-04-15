@@ -15794,10 +15794,10 @@ fast-ordered-set@^1.0.0, fast-ordered-set@^1.0.2:
   dependencies:
     blank-object "^1.0.1"
 
-fast-sort@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/fast-sort/-/fast-sort-3.3.0.tgz#8af9413bf61d6b035a695c34bd9ced6da2b9f637"
-  integrity sha512-bF8QiR3lRbvSMCkgsXzedUtgJqrJP1sRL6H7YGHMpMbRCElJ3VOJ4qhh45U70Zs3ElsuUAwpgQZJvdNueSBZHg==
+fast-sort@3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/fast-sort/-/fast-sort-3.4.0.tgz#e5abb6bed199a601b34237d29db9262cdca82b3a"
+  integrity sha512-c/cMBGA5mH3OYjaXedtLIM3hQjv+KuZuiD2QEH5GofNOZeQVDIYIN7Okc2AW1KPhk44g5PTZnXp8t2lOMl8qhQ==
 
 fast-sourcemap-concat@^1.4.0:
   version "1.4.0"
