@@ -6546,6 +6546,15 @@
     "@embroider/shared-internals" "^0.50.2"
     semver "^7.3.5"
 
+"@embroider/addon-shim@^1.6.0":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-1.8.4.tgz#0e7f32c5506bf0f3eb0840506e31c36c7053763c"
+  integrity sha512-sFhfWC0vI18KxVenmswQ/ShIvBg4juL8ubI+Q3NTSdkCTeaPQ/DIOUF6oR5DCQ8eO/TkIaw+kdG3FkTY6yNJqA==
+  dependencies:
+    "@embroider/shared-internals" "^2.0.0"
+    broccoli-funnel "^3.0.8"
+    semver "^7.3.8"
+
 "@embroider/core@0.33.0", "@embroider/core@^0.33.0":
   version "0.33.0"
   resolved "https://registry.yarnpkg.com/@embroider/core/-/core-0.33.0.tgz#0fb1752d6e34ea45368e65c42e13220a57ffae76"
@@ -14510,14 +14519,12 @@ ember-intl@5.7.2:
     mkdirp "^1.0.4"
     silent-error "^1.1.1"
 
-ember-lifeline@6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/ember-lifeline/-/ember-lifeline-6.0.2.tgz#bdb2be2d5a6ee8b8bc2021c3cf0bf7c6fb7fa8ba"
-  integrity sha512-utTdZJk/iKtMZA5vFbhddB6lGAZ8k7HZthha1Xs/9KN1bzIUDw/7oqYXSAETTo2o4/qXqz8DLT9Wbl7F4GW7yA==
+ember-lifeline@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ember-lifeline/-/ember-lifeline-7.0.0.tgz#46780c8f832b6c784ee4681b938a1e1437bfa676"
+  integrity sha512-2l51NzgH5vjN972zgbs+32rnXnnEFKB7qsSpJF+lBI4V5TG6DMy4SfowC72ZEuAtS58OVfwITbOO+RnM21EdpA==
   dependencies:
-    ember-cli-babel "^7.23.0"
-    ember-cli-typescript "^3.1.4"
-    ember-destroyable-polyfill "^2.0.2"
+    "@embroider/addon-shim" "^1.6.0"
 
 ember-load-initializers@2.1.2:
   version "2.1.2"
