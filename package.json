@@ -123,7 +123,7 @@
 		"ember-template-lint": "5.10.0",
 		"ember-truth-helpers": "3.1.1",
 		"ember-try": "2.0.0",
-		"eslint": "8.41.0",
+		"eslint": "8.42.0",
 		"eslint-plugin-ember": "11.8.0",
 		"eslint-plugin-json": "3.1.0",
 		"eslint-plugin-node": "11.1.0",
